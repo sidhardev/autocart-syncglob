@@ -1,28 +1,46 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import DashboardDatePicker from './DashboardDatePicker'
 import { Box } from '@mui/material'
 import Statscard from './Statscard'
-import adCards from '../../../ads'
-import Users from '../../../users'
 
 
 function  Dashboard() {
+  const [ads, setAds] = useState([]);
+  const [users, setUsers] = useState([]);
+
+useEffect(() => {
+    async function fetchData() {
+      try {
+        const fetchAd = await fetch('../../../ads.json');
+        const fetchUsers = await fetch('../../../users.json');
+        const users = await fetchUsers.json();
+        const ads = await fetchAd.json();
+          setUsers(users || []);
+        setAds(ads || []);
+      } catch (error) {
+        console.error("Error fetching Ads:", error);
+      }
+    }
+
+    fetchData();
+
+  }, []);
+
   return (
     <>
    <Box
       sx={{
         p: 4,
-        backgroundImage:
-          "url('https://syncglob.com/static/media/homeBg.3bfe02e2c5bf3fda69e8.png')",
-        backgroundSize: "cover",
+        
         minHeight: "100vh",
+
       }}
     >
 
       <DashboardDatePicker />
       <Box sx={{ mt: 4 }}>
-    <Statscard cards={adCards} heading={'Ads'} />
-        <Statscard cards={Users} heading={'Users'} />
+    <Statscard cards={ads} heading={'Ads'} />
+        <Statscard cards={users} heading={'Users'} />
 
       </Box>
     </Box>

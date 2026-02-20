@@ -7,7 +7,7 @@ function DashboardDatePicker() {
       <Box
       sx={{
         backgroundColor: "#ffffffb9",
-        borderRadius: 9,
+        borderRadius: 3,
         p: 2.5,
         display: "flex",
         alignItems: "center",

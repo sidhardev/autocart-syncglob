@@ -7,13 +7,12 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
  import AdbIcon from '@mui/icons-material/Adb';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import { useNotification } from '../../Context/NotificationContext';
+ import { Link } from 'react-router-dom';
 
 function TopBar() {
-        const { toggleNotification } = useNotification();
-  return (
+   return (
     <>
-       <AppBar position="fixed" sx={{ background: "rgba(3, 193, 254, 0.1)",}}>
+       <AppBar position="absolute" sx={{ background: "rgba(3, 193, 254, 0.1)", }}>
       <Container maxWidth="xl">
   <Toolbar disableGutters sx={{ display: "flex", alignItems: "center" }}>
   
@@ -46,7 +45,10 @@ function TopBar() {
        <IconButton   sx={{ p: 0 }}>
         <Avatar sx={{border: '1px solid rgb(58, 193, 254)'}} />
       </IconButton>
-     <NotificationsActiveIcon fontSize="large" sx={{ color: 'rgb(58, 193, 254)', cursor: "pointer", "&:hover": { color: 'rgb(58, 193, 254)', opacity: 0.8 }, }} onClick={() => toggleNotification()}/>
+      <Link to="/notifications" style={{ textDecoration: 'none' }}>
+     <NotificationsActiveIcon fontSize="large" sx={{ color: 'rgb(58, 193, 254)', cursor: "pointer", "&:hover": { color: 'rgb(58, 193, 254)', opacity: 0.8 }, }} />
+
+      </Link>
   </Box>
 
 </Toolbar>

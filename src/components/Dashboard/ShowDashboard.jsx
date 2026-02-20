@@ -1,16 +1,14 @@
- 
+import React from 'react'
+import TopBar from '../layout/Topbar'
 import { Box } from '@mui/material'
-  import Topbar from './components/layout/Topbar'
-import Sidebar from './components/layout/Sidebar'
-import Dashboard from './components/Dashboard/Dashboard'
- import './css/root.css'
-import { useState } from 'react'
- function App() {
-  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
-   return (
+import Sidebar from '../layout/Sidebar'
+import Dashboard from './Dashboard'
+
+function ShowDashboard() {
+  return (
     <>
 
-       <Topbar />
+       <TopBar />
        
        <Box sx={{ display: "flex" }}>
         <Sidebar />
@@ -24,4 +22,4 @@ import { useState } from 'react'
   )
 }
 
-export default App
+export default ShowDashboard

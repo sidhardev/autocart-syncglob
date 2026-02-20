@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "type": "success",
+    "title": "BMW Ad Approved",
+    "message": "Your ad 'Summer Sale Banner' has been approved.",
+    "isRead": false,
+    "createdAt": "2026-02-20T08:30:00Z"
+  },
+  {
+    "id": 2,
+    "type": "warning",
+    "title": "Ad Pending Review",
+    "message": "Your ad 'Black Friday Offer' is waiting for admin approval.",
+    "isRead": false,
+    "createdAt": "2026-02-19T15:10:00Z"
+  },
+  {
+    "id": 3,
+    "type": "info",
+    "title": "New User Registered",
+    "message": "A new user registered on the platform.",
+    "isRead": true,
+    "createdAt": "2026-02-19T10:05:00Z"
+  }
+]

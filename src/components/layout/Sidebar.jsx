@@ -5,6 +5,7 @@
   ListItemButton,
   ListItemText,
 } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const drawerWidth = 260;
 
@@ -18,27 +19,31 @@ export default function Sidebar() {
         position: "relative",
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-           top: '64px',
-           height: 'calc(100% - 64px)',
-          width: drawerWidth,
-          boxSizing: "border-box",
-        },
+  width: drawerWidth,
+  boxSizing: "border-box",
+  pl: 2,
+  pr: 1,
+  position: "relative",    
+  height: "auto",  
+  top: "64px",        
+  },
 
       }}
     >
       <Box sx={{ overflow: "auto", mt: 2 }}>
         <List>
 
-           <ListItemButton
-            selected
+           <ListItemButton 
+           component={NavLink}
+          to="/dashboard"
             sx={{
               borderRadius: 2,
               mb: 1,
-              "&.Mui-selected": {
+              "&:hover": {
                 backgroundColor: "rgb(58, 193, 239)",
                 color: "#fff",
               },
-              "&:hover": {
+              "&.active": {
                 backgroundColor: "rgb(58, 193, 239)",
                 color: "#fff",
               },
