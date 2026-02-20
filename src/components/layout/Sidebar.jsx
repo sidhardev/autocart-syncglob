@@ -1,36 +1,119 @@
-import { Box, Typography, List, ListItemButton, ListItemText } from "@mui/material";
+ import {
+  Box,
+  Drawer,
+  List,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
+
+const drawerWidth = 260;
 
 export default function Sidebar() {
   return (
-    <Box
+    <Drawer
+      variant="permanent"
+      anchor="left"
       sx={{
-        width: 260,
-        borderRight: "1px solid #e0e0e0",
-        p: 2,
-        height: "100vh",
-        overflow: "auto",
+        width: drawerWidth,
+        position: "relative",
+        flexShrink: 0,
+        "& .MuiDrawer-paper": {
+           top: '64px',
+           height: 'calc(100% - 64px)',
+          width: drawerWidth,
+          boxSizing: "border-box",
+        },
 
       }}
     >
-     
+      <Box sx={{ overflow: "auto", mt: 2 }}>
+        <List>
 
-      <List>
-        {[
-          "Dashboard",
-          "Ads Management",
-          "Users Management",
-          "Reporting & Analytics",
-          "Financial Management",
-          "Email Management",
-        ].map((text) => (
-          <ListItemButton key={text} sx={{ borderRadius: 2, mb: 1, "&:hover": {
-      backgroundColor: "rgb(58, 193, 239)",
-      color: "#fff",
-    }, }}>
-            <ListItemText primary={text} />
+           <ListItemButton
+            selected
+            sx={{
+              borderRadius: 2,
+              mb: 1,
+              "&.Mui-selected": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+              "&:hover": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+            }}
+          >
+            <ListItemText primary="Dashboard" />
           </ListItemButton>
-        ))}
-      </List>
-    </Box>
+
+           <ListItemButton
+            sx={{
+              borderRadius: 2,
+              mb: 1,
+              "&:hover": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+            }}
+          >
+            <ListItemText primary="Ads Management" />
+          </ListItemButton>
+
+           <ListItemButton
+            sx={{
+              borderRadius: 2,
+              mb: 1,
+              "&:hover": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+            }}
+          >
+            <ListItemText primary="Users Management" />
+          </ListItemButton>
+
+           <ListItemButton
+            sx={{
+              borderRadius: 2,
+              mb: 1,
+              "&:hover": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+            }}
+          >
+            <ListItemText primary="Reporting & Analytics" />
+          </ListItemButton>
+
+           <ListItemButton
+            sx={{
+              borderRadius: 2,
+              mb: 1,
+              "&:hover": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+            }}
+          >
+            <ListItemText primary="Financial Management" />
+          </ListItemButton>
+
+           <ListItemButton
+            sx={{
+              borderRadius: 2,
+              mb: 1,
+              "&:hover": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+            }}
+          >
+            <ListItemText primary="Email Management" />
+          </ListItemButton>
+
+        </List>
+      </Box>
+    </Drawer>
   );
 }

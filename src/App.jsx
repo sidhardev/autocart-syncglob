@@ -1,25 +1,23 @@
-import { Box } from "@mui/material";
-import TopBar from "./components/layout/TopBar";
-import Dashboard from "./components/Dashboard/DashBoard";
-import Sidebar from "./components/layout/Sidebar";
-import "./css/root.css";
-
-function App() {
+ 
+import { Box } from '@mui/material'
+  import Topbar from './components/layout/Topbar'
+import Sidebar from './components/layout/Sidebar'
+import Dashboard from './components/dashboard/Dashboard'
+ function App() {
+  
   return (
     <>
-      {/* Top Bar */}
-      <TopBar />
-
-      {/* Main Layout */}
-      <Box sx={{ display: "flex" }}>
+       <Topbar />
+       
+       <Box sx={{ display: "flex" }}>
         <Sidebar />
 
-        <Box sx={{ flexGrow: 1, width: '100%' }}>
+        <Box sx={{ flexGrow: 1, width: '100%', top: "64px", position: "relative", }}>
           <Dashboard />
         </Box>
       </Box>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
