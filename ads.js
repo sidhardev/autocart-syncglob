@@ -1,0 +1,38 @@
+const adCards = [
+  {
+    id: 1,
+    title: "Active Ads",
+    color: "#22c55e",
+    data: "2113",
+    ratio: "+9.5%"
+  },
+  {
+    id: 2,
+    title: "Pending Ads",
+        color: "#f59e0b",
+            data: "1098",
+                ratio: "+9.5%"
+
+
+  },
+  {
+    id: 3,
+    title: "Total Ads",
+        color: "#3b82f6",
+            data: "13984",
+                ratio: "+9.5%"
+
+
+  },
+  {
+    id: 4,
+    title: "Daily Ads Created",
+        color: "#b43f25",
+            data: "900",
+                ratio: "+9.5%"
+
+
+  },
+];
+
+export default adCards;
