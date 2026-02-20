@@ -11,7 +11,7 @@ function  Dashboard() {
 useEffect(() => {
     async function fetchData() {
       try {
-        const fetchAd = await fetch('../../../ads.json');
+        const fetchAd = await fetch('../../../adsData.json');
         const fetchUsers = await fetch('../../../users.json');
         const users = await fetchUsers.json();
         const ads = await fetchAd.json();

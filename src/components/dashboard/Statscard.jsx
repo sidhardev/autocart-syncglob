@@ -3,8 +3,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import AdsClickIcon from "@mui/icons-material/AdsClick";
-import StopIcon from '@mui/icons-material/Stop';
 import PeopleIcon from '@mui/icons-material/People';
+import StopRoundedIcon from '@mui/icons-material/StopRounded';
 
 function Statscard({ cards, heading }) {
   return (
@@ -57,7 +57,7 @@ function Statscard({ cards, heading }) {
               }}
             >
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <StopIcon fontSize="small" sx={{ color: card.color }} />
+                <StopRoundedIcon fontSize="small" sx={{ color: card.color }} />
                 <Typography variant="body2" color="text.secondary">
                   {card.title}
                 </Typography>

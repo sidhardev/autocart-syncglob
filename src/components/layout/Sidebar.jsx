@@ -53,10 +53,16 @@ export default function Sidebar() {
           </ListItemButton>
 
            <ListItemButton
+            component={NavLink}
+            to="/ads-management"
             sx={{
               borderRadius: 2,
               mb: 1,
               "&:hover": {
+                backgroundColor: "rgb(58, 193, 239)",
+                color: "#fff",
+              },
+              "&.active": {
                 backgroundColor: "rgb(58, 193, 239)",
                 color: "#fff",
               },

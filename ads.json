@@ -1,30 +1,92 @@
 [
   {
     "id": 1,
-    "title": "Active Ads",
-    "color": "#22c55e",
-    "data": "2113",
-    "ratio": "+9.5%"
+    "status": "Active",
+    "adId": "AC2501",
+    "title": "BMW M4 Competition",
+    "category": "Sports Car",
+    "user": {
+      "userId": "USER201",
+      "name": "Rahul Sharma",
+      "avatar": "https://i.pravatar.cc/150?img=1"
+    },
+    "price": 8200000,
+    "dateCreated": "20/01/2025",
+    "expiryDate": "20/02/2025"
   },
   {
     "id": 2,
-    "title": "Pending Ads",
-    "color": "#f59e0b",
-    "data": "1098",
-    "ratio": "+9.5%"
+    "status": "Suspended",
+    "adId": "AC2502",
+    "title": "Audi A6 Premium",
+    "category": "Sedan",
+    "user": {
+      "userId": "USER202",
+      "name": "Amit Verma",
+      "avatar": "https://i.pravatar.cc/150?img=2"
+    },
+    "price": 6500000,
+    "dateCreated": "18/01/2025",
+    "expiryDate": "18/02/2025"
   },
   {
     "id": 3,
-    "title": "Total Ads",
-    "color": "#3b82f6",
-    "data": "13984",
-    "ratio": "+9.5%"
+    "status": "Banned",
+    "adId": "AC2503",
+    "title": "Mercedes C-Class",
+    "category": "Luxury Sedan",
+    "user": {
+      "userId": "USER203",
+      "name": "Sanjay Mehta",
+      "avatar": "https://i.pravatar.cc/150?img=3"
+    },
+    "price": 7200000,
+    "dateCreated": "15/01/2025",
+    "expiryDate": "15/02/2025"
   },
   {
     "id": 4,
-    "title": "Daily Ads Created",
-    "color": "#b43f25",
-    "data": "900",
-    "ratio": "+9.5%"
+    "status": "Active",
+    "adId": "AC2504",
+    "title": "Toyota Fortuner",
+    "category": "SUV",
+    "user": {
+      "userId": "USER204",
+      "name": "Vikas Yadav",
+      "avatar": "https://i.pravatar.cc/150?img=4"
+    },
+    "price": 4200000,
+    "dateCreated": "12/01/2025",
+    "expiryDate": "12/02/2025"
+  },
+  {
+    "id": 5,
+    "status": "Suspended",
+    "adId": "AC2505",
+    "title": "Hyundai Creta 2024",
+    "category": "Compact SUV",
+    "user": {
+      "userId": "USER205",
+      "name": "Deepak Singh",
+      "avatar": "https://i.pravatar.cc/150?img=5"
+    },
+    "price": 2100000,
+    "dateCreated": "10/01/2025",
+    "expiryDate": "10/02/2025"
+  },
+  {
+    "id": 6,
+    "status": "Active",
+    "adId": "AC2506",
+    "title": "Mahindra Thar 4x4",
+    "category": "Off Road",
+    "user": {
+      "userId": "USER206",
+      "name": "Arjun Patel",
+      "avatar": "https://i.pravatar.cc/150?img=6"
+    },
+    "price": 1900000,
+    "dateCreated": "08/01/2025",
+    "expiryDate": "08/02/2025"
   }
 ]
