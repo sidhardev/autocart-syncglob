@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import Topbar from "./components/layout/Topbar";
 import Sidebar from "./components/layout/Sidebar";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard-UI/Dashboard";
 import "./css/root.css";
 import { useState } from "react";
 function App() {
