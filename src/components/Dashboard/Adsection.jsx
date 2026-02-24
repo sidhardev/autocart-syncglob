@@ -1,13 +1,13 @@
 import { Box, Grid, Typography } from "@mui/material";
 import AdsClickIcon from "@mui/icons-material/AdsClick";
 import Statscard from "./Statscard";
- 
+
 export default function AdsSection() {
   return (
     <Box
       sx={{ mt: 4, mx: { xs: -2, sm: -3, md: -4 }, width: "calc(100% + 4rem)" }}
     >
-       <Box
+      <Box
         sx={{
           display: "flex",
           alignItems: "center",
@@ -21,7 +21,7 @@ export default function AdsSection() {
         </Typography>
       </Box>
 
-       <Grid container spacing={2} sx={{ width: "100%", m: 0 }}>
+      <Grid container spacing={2} sx={{ width: "100%", m: 0 }}>
         {["Total Ads", "Pending Ads", "Active Ads", "Daily Ads Created"].map(
           (title, index) => (
             <Grid item xs={12} key={index} sx={{ px: { xs: 2, sm: 3, md: 4 } }}>

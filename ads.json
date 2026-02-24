@@ -5,6 +5,8 @@
     "adId": "AC2501",
     "title": "BMW M4 Competition",
     "category": "Sports Car",
+    "sellerType": "Trade Seller",
+    "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "user": {
       "userId": "USER201",
       "name": "Rahul Sharma",
@@ -12,7 +14,8 @@
     },
     "price": 8200000,
     "dateCreated": "20/01/2025",
-    "expiryDate": "20/02/2025"
+    "expiryDate": "20/02/2025",
+    "adType": "APPROVED"
   },
   {
     "id": 2,
@@ -20,6 +23,8 @@
     "adId": "AC2502",
     "title": "Audi A6 Premium",
     "category": "Sedan",
+    "sellerType": "Private Seller",
+    "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "user": {
       "userId": "USER202",
       "name": "Amit Verma",
@@ -27,7 +32,8 @@
     },
     "price": 6500000,
     "dateCreated": "18/01/2025",
-    "expiryDate": "18/02/2025"
+    "expiryDate": "18/02/2025",
+    "adType": "PENDING"
   },
   {
     "id": 3,
@@ -35,6 +41,8 @@
     "adId": "AC2503",
     "title": "Mercedes C-Class",
     "category": "Luxury Sedan",
+    "sellerType": "Private Seller",
+    "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "user": {
       "userId": "USER203",
       "name": "Sanjay Mehta",
@@ -42,7 +50,8 @@
     },
     "price": 7200000,
     "dateCreated": "15/01/2025",
-    "expiryDate": "15/02/2025"
+    "expiryDate": "15/02/2025",
+    "adType": "REJECTED"
   },
   {
     "id": 4,
@@ -50,6 +59,8 @@
     "adId": "AC2504",
     "title": "Toyota Fortuner",
     "category": "SUV",
+    "sellerType": "Trade Seller",
+    "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "user": {
       "userId": "USER204",
       "name": "Vikas Yadav",
@@ -57,14 +68,17 @@
     },
     "price": 4200000,
     "dateCreated": "12/01/2025",
-    "expiryDate": "12/02/2025"
+    "expiryDate": "12/02/2025",
+    "adType": "RENEW"
   },
   {
     "id": 5,
     "status": "Suspended",
     "adId": "AC2505",
+    "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "title": "Hyundai Creta 2024",
     "category": "Compact SUV",
+    "sellerType": "Private Seller",
     "user": {
       "userId": "USER205",
       "name": "Deepak Singh",
@@ -72,14 +86,17 @@
     },
     "price": 2100000,
     "dateCreated": "10/01/2025",
-    "expiryDate": "10/02/2025"
+    "expiryDate": "10/02/2025",
+    "adType": "PENDING"
   },
   {
     "id": 6,
     "status": "Active",
     "adId": "AC2506",
+    "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "title": "Mahindra Thar 4x4",
     "category": "Off Road",
+    "sellerType": "Private Seller",
     "user": {
       "userId": "USER206",
       "name": "Arjun Patel",
@@ -87,6 +104,7 @@
     },
     "price": 1900000,
     "dateCreated": "08/01/2025",
-    "expiryDate": "08/02/2025"
+    "expiryDate": "08/02/2025",
+    "adType": "DELETED"
   }
 ]

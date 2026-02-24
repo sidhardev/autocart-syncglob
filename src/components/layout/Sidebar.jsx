@@ -1,10 +1,4 @@
- import {
-  Box,
-  Drawer,
-  List,
-  ListItemButton,
-  ListItemText,
-} from "@mui/material";
+import { Box, Drawer, List, ListItemButton, ListItemText } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const drawerWidth = 260;
@@ -19,25 +13,23 @@ export default function Sidebar() {
         position: "relative",
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-  width: drawerWidth,
-  boxSizing: "border-box",
-  pl: 2,
-  pr: 1,
-  position: "relative",    
-  height: "auto",  
-  top: "64px",        
-  },
-
+          width: drawerWidth,
+          boxSizing: "border-box",
+          pl: 2,
+          pr: 1,
+          position: "relative",
+          height: "auto",
+          top: "64px",
+        },
       }}
     >
       <Box sx={{ overflow: "auto", mt: 2 }}>
         <List>
-
-           <ListItemButton 
-           component={NavLink}
-          to="/dashboard"
+          <ListItemButton
+            component={NavLink}
+            to="/dashboard"
             sx={{
-              borderRadius: 2,
+              borderRadius: 3,
               mb: 1,
               "&:hover": {
                 backgroundColor: "rgb(58, 193, 239)",
@@ -52,11 +44,11 @@ export default function Sidebar() {
             <ListItemText primary="Dashboard" />
           </ListItemButton>
 
-           <ListItemButton
+          <ListItemButton
             component={NavLink}
             to="/ads-management"
             sx={{
-              borderRadius: 2,
+              borderRadius: 3,
               mb: 1,
               "&:hover": {
                 backgroundColor: "rgb(58, 193, 239)",
@@ -71,9 +63,9 @@ export default function Sidebar() {
             <ListItemText primary="Ads Management" />
           </ListItemButton>
 
-           <ListItemButton
+          <ListItemButton
             sx={{
-              borderRadius: 2,
+              borderRadius: 3,
               mb: 1,
               "&:hover": {
                 backgroundColor: "rgb(58, 193, 239)",
@@ -84,9 +76,9 @@ export default function Sidebar() {
             <ListItemText primary="Users Management" />
           </ListItemButton>
 
-           <ListItemButton
+          <ListItemButton
             sx={{
-              borderRadius: 2,
+              borderRadius: 3,
               mb: 1,
               "&:hover": {
                 backgroundColor: "rgb(58, 193, 239)",
@@ -97,9 +89,9 @@ export default function Sidebar() {
             <ListItemText primary="Reporting & Analytics" />
           </ListItemButton>
 
-           <ListItemButton
+          <ListItemButton
             sx={{
-              borderRadius: 2,
+              borderRadius: 3,
               mb: 1,
               "&:hover": {
                 backgroundColor: "rgb(58, 193, 239)",
@@ -110,9 +102,9 @@ export default function Sidebar() {
             <ListItemText primary="Financial Management" />
           </ListItemButton>
 
-           <ListItemButton
+          <ListItemButton
             sx={{
-              borderRadius: 2,
+              borderRadius: 3,
               mb: 1,
               "&:hover": {
                 backgroundColor: "rgb(58, 193, 239)",
@@ -122,7 +114,6 @@ export default function Sidebar() {
           >
             <ListItemText primary="Email Management" />
           </ListItemButton>
-
         </List>
       </Box>
     </Drawer>
