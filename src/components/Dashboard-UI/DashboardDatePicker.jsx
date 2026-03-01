@@ -35,7 +35,7 @@ function DashboardDatePicker() {
           variant="outlined"
           startIcon={<CalendarTodayIcon />}
           sx={{
-            borderRadius: 2,
+            borderRadius: 3,
             textTransform: "none",
           }}
           color="info"

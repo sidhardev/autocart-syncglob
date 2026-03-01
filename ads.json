@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "status": "Active",
+    "status": "APPROVED",
     "adId": "AC2501",
     "title": "BMW M4 Competition",
     "category": "Sports Car",
@@ -16,7 +16,7 @@
     "dateCreated": "20/01/2025",
     "expiryDate": "20/02/2025",
     "adType": "APPROVED",
-
+    "vehicleNumber": "MH01AB1234",
     "mileage": "2000 km",
     "youtubeLink": "https://www.youtube.com/watch?v=bmw123",
     "description": "BMW M4 Competition in exceptional showroom condition with extremely low mileage and outstanding performance capabilities. The vehicle delivers powerful acceleration, smooth automatic transmission, and precision steering control. Maintained regularly with complete service history and no accidental record. The premium interior features leather sports seats, advanced infotainment system, and climate control. A perfect luxury sports car for enthusiasts seeking comfort, style, and performance in one package.",
@@ -27,7 +27,7 @@
   },
   {
     "id": 2,
-    "status": "Suspended",
+    "status": "PENDING",
     "adId": "AC2502",
     "title": "Audi A6 Premium",
     "category": "Sedan",
@@ -42,17 +42,15 @@
     "dateCreated": "18/01/2025",
     "expiryDate": "18/02/2025",
     "adType": "PENDING",
-
+    "vehicleNumber": "KA02CD5678",
     "mileage": "8000 km",
     "youtubeLink": "https://www.youtube.com/watch?v=audi456",
     "description": "Audi A6 Premium edition offering luxury, comfort, and reliable performance. This vehicle has been carefully maintained with timely servicing and proper documentation. The car features a smooth automatic gearbox, refined cabin insulation, and premium interior materials. Equipped with advanced safety systems, stylish alloy wheels, and modern infotainment setup. Ideal for buyers who prefer a comfortable executive sedan with powerful performance and elegant road presence.",
-    "images": [
-      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8"
-    ]
+    "images": ["https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8"]
   },
   {
     "id": 3,
-    "status": "Banned",
+    "status": "REJECTED",
     "adId": "AC2503",
     "title": "Mercedes C-Class",
     "category": "Luxury Sedan",
@@ -67,17 +65,15 @@
     "dateCreated": "15/01/2025",
     "expiryDate": "15/02/2025",
     "adType": "REJECTED",
-
+    "vehicleNumber": "DL03EF9012",
     "mileage": "12000 km",
     "youtubeLink": "https://www.youtube.com/watch?v=merc789",
     "description": "Mercedes C-Class luxury sedan built for performance and comfort. The vehicle provides smooth acceleration, responsive handling, and excellent ride stability. Regularly serviced and maintained in good condition. The interior includes premium upholstery, advanced dashboard system, and enhanced safety features. Suitable for professionals and families seeking a premium driving experience with stylish design and dependable engine performance.",
-    "images": [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70"
-    ]
+    "images": ["https://images.unsplash.com/photo-1503376780353-7e6692767b70"]
   },
   {
     "id": 4,
-    "status": "Active",
+    "status": "RENEW",
     "adId": "AC2504",
     "title": "Toyota Fortuner",
     "category": "SUV",
@@ -92,17 +88,15 @@
     "dateCreated": "12/01/2025",
     "expiryDate": "12/02/2025",
     "adType": "RENEW",
-
+    "vehicleNumber": "HR04GH3456",
     "mileage": "15000 km",
     "youtubeLink": "https://www.youtube.com/watch?v=fortuner123",
     "description": "Toyota Fortuner known for its durability, power, and strong road presence. The vehicle is maintained in excellent condition with reliable engine performance and smooth driving experience. Spacious interiors provide comfort for long trips and family journeys. Equipped with safety features and modern infotainment system. A dependable SUV for city drives as well as off-road adventures.",
-    "images": [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341"
-    ]
+    "images": ["https://images.unsplash.com/photo-1549399542-7e3f8b79c341"]
   },
   {
     "id": 5,
-    "status": "Suspended",
+    "status": "PENDING",
     "adId": "AC2505",
     "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "title": "Hyundai Creta 2024",
@@ -117,17 +111,15 @@
     "dateCreated": "10/01/2025",
     "expiryDate": "10/02/2025",
     "adType": "PENDING",
-
+    "vehicleNumber": "KL05IJ7890",
     "mileage": "5000 km",
     "youtubeLink": "https://www.youtube.com/watch?v=creta456",
     "description": "Hyundai Creta 2024 model in almost new condition with modern styling and advanced features. The vehicle offers smooth handling, good fuel efficiency, and comfortable interior space. Regular servicing completed with proper maintenance records. Suitable for families and professionals looking for a reliable compact SUV with stylish design and practical performance.",
-    "images": [
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6"
-    ]
+    "images": ["https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6"]
   },
   {
     "id": 6,
-    "status": "Active",
+    "status": "DELETED",
     "adId": "AC2506",
     "image": "https://pngimg.com/uploads/bmw/bmw_PNG99558.png",
     "title": "Mahindra Thar 4x4",
@@ -142,12 +134,10 @@
     "dateCreated": "08/01/2025",
     "expiryDate": "08/02/2025",
     "adType": "DELETED",
-
+    "vehicleNumber": "TN06KL2345",
     "mileage": "3000 km",
     "youtubeLink": "https://www.youtube.com/watch?v=thar789",
     "description": "Mahindra Thar 4x4 designed for adventure lovers and off-road enthusiasts. The vehicle is in excellent condition with low mileage and powerful engine performance. High ground clearance and durable suspension make it suitable for rough terrains. Maintained properly with no major issues. A strong and stylish SUV ideal for both daily drives and outdoor exploration.",
-    "images": [
-      "https://images.unsplash.com/photo-1609521263047-f8f205293f24"
-    ]
+    "images": ["https://images.unsplash.com/photo-1609521263047-f8f205293f24"]
   }
 ]

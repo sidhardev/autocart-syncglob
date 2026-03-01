@@ -25,5 +25,5 @@ export const router = createBrowserRouter([
   {
     path: "/ads-management/:id",
     element: <AdDetails />,
-  }
+  },
 ]);

@@ -13,12 +13,11 @@ import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import { useNavigate } from "react-router-dom";
 
 export default function AdTable({ filter, rows }) {
-
   const navigate = useNavigate();
   const getStatusColor = (status) => {
-    if (status === "Active") return "#F0FDF4";
-    if (status === "Suspended") return "#FEFCE8";
-    if (status === "Banned") return "#FEF2F2";
+    if (status === "ACTIVE" || status === "APPROVED") return "#F0FDF4";
+    if (status === "PENDING" || status === "RENEW") return "#FEFCE8";
+    if (status === "REJECTED" || status === "DELETED") return "#FEE2E2";
     return "default";
   };
   const getSellerColor = (sellerType) => {
@@ -83,12 +82,12 @@ export default function AdTable({ filter, rows }) {
               return (
                 <TableRow
                   key={row.id}
-                  sx={{ 
-                    bgcolor: active ? "#ffffffd7" : "#F3F4F6", 
+                  sx={{
+                    bgcolor: active ? "#ffffffd7" : "#F3F4F6",
                     cursor: "pointer",
                     "&:hover": {
                       bgcolor: "#E5E7EB",
-                    }
+                    },
                   }}
                   onClick={() => navigate(`/ads-management/${row.id}`)}
                 >
@@ -108,9 +107,10 @@ export default function AdTable({ filter, rows }) {
                         fontSize="small"
                         sx={{
                           color:
-                            row.status === "Active"
+                            row.status === "ACTIVE" || row.status === "APPROVED"
                               ? "#10B981"
-                              : row.status === "Suspended"
+                              : row.status === "PENDING" ||
+                                  row.status === "RENEW"
                                 ? "#F59E0B"
                                 : "#EF4444",
                         }}

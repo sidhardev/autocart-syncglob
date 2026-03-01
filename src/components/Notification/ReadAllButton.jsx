@@ -32,7 +32,7 @@ function ReadAllButton() {
         variant="contained"
         size="small"
         color="primary"
-        sx={{ bgcolor: "#3B82F6" }}
+        sx={{ bgcolor: "#3B82F6", borderRadius: 3, textTransform: "none" }}
       >
         Read All
       </Button>

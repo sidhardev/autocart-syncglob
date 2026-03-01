@@ -15,7 +15,8 @@ const ShowNotification = ({ notification }) => {
       >
         <Typography
           variant="h5"
-          fontWeight={600}
+          fontWeight={"bold"}
+          color="text.primary"
           sx={{ color: "text.primary", fontFamily: "Lexend" }}
         >
           Notifications
