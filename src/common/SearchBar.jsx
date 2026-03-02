@@ -1,13 +1,13 @@
 import { Box, InputAdornment, TextField } from "@mui/material";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-function SearchBar() {
+function SearchBar( { text }) {
   return (
     <>
       <Box sx={{ display: "flex", alignItems: "flex-end" }}>
         <TextField
           id="input-with-icon-textfield"
-          placeholder="Search Ads"
+          placeholder={text}
           sx={{ width: "50%" }}
           slotProps={{
             input: {

@@ -12,14 +12,14 @@ import { Link, NavLink } from "react-router-dom";
 function TopBar() {
   return (
     <>
-      <AppBar position="absolute" sx={{ background: "rgba(3, 193, 254, 0.1)" }}>
+      <AppBar position="fixed" sx={{ background: "#DCFCE7" }}>
         <Container maxWidth="xl">
           <Toolbar
             disableGutters
             sx={{ display: "flex", alignItems: "center" }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <AdbIcon sx={{ mr: 1, color: "rgb(58, 193, 254)" }} />
+              <AdbIcon sx={{ mr: 1, color: "#15803D" }} />
               <Typography
                 variant="h6"
                 noWrap
@@ -30,7 +30,7 @@ function TopBar() {
 
                   fontWeight: 700,
                   letterSpacing: ".3rem",
-                  color: "rgb(58, 193, 254)",
+                  color: "#15803D",
                   textDecoration: "none",
                 }}
               >
@@ -40,12 +40,12 @@ function TopBar() {
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <Typography sx={{ mr: 1, color: "rgb(58, 193, 254)" }}>
+            <Typography sx={{ mr: 1, color: "#15803D" }}>
               Syncglob Admin
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", gap: 6 }}>
               <IconButton sx={{ p: 0 }}>
-                <Avatar sx={{ border: "1px solid rgb(58, 193, 254)" }} />
+                <Avatar sx={{ border: "1px solid #15803D" }} />
               </IconButton>
               <NavLink to="/notifications" style={{ textDecoration: "none" }}>
                 {({ isActive }) => (
@@ -59,7 +59,7 @@ function TopBar() {
                       borderRadius: 3,
                       transition: "0.2s ease",
                       backgroundColor: isActive
-                        ? "rgb(58, 193, 254)"
+                        ? "#07B007"
                         : "transparent",
                     }}
                   >
@@ -72,7 +72,7 @@ function TopBar() {
                     >
                       <path
                         d="M13.5 31.5C14.694 32.433 16.272 33 18 33C19.728 33 21.306 32.433 22.5 31.5M3.79501 21.591C3.47551 23.6205 4.90201 25.029 6.64801 25.731C13.3425 28.4235 22.6575 28.4235 29.352 25.731C31.098 25.029 32.5245 23.6205 32.205 21.591C32.01 20.343 31.0395 19.305 30.321 18.291C29.3805 16.9455 29.2875 15.48 29.286 13.9185C29.2875 7.89 24.2355 3 18 3C11.7645 3 6.71251 7.89 6.71251 13.92C6.71251 15.48 6.61951 16.947 5.67751 18.291C4.96051 19.305 3.99151 20.343 3.79501 21.591Z"
-                        stroke={isActive ? "#fff" : "rgb(58, 193, 254)"}
+                        stroke={isActive ? "#fff" : "rgb(0, 0, 0)"}
                         strokeWidth="2.25"
                         strokeLinecap="round"
                         strokeLinejoin="round"

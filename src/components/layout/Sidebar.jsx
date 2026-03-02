@@ -10,16 +10,19 @@ export default function Sidebar() {
       anchor="left"
       sx={{
         width: drawerWidth,
-        position: "relative",
+        position: "fixed",
+        zIndex: 1200,
         flexShrink: 0,
+        overflowX: "hidden",
         "& .MuiDrawer-paper": {
           width: drawerWidth,
           boxSizing: "border-box",
           pl: 2,
           pr: 1,
-          position: "relative",
-          height: "auto",
+          position: "fixed",
+          height: "calc(100vh - 64px)",
           top: "64px",
+          
         },
       }}
     >
@@ -32,11 +35,11 @@ export default function Sidebar() {
               borderRadius: 3,
               mb: 1,
               "&:hover": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
               "&.active": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
             }}
@@ -51,11 +54,11 @@ export default function Sidebar() {
               borderRadius: 3,
               mb: 1,
               "&:hover": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
               "&.active": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
             }}
@@ -64,11 +67,17 @@ export default function Sidebar() {
           </ListItemButton>
 
           <ListItemButton
+          component={NavLink}
+            to="/user-management"
             sx={{
               borderRadius: 3,
               mb: 1,
               "&:hover": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
+                color: "#fff",
+              },
+              "&.active": {
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
             }}
@@ -81,9 +90,14 @@ export default function Sidebar() {
               borderRadius: 3,
               mb: 1,
               "&:hover": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
+              "&.active": {
+                backgroundColor: "#07B007",
+                color: "#fff",
+              },
+            
             }}
           >
             <ListItemText primary="Reporting & Analytics" />
@@ -94,7 +108,11 @@ export default function Sidebar() {
               borderRadius: 3,
               mb: 1,
               "&:hover": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
+                color: "#fff",
+              },
+              "&.active": {
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
             }}
@@ -107,7 +125,11 @@ export default function Sidebar() {
               borderRadius: 3,
               mb: 1,
               "&:hover": {
-                backgroundColor: "rgb(58, 193, 239)",
+                backgroundColor: "#07B007",
+                color: "#fff",
+              },
+              "&.active": {
+                backgroundColor: "#07B007",
                 color: "#fff",
               },
             }}

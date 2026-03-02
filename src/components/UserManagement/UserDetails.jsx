@@ -1,41 +1,41 @@
-import { Box, Divider, Paper, Typography } from "@mui/material";
+import DetailsCard from "../../common/DetailsCard";
+import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TopBar from "../layout/Topbar";
 import Sidebar from "../layout/Sidebar";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
-import AdDetailsCard from "./AdDetailsCard.jsx";
 
 const STATUS_COLORS = {
-  ACTIVE: "#07B007",
-  APPROVED: "#07B007",
-  INACTIVE: "#f4da48",
+  Active: "#07B007",
+  Suspended: "#f4da48",
+  Banned: "#d32f2f",
 };
 
-function AdDetails() {
-  const [ad, setAd] = useState([]);
+function UserDetails() {
+  const [userDetails, setUserDetails] = useState({});
+  const [error, setError] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("../../../ads.json");
-        if (!response.ok) throw new Error("Failed to fetch ads data");
+        const response = await fetch("../../../userData.json");
+        if (!response.ok) throw new Error("Failed to fetch user data");
 
         const data = await response.json();
-        const selectedAd = data[parseInt(id) - 1];
+        const selectedUser = data[parseInt(id) - 1];
 
-        if (!selectedAd) {
-          throw new Error("Advertisement not found");
+        if (!selectedUser) {
+          throw new Error("User not found");
         }
 
-        setAd(selectedAd);
+        setUserDetails(selectedUser);
         setError(null);
       } catch (err) {
-        setError(err.message || "Error fetching advertisement details");
-        setAd(null);
-      } finally {
+        setError(err.message || "Error fetching user details");
+        setUserDetails({});
       }
     };
 
@@ -45,10 +45,22 @@ function AdDetails() {
   }, [id]);
 
   const getButtonText = () => {
-    return ["ACTIVE", "APPROVED", "REJECTED"].includes(ad.status)
-      ? "Delete Ad"
-      : "Approve Ad";
+    return ["Active", "Suspended", "Banned"].includes(userDetails.status)
+      ? "Delete User"
+      : "Approve User";
   };
+
+  const fields = [
+    { label: "Name", key: "name" },
+    { label: "Country", key: "country" },
+    { label: "Email", key: "email" },
+    { label: "Area", key: "area" },
+
+    { label: "Phone Number", key: "phoneNumber" },
+    { label: "Type", key: "type" },
+    { label: "Following", key: "following" },
+    { label: "Followers", key: "followers" },
+  ];
 
   return (
     <>
@@ -64,7 +76,6 @@ function AdDetails() {
             top: "64px",
             position: "relative",
             marginLeft: "260px",
-
             minHeight: "calc(100vh - 64px)",
             p: 3,
           }}
@@ -87,24 +98,27 @@ function AdDetails() {
               <StopRoundedIcon
                 fontSize="small"
                 sx={{
-                  color: STATUS_COLORS[ad.status] || STATUS_COLORS.INACTIVE,
+                  color:
+                    STATUS_COLORS[userDetails.status] || STATUS_COLORS.Active,
                 }}
               />
-              {ad.title || "Untitled Ad"}
+              {userDetails.name || "Untitled User"}
             </Typography>
             <Box sx={{ display: "flex", gap: 2 }}>
               <CommonButton text={getButtonText()} />
-              {(ad.status === "PENDING" || ad.status === "RENEW") && (
-                <CommonButton text="Reject Ad" />
-              )}
             </Box>
           </Box>
 
-          <AdDetailsCard ad={ad} />
+          <DetailsCard
+            title="User Details"
+            data={userDetails}
+            fields={fields}
+            image={userDetails.imageUrl}
+          />
         </Box>
       </Box>
     </>
   );
 }
 
-export default AdDetails;
+export default UserDetails;

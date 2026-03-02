@@ -4,6 +4,9 @@ import ShowDashboard from "./src/components/Dashboard-UI/ShowDashboard";
 import Notification from "./src/components/Notification/Notification";
 import ShowAds from "./src/components/AdsManagement/ShowAds";
 import AdDetails from "./src/components/AdsManagement/AdDetails";
+import Container from "./src/components/UserManagement/Container";
+import UserManagementUI from "./src/components/UserManagement/UserManagementUI";
+import UserDetails from "./src/components/UserManagement/UserDetails";
 
 export const router = createBrowserRouter([
   {
@@ -26,4 +29,12 @@ export const router = createBrowserRouter([
     path: "/ads-management/:id",
     element: <AdDetails />,
   },
+  {
+    path: '/user-management',
+    element: <UserManagementUI />,
+  },
+  {
+    path: '/user-management/:id',
+    element: <UserDetails />
+  }
 ]);
