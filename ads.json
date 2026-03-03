@@ -69,7 +69,8 @@
     "mileage": "12000 km",
     "youtubeLink": "https://www.youtube.com/watch?v=merc789",
     "description": "Mercedes C-Class luxury sedan built for performance and comfort. The vehicle provides smooth acceleration, responsive handling, and excellent ride stability. Regularly serviced and maintained in good condition. The interior includes premium upholstery, advanced dashboard system, and enhanced safety features. Suitable for professionals and families seeking a premium driving experience with stylish design and dependable engine performance.",
-    "images": ["https://images.unsplash.com/photo-1503376780353-7e6692767b70"]
+    "images": ["https://images.unsplash.com/photo-1503376780353-7e6692767b70"],
+    "rejectionReason": "This advertisement has been rejected due to inconsistent vehicle information and incomplete verification details. Please ensure that all registration data and uploaded images clearly match the listing information before resubmitting the advertisement."
   },
   {
     "id": 4,

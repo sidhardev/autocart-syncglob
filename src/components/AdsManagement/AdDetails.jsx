@@ -7,6 +7,7 @@ import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import AdDetailsCard from "./AdDetailsCard.jsx";
 import GoBackButton from "../../common/GoBackButton.jsx";
+import Rejection from "./Rejection.jsx";
 
 const STATUS_COLORS = {
   ACTIVE: "#07B007",
@@ -85,7 +86,7 @@ function AdDetails() {
               color="text.primary"
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
-            <GoBackButton />
+              <GoBackButton />
               <StopRoundedIcon
                 fontSize="small"
                 sx={{
@@ -95,14 +96,43 @@ function AdDetails() {
               {ad.title || "Untitled Ad"}
             </Typography>
             <Box sx={{ display: "flex", gap: 2 }}>
-              <CommonButton text={getButtonText()} />
+              <CommonButton text={getButtonText()} size="medium" />
               {(ad.status === "PENDING" || ad.status === "RENEW") && (
-                <CommonButton text="Reject Ad" />
+                <CommonButton text="Reject Ad" size="medium" />
               )}
             </Box>
           </Box>
 
           <AdDetailsCard ad={ad} />
+          <Box
+            sx={{
+              mt: 4,
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: 3,
+            }}
+          >
+            {["/slide1.png", "/slide2.png", "/slide3.png"].map((img, index) => (
+              <Box
+                key={index}
+                component="img"
+                src={img}
+                alt={`Slide ${index + 1}`}
+                sx={{
+                  width: "100%",
+                  height: 200,
+                  objectFit: "cover",
+                  borderRadius: 2,
+                  boxShadow: 2,
+                }}
+              />
+            ))}
+          </Box>
+          
+
+            {ad.status === "REJECTED" && (
+              <Rejection rejectionReason={ad.rejectionReason} />
+            )}
         </Box>
       </Box>
     </>

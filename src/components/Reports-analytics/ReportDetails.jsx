@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import Sidebar from "../layout/Sidebar";
 import TopBar from "../layout/Topbar";
 import { useParams } from "react-router-dom";
@@ -80,11 +80,17 @@ const ReportDetails = () => {
   
 
   const adFields = [
-     { label: "Title", key: "title" },
+    { label: "Title", key: "title" },
     { label: "Category", key: "category" },
-    { label: "Status", key: "status" },
-    { label: "Price", key: "price" },
+    {
+      label: "Youtube Link",
+      key: "youtubeLink",
+      type: "link",
+      linkText: "Youtube",
+    },
+    { label: "Vehicle License Number", key: "vehicleNumber" },
     { label: "Mileage", key: "mileage" },
+    { label: "Type", key: "sellerType" },
   ];
 
   const userFields = [

@@ -82,42 +82,52 @@ function DetailsCard({
             <Paper
               sx={{
                 flex: 0.8,
-                 borderRadius: 2,
-                 alignItems:"end",
-                 justifyContent:"end",
-                 display:"flex",}}
+                borderRadius: 2,
+                alignItems: "center",
+                justifyContent: "center",
+                display: "flex",
+                flexDirection: "column",
+                        height: "50%",
+              }}
             >
               {image && (
-                <Box sx={{ mb: 2 }}>
-                  <img
-                    src={image}
-                    alt="User"
-                    style={{
-                      width: "80%",
-                      borderRadius: "8px",
-                       height:  "80%",
+                <Box
+                  component="img"
+                  src={image}
+                  alt="User"
+                  sx={{
+                    width: "100%",
+                    flex: 1,
+                    objectFit: "contain",
+                    borderRadius: 2,
 
-                    }}
-                  />
-                </Box>
+                    mb: description ? 2 : 0,
+                  }}
+                />
               )}
               {description && (
                 <>
-                <Box sx={{ borderRadius: 2, border: "1px solid #e0e0e0", p: 2 }}>
-
-
-                  <Typography variant="h6" fontWeight="bold" mb={1.5}>
-                    {descriptionLabel}
-                  </Typography>
-
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ lineHeight: 1.6 }}
+                  <Box
+                    sx={{
+                      borderRadius: 2,
+                      border: "1px solid #e0e0e0",
+                      p: 2.5,
+                      width: "100%",
+                      backgroundColor: "#ffffff",
+                    }}
                   >
-                    {description || "No description available"}
-                  </Typography>
-                    </Box>
+                    <Typography variant="h6" fontWeight="bold" mb={1.5}>
+                      {descriptionLabel}
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ lineHeight: 1.6 }}
+                    >
+                      {description || "No description available"}
+                    </Typography>
+                  </Box>
                 </>
               )}
             </Paper>

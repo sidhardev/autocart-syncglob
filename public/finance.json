@@ -1,0 +1,132 @@
+{
+  "financeType": "OVERVIEW",
+
+  "overview": {
+    "today": { "amount": 7854472, "change": 9.2 },
+    "week": { "amount": 7854472, "change": -0.2 },
+    "month": { "amount": 7854472, "change": 9.2 },
+    "year": { "amount": 7854472, "change": -8.4 },
+
+    "selectedMonth": "Jan 2025",
+
+    "chartData": [
+      { "day": "01", "value": 18 },
+      { "day": "02", "value": 5 },
+      { "day": "03", "value": 8 },
+      { "day": "04", "value": 15 },
+      { "day": "05", "value": 1 },
+      { "day": "06", "value": 0.5 },
+      { "day": "07", "value": 10 },
+      { "day": "08", "value": 3 },
+      { "day": "09", "value": 2 },
+      { "day": "10", "value": 6 },
+      { "day": "11", "value": 2.5 },
+      { "day": "12", "value": 14 },
+      { "day": "13", "value": 9 },
+      { "day": "14", "value": 11 },
+      { "day": "15", "value": 1.5 },
+      { "day": "16", "value": 0.8 },
+      { "day": "17", "value": 1 },
+      { "day": "18", "value": 7 },
+      { "day": "19", "value": 7 },
+      { "day": "20", "value": 11 },
+      { "day": "21", "value": 3 }
+    ]
+  },
+
+  
+  "transactions": [
+    {
+      "id": 1,
+      "ad": {
+        "id": "Ad 39547",
+        "imageUrl": "/images/ads/car1.jpg"
+      },
+      "user": {
+        "id": "USER200",
+        "avatarUrl": "/images/users/user1.jpg"
+      },
+      "transactionId": "AC54782245578",
+      "amount": 5000,
+      "currency": "USD",
+      "status": "SUCCESS",
+      "date": "2025-02-20T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "ad": {
+        "id": "Ad 5247",
+        "imageUrl": "/images/ads/car2.jpg"
+      },
+      "user": {
+        "id": "USER200",
+        "avatarUrl": "/images/users/user2.jpg"
+      },
+      "transactionId": "AC542258854452",
+      "amount": 3400,
+      "currency": "USD",
+      "status": "PENDING",
+      "date": "2025-02-14T08:15:00Z"
+    },
+    {
+      "id": 3,
+      "ad": {
+        "id": "Ad 39547",
+        "imageUrl": "/images/ads/car1.jpg"
+      },
+      "user": {
+        "id": "USER200",
+        "avatarUrl": "/images/users/user1.jpg"
+      },
+      "transactionId": "AC54782245579",
+      "amount": 5000,
+      "currency": "USD",
+      "status": "FAILED",
+      "date": "2025-02-20T12:45:00Z"
+    }
+  ]
+,
+
+  
+  "refunds": [
+    {
+      "id": 1,
+      "ad": {
+        "id": "Ad 5247",
+        "imageUrl": "/images/ads/car2.jpg"
+      },
+      "user": {
+        "id": "USER200",
+        "avatarUrl": "/images/users/user2.jpg"
+      },
+      "originalTransactionId": "AC542258854452",
+      "transactionId": "RF542258854452",
+      "amount": 3400,
+      "currency": "USD",
+      "reason": "Duplicate payment",
+      "status": "PENDING",
+      "date": "2025-02-18T10:15:00Z",
+      "refundMethod": "Original Payment Method"
+    },
+    {
+      "id": 2,
+      "ad": {
+        "id": "Ad 39547",
+        "imageUrl": "/images/ads/car1.jpg"
+      },
+      "user": {
+        "id": "USER200",
+        "avatarUrl": "/images/users/user1.jpg"
+      },
+      "originalTransactionId": "AC54782245578",
+      "transactionId": "RF54782245578",
+      "amount": 5000,
+      "currency": "USD",
+      "reason": "Ad removed before expiry",
+      "status": "APPROVED",
+      "date": "2025-02-20T14:20:00Z",
+      "refundMethod": "Bank Transfer"
+    }
+  ]
+
+}

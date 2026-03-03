@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import AdsClickIcon from "@mui/icons-material/AdsClick";
-import Statscard from "./Statscard";
+import Statscard from "../../common/Statscard";
 
 export default function AdsSection() {
   return (

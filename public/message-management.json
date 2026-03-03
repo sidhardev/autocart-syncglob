@@ -1,0 +1,82 @@
+{
+  "messageOverview": {
+    "today": { "count": 54, "change": 9.2, "compareText": "Compared to yesterday" },
+    "thisWeek": { "count": 25455, "change": -0.2, "compareText": "Compared to last week" },
+    "thisMonth": { "count": 347588, "change": 9.2, "compareText": "Compared to last month" },
+    "thisYear": { "count": 8752235, "change": -8.4, "compareText": "Compared to last year" }
+  },
+
+  "flaggedMessagesStats": {
+    "today": { "count": 54, "change": 9.2, "compareText": "Compared to yesterday" },
+    "thisWeek": { "count": 25455, "change": -0.2, "compareText": "Compared to last week" },
+    "thisMonth": { "count": 347588, "change": 9.2, "compareText": "Compared to last month" },
+    "thisYear": { "count": 8752235, "change": -8.4, "compareText": "Compared to last year" }
+  },
+
+  "reportedMessagesStats": {
+    "today": { "count": 54, "change": 9.2, "compareText": "Compared to yesterday" },
+    "thisWeek": { "count": 25455, "change": -0.2, "compareText": "Compared to last week" },
+    "thisMonth": { "count": 347588, "change": 9.2, "compareText": "Compared to last month" },
+    "thisYear": { "count": 8752235, "change": -8.4, "compareText": "Compared to last year" }
+  },
+
+  "flaggedMessages": [
+    {
+      "id": 1,
+      "status": "FLAGGED",
+      "sender": {
+        "id": "USER200",
+        "avatar": "/images/users/user1.jpg"
+      },
+      "receiver": {
+        "id": "USER201",
+        "avatar": "/images/users/user2.jpg"
+      },
+      "message": {
+        "content": "Lorem ipsum dolor sit amet consectetur.",
+        "time": "08:47 AM"
+      },
+      "reason": "Suspicious Activities",
+      "date": "2025-01-20"
+    },
+    {
+      "id": 2,
+      "status": "FLAGGED",
+      "sender": {
+        "id": "USER205",
+        "avatar": "/images/users/user3.jpg"
+      },
+      "receiver": {
+        "id": "USER210",
+        "avatar": "/images/users/user4.jpg"
+      },
+      "message": {
+        "content": "Spam promotional content detected.",
+        "time": "11:12 AM"
+      },
+      "reason": "Spam Content",
+      "date": "2025-01-21"
+    }
+  ],
+
+  "reportedMessages": [
+    {
+      "id": 1,
+      "status": "REPORTED",
+      "sender": {
+        "id": "USER300",
+        "avatar": "/images/users/user5.jpg"
+      },
+      "receiver": {
+        "id": "USER301",
+        "avatar": "/images/users/user6.jpg"
+      },
+      "message": {
+        "content": "Inappropriate language used.",
+        "time": "09:20 AM"
+      },
+      "reason": "Abusive Language",
+      "date": "2025-01-19"
+    }
+  ]
+}

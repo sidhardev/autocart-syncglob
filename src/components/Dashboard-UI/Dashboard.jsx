@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import DashboardDatePicker from "./DashboardDatePicker";
 import { Box } from "@mui/material";
-import Statscard from "./Statscard";
+import Statscard from "../../common/Statscard";
 
 function Dashboard() {
   const [ads, setAds] = useState([]);

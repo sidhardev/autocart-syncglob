@@ -23,6 +23,7 @@ function ShowDashboard() {
             marginLeft: "260px",
             minHeight: "calc(100vh - 64px)",
             p: 3,
+            background: "#F9F9F9",
           }}
         >
           <Dashboard />

@@ -85,7 +85,15 @@ export default function AdTable({ filter, rows, tableHeaders }) {
       header: tableHeaders[2] || "Title",
       render: (row) => (
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <img src={row.image} style={{ width: 28 }} />
+          <img
+            src={row.image}
+            style={{
+              width: 28,
+              height: 28,
+              objectFit: "cover",
+              borderRadius: "4px",
+            }}
+          />
           {row.title}
         </Box>
       ),

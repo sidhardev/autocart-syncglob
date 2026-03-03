@@ -42,9 +42,7 @@ export default function CommonTable({
                     index !== columns.length - 1 ? "1px solid #CACACA" : "none",
                   fontWeight: 600,
                   color: "#9CA3AF",
-                  fontStyle: "SemiBold",
-                  fontFamily: "Source Sans Pro",
-                }}
+                 }}
               >
                 {col.header}
               </TableCell>
