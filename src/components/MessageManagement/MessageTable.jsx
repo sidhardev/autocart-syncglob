@@ -1,7 +1,9 @@
 import { Box, Avatar, Typography } from "@mui/material";
 import CommonTable from "../../common/Table";
+import { useNavigate } from "react-router-dom";
 
 export default function MessageTable({ rows, tableHeaders }) {
+  const navigate = useNavigate();
   const getStatusStyles = (status, count) => {
     if (status === "FLAGGED") {
       return {
@@ -112,7 +114,6 @@ export default function MessageTable({ rows, tableHeaders }) {
     <CommonTable
       columns={columns}
       rows={rows}
-      onRowClick={(row) => console.log("Message row:", row)}
-    />
+onRowClick={(row) => navigate(`/message-management/${row.id}`)}    />
   );
 }

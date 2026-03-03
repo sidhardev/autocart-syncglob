@@ -10,6 +10,7 @@ import ReportUI from "./src/components/Reports-analytics/ReportUI";
 import ReportDetails from "./src/components/Reports-analytics/ReportDetails";
 import MessageUI from "./src/components/MessageManagement/MessageUI";
 import FinancialUI from "./src/components/FinancialManagement/FinancialUI";
+import MessageDetails from "./src/components/MessageManagement/MessageDetails";
 
 export const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
   {
     path: "/message-management",
     element: <MessageUI />,
+  },
+  {
+    path: "/message-management/:id",
+    element: <MessageDetails />,
   }
 
 ]);

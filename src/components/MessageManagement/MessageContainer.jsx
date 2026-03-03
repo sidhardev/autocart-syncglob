@@ -2,8 +2,7 @@ import { Box, Typography } from "@mui/material";
 import ReusableTabs, { TabPanel } from "../../common/Tabs";
 import { useEffect, useState } from "react";
 import MessageOverviewCards from "./MessageOverview";
-import FlaggedMessagesTable from "./MessageTable";
-import MessageTable from "./MessageTable";
+ import MessageTable from "./MessageTable";
 
 function MessageContainer() {
   const [value, setValue] = useState(0);
