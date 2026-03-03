@@ -31,10 +31,7 @@ const Notification = () => {
             width: "100%",
             top: "64px",
             position: "relative",
-            backgroundImage:
-              "url('https://syncglob.com/static/media/homeBg.3bfe02e2c5bf3fda69e8.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            marginLeft: "260px",
             minHeight: "calc(100vh - 64px)",
             p: 3,
           }}

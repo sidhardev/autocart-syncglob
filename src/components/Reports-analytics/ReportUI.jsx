@@ -1,10 +1,9 @@
-import React from "react";
-import TopNav from "./AdsContainer";
 import { Box } from "@mui/material";
 import Sidebar from "../layout/Sidebar";
 import TopBar from "../layout/Topbar";
+ import ReportContainer from "./ReportContainer";
 
-function ShowAds() {
+function ReportUI() {
   return (
     <>
       <TopBar />
@@ -18,16 +17,15 @@ function ShowAds() {
             top: "64px",
             position: "relative",
             marginLeft: "260px",
-
             minHeight: "calc(100vh - 64px)",
             p: 3,
-          }}
+           }}
         >
-          <TopNav />
+          <ReportContainer />
         </Box>
       </Box>
     </>
   );
 }
 
-export default ShowAds;
+export default ReportUI;

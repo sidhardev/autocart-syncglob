@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "status": "UNREAD",
+    "reportType": "AD_REPORT",
+    "reporterUserId": "USR3021",
+    "adId": 3,
+    "imageUrl": "https://picsum.photos/200?random=101",
+    "title": "Report on AD3",
+    "category": "Misleading information",
+    "dateIssued": "2025-02-12"
+  },
+  {
+    "id": 2,
+    "status": "READ",
+    "reportType": "USER_REPORT",
+    "reporterUserId": "USR1874",
+    "userId": 7,
+    "imageUrl": "https://picsum.photos/200?random=102",
+    "title": "Report on USR7",
+    "category": "Fraud",
+    "dateIssued": "2025-02-11"
+  },
+  {
+    "id": 3,
+    "status": "UNREAD",
+    "reportType": "AD_REPORT",
+    "reporterUserId": "USR4502",
+    "adId": 5,
+    "imageUrl": "https://picsum.photos/200?random=103",
+    "title": "Report on AD5",
+    "category": "Spam content",
+    "dateIssued": "2025-02-10"
+  },
+  {
+    "id": 4,
+    "status": "READ",
+    "reportType": "USER_REPORT",
+    "reporterUserId": "USR2210",
+    "userId": 2,
+    "imageUrl": "https://picsum.photos/200?random=104",
+    "title": "Report on USR2",
+    "category": "Abusive behavior",
+    "dateIssued": "2025-02-09"
+  },
+  {
+    "id": 5,
+    "status": "UNREAD",
+    "reportType": "AD_REPORT",
+    "reporterUserId": "USR3900",
+    "adId": 8,
+    "imageUrl": "https://picsum.photos/200?random=105",
+    "title": "Report on AD8",
+    "category": "Fraud",
+    "dateIssued": "2025-02-08"
+  },
+  {
+    "id": 6,
+    "status": "READ",
+    "reportType": "AD_REPORT",
+    "reporterUserId": "USR2755",
+    "adId": 1,
+    "imageUrl": "https://picsum.photos/200?random=106",
+    "title": "Report on AD1",
+    "category": "Duplicate listing",
+    "dateIssued": "2025-02-07"
+  },
+  {
+    "id": 7,
+    "status": "UNREAD",
+    "reportType": "USER_REPORT",
+    "reporterUserId": "USR1987",
+    "userId": 10,
+    "imageUrl": "https://picsum.photos/200?random=107",
+    "title": "Report on USR10",
+    "category": "Fake profile",
+    "dateIssued": "2025-02-06"
+  },
+  {
+    "id": 8,
+    "status": "READ",
+    "reportType": "USER_REPORT",
+    "reporterUserId": "USR5120",
+    "userId": 4,
+    "imageUrl": "https://picsum.photos/200?random=108",
+    "title": "Report on USR4",
+    "category": "Inappropriate content",
+    "dateIssued": "2025-02-05"
+  },
+  {
+    "id": 9,
+    "status": "UNREAD",
+    "reportType": "AD_REPORT",
+    "reporterUserId": "USR3312",
+    "adId": 9,
+    "imageUrl": "https://picsum.photos/200?random=109",
+    "title": "Report on AD9",
+    "category": "Misleading information",
+    "dateIssued": "2025-02-04"
+  },
+  {
+    "id": 10,
+    "status": "READ",
+    "reportType": "AD_REPORT",
+    "reporterUserId": "USR4108",
+    "adId": 6,
+    "imageUrl": "https://picsum.photos/200?random=110",
+    "title": "Report on AD6",
+    "category": "Fraud",
+    "dateIssued": "2025-02-03"
+  }
+]

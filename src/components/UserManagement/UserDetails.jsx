@@ -6,6 +6,7 @@ import TopBar from "../layout/Topbar";
 import Sidebar from "../layout/Sidebar";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
+import GoBackButton from "../../common/GoBackButton";
 
 const STATUS_COLORS = {
   Active: "#07B007",
@@ -89,12 +90,14 @@ function UserDetails() {
               mb: 2,
             }}
           >
+
             <Typography
               variant="h5"
               fontWeight="bold"
               color="text.primary"
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
+                        <GoBackButton />
               <StopRoundedIcon
                 fontSize="small"
                 sx={{
@@ -105,7 +108,21 @@ function UserDetails() {
               {userDetails.name || "Untitled User"}
             </Typography>
             <Box sx={{ display: "flex", gap: 2 }}>
-              <CommonButton text={getButtonText()} />
+                {userDetails.status === "Active" && (
+                    <>
+                    <CommonButton text="Edit User" size="medium" />
+                  <CommonButton text="Suspend User" size="medium" />
+                  <CommonButton text="Ban User" size="medium" />
+
+                    </>
+                )}
+                {userDetails.status === "Suspended" && (
+                    <>
+                    <CommonButton text="Edit User" size="medium" />
+                  <CommonButton text="Unsuspend User" size="medium"/>
+                  <CommonButton text="Ban User" size="medium" />
+                    </>
+                )}
             </Box>
           </Box>
 

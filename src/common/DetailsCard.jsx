@@ -85,8 +85,7 @@ function DetailsCard({
                  borderRadius: 2,
                  alignItems:"end",
                  justifyContent:"end",
-                 boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)",
-              }}
+                 display:"flex",}}
             >
               {image && (
                 <Box sx={{ mb: 2 }}>
@@ -96,7 +95,8 @@ function DetailsCard({
                     style={{
                       width: "80%",
                       borderRadius: "8px",
-                      objectFit: "cover",
+                       height:  "80%",
+
                     }}
                   />
                 </Box>

@@ -1,7 +1,7 @@
- import { Box } from "@mui/material";
+import { Box } from "@mui/material";
 import Sidebar from "../layout/Sidebar";
 import TopBar from "../layout/Topbar";
-import Container from "./Container";
+import Container from "./UserContainer";
 
 function UserManagementUI() {
   return (
@@ -16,9 +16,9 @@ function UserManagementUI() {
             width: "100%",
             top: "64px",
             position: "relative",
-                        marginLeft: "260px",
+            marginLeft: "260px",
 
-             minHeight: "calc(100vh - 64px)",
+            minHeight: "calc(100vh - 64px)",
             p: 3,
           }}
         >

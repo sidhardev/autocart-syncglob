@@ -4,9 +4,11 @@ import ShowDashboard from "./src/components/Dashboard-UI/ShowDashboard";
 import Notification from "./src/components/Notification/Notification";
 import ShowAds from "./src/components/AdsManagement/ShowAds";
 import AdDetails from "./src/components/AdsManagement/AdDetails";
-import Container from "./src/components/UserManagement/Container";
+import Container from "./src/components/UserManagement/UserContainer";
 import UserManagementUI from "./src/components/UserManagement/UserManagementUI";
 import UserDetails from "./src/components/UserManagement/UserDetails";
+import ReportUI from "./src/components/Reports-analytics/ReportUI";
+import ReportDetails from "./src/components/Reports-analytics/ReportDetails";
 
 export const router = createBrowserRouter([
   {
@@ -30,11 +32,21 @@ export const router = createBrowserRouter([
     element: <AdDetails />,
   },
   {
-    path: '/user-management',
+    path: "/user-management",
     element: <UserManagementUI />,
   },
   {
-    path: '/user-management/:id',
-    element: <UserDetails />
+    path: "/user-management/:id",
+    element: <UserDetails />,
+  },
+  {
+    path: '/report-analytics',
+    element: <ReportUI />,
+
+  },
+  {
+    path: "/report-analytics/:id",
+    element: <ReportDetails />,
   }
+
 ]);

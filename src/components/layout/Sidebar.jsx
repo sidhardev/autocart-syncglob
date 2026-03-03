@@ -1,4 +1,4 @@
-import { Box, Drawer, List, ListItemButton, ListItemText } from "@mui/material";
+import { Box, Drawer, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const drawerWidth = 260;
@@ -29,6 +29,7 @@ export default function Sidebar() {
       <Box sx={{ overflow: "auto", mt: 2 }}>
         <List>
           <ListItemButton
+          
             component={NavLink}
             to="/dashboard"
             sx={{
@@ -44,6 +45,7 @@ export default function Sidebar() {
               },
             }}
           >
+           
             <ListItemText primary="Dashboard" />
           </ListItemButton>
 
@@ -86,6 +88,8 @@ export default function Sidebar() {
           </ListItemButton>
 
           <ListItemButton
+          component={NavLink}
+            to="/report-analytics"
             sx={{
               borderRadius: 3,
               mb: 1,

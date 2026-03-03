@@ -6,6 +6,7 @@ import Sidebar from "../layout/Sidebar";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import AdDetailsCard from "./AdDetailsCard.jsx";
+import GoBackButton from "../../common/GoBackButton.jsx";
 
 const STATUS_COLORS = {
   ACTIVE: "#07B007",
@@ -84,6 +85,7 @@ function AdDetails() {
               color="text.primary"
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
+            <GoBackButton />
               <StopRoundedIcon
                 fontSize="small"
                 sx={{
