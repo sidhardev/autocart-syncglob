@@ -143,6 +143,7 @@ function CommonButton({
   color = "primary",
   icon = null,
   sx = {},
+  iconName= null
 }) {
   let finalIcon = icon;
   let finalColor = color;
@@ -186,7 +187,7 @@ function CommonButton({
         textTransform: "none",
         ...sx,
       }}
-      startIcon={finalIcon}
+      startIcon={iconName ? getIcon(iconName, iconSize) : finalIcon}
     >
       {text}
     </Button>

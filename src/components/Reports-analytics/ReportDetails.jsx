@@ -2,7 +2,7 @@ import  { useState, useEffect } from "react";
 import Sidebar from "../layout/Sidebar";
 import TopBar from "../layout/Topbar";
 import { useParams } from "react-router-dom";
-import { Box, Typography } from "@mui/material";
+import { Box, SvgIcon, Typography } from "@mui/material";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import DetailsCard from "../../common/DetailsCard";
@@ -76,7 +76,19 @@ const ReportDetails = () => {
     );
   }
 
+const vector = (
+  <SvgIcon
+       viewBox="0 0 40 42"
+    >
+      <path
+        d="M0 10.707H36M28 0.707031L38 10.707L28 20.707M40 30.707H4M12 20.707L2 30.707L12 40.707"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+    </SvgIcon>
 
+)
   
 
   const adFields = [

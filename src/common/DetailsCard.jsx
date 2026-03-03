@@ -17,6 +17,8 @@ function DetailsCard({
           borderRadius: 3,
           width: "95%",
           mx: "auto",
+          boxShadow: 0,
+          border: '1px solid #E5E7EB',
         }}
       >
         <Typography variant="h6" fontWeight="bold" mb={2} sx={{ mt: 1 }}>
@@ -87,7 +89,7 @@ function DetailsCard({
                 justifyContent: "center",
                 display: "flex",
                 flexDirection: "column",
-                        height: "50%",
+                height: "50%",
               }}
             >
               {image && (

@@ -123,7 +123,6 @@ function AdDetails() {
                   height: 200,
                   objectFit: "cover",
                   borderRadius: 2,
-                  boxShadow: 2,
                 }}
               />
             ))}
