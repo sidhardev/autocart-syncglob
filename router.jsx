@@ -11,6 +11,7 @@ import ReportDetails from "./src/components/Reports-analytics/ReportDetails";
 import MessageUI from "./src/components/MessageManagement/MessageUI";
 import FinancialUI from "./src/components/FinancialManagement/FinancialUI";
 import MessageDetails from "./src/components/MessageManagement/MessageDetails";
+import EmailUI from "./src/components/EmailManagement/EmailUI";
 
 export const router = createBrowserRouter([
   {
@@ -61,6 +62,14 @@ export const router = createBrowserRouter([
   {
     path: "/message-management/:id",
     element: <MessageDetails />,
-  }
+  },
+  {
+    path: "/email-management",
+    element: <EmailUI />,
+  },
+  // {
+  //   path: "/email-management/:id",
+  //   element: <EmailDetails />,
+  // }
 
 ]);

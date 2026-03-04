@@ -7,12 +7,13 @@ function FinancialCard({
   amount,
   change,
   comparisonText,
+  currency = "$",
 }) {
   const isPositive = change > 0;
   const isNegative = change < 0;
 
   return (
-    
+
     <Paper
       elevation={0}
       sx={{
@@ -20,7 +21,7 @@ function FinancialCard({
         minWidth: 210,
         height: "80%",
         p: 2,
-         borderRadius: 3,
+        borderRadius: 3,
         border: "1px solid #e5e7eb",
         display: "flex",
         flexDirection: "column",
@@ -75,7 +76,7 @@ function FinancialCard({
             color: "#1f2937",
           }}
         >
-          ${Number(amount).toLocaleString()}
+          {currency}{Number(amount).toLocaleString()}
         </Typography>
 
         <Typography
@@ -85,8 +86,8 @@ function FinancialCard({
             color: isPositive
               ? "#16a34a"
               : isNegative
-              ? "#dc2626"
-              : "#6b7280",
+                ? "#dc2626"
+                : "#6b7280",
           }}
         >
           {isPositive ? "+" : ""}
