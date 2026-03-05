@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import TopBar from "../layout/Topbar";
-import Sidebar from "../layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import Sidebar from "../../components/layout/Sidebar";
 import GoBackButton from "../../common/GoBackButton";
 import CommonButton from "../../common/Button";
 import { useParams } from "react-router-dom";

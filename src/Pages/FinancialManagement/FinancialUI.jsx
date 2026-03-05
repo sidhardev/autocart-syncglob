@@ -1,9 +1,9 @@
-  import { Box } from "@mui/material";
-import Sidebar from "../layout/Sidebar";
-import TopBar from "../layout/Topbar";
-import MessageContainer from "./MessageContainer";
+import { Box } from "@mui/material";
+import Sidebar from "../../components/layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import FinancialContainer from "./FinancialContainer";
 
-function MessageUI() {
+function FinancialUI() {
   return (
     <>
       <TopBar />
@@ -24,11 +24,11 @@ function MessageUI() {
                     background: "#F9F9F9"
                   }}
                 >
-          <MessageContainer />
+          <FinancialContainer />
         </Box>
       </Box>
     </>
   );
 }
 
-export default MessageUI;
+export default FinancialUI;

@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
-import Sidebar from "../layout/Sidebar";
-import TopBar from "../layout/Topbar";
- import ReportContainer from "./ReportContainer";
+import Sidebar from "../../components/layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import Container from "./UserContainer";
 
-function ReportUI() {
+function UserManagementUI() {
   return (
     <>
       <TopBar />
@@ -17,15 +17,16 @@ function ReportUI() {
             top: "64px",
             position: "relative",
             marginLeft: "260px",
+
             minHeight: "calc(100vh - 64px)",
             p: 3,
-           }}
+          }}
         >
-          <ReportContainer />
+          <Container />
         </Box>
       </Box>
     </>
   );
 }
 
-export default ReportUI;
+export default UserManagementUI;

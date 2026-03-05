@@ -1,21 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./src/App";
-import ShowDashboard from "./src/components/Dashboard-UI/ShowDashboard";
-import Notification from "./src/components/Notification/Notification";
-import ShowAds from "./src/components/AdsManagement/ShowAds";
-import AdDetails from "./src/components/AdsManagement/AdDetails";
-import UserManagementUI from "./src/components/UserManagement/UserManagementUI";
-import UserDetails from "./src/components/UserManagement/UserDetails";
-import ReportUI from "./src/components/Reports-analytics/ReportUI";
-import ReportDetails from "./src/components/Reports-analytics/ReportDetails";
-import MessageUI from "./src/components/MessageManagement/MessageUI";
-import FinancialUI from "./src/components/FinancialManagement/FinancialUI";
-import MessageDetails from "./src/components/MessageManagement/MessageDetails";
-import EmailUI from "./src/components/EmailManagement/EmailUI";
-import EmailDetails from "./src/components/EmailManagement/EmailDetails";
-import StoryUI from "./src/components/StoryManagement/StoryUI";
-import StoryDetails from "./src/components/StoryManagement/StoryDetails";
-import Main from "./src/components/MainPage/Main";
+import ShowDashboard from "./src/Pages/Dashboard-UI/ShowDashboard";
+import Notification from "./src/Pages/Notification/Notification";
+import ShowAds from "./src/Pages/AdsManagement/ShowAds";
+import AdDetails from "./src/Pages/AdsManagement/AdDetails";
+import UserManagementUI from "./src/Pages/UserManagement/UserManagementUI";
+import UserDetails from "./src/Pages/UserManagement/UserDetails";
+import ReportUI from "./src/Pages/Reports-analytics/ReportUI";
+import ReportDetails from "./src/Pages/Reports-analytics/ReportDetails";
+import MessageUI from "./src/Pages/MessageManagement/MessageUI";
+import FinancialUI from "./src/Pages/FinancialManagement/FinancialUI";
+import MessageDetails from "./src/Pages/MessageManagement/MessageDetails";
+import EmailUI from "./src/Pages/EmailManagement/EmailUI";
+import EmailDetails from "./src/Pages/EmailManagement/EmailDetails";
+import StoryUI from "./src/Pages/StoryManagement/StoryUI";
+import StoryDetails from "./src/Pages/StoryManagement/StoryDetails";
+import Main from "./src/Pages/MainPage/Main";
 
 export const router = createBrowserRouter([
   {

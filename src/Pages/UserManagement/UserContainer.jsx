@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import TopNav from "../AdsManagement/AdsContainer";
-import TopBar from "../layout/Topbar";
-import Sidebar from "../layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import Sidebar from "../../components/layout/Sidebar";
 import ReusableTabs, { TabPanel } from "../../common/Tabs";
 import SearchBar from "../../common/SearchBar";
 import UsersTable from "./UsersTable";

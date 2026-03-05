@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Sidebar from "../layout/Sidebar";
-import Topbar from "../layout/Topbar";
+import Sidebar from "../../components/layout/Sidebar";
+import Topbar from "../../components/layout/Topbar";
 import Statscard from "../../common/Statscard";
 import FinancialCard from "../../common/FinancialCard";
 import FinanceChart from "../FinancialManagement/BarChart";
 import { useNavigate } from "react-router-dom";
 
- import DonutLargeOutlinedIcon from "@mui/icons-material/DonutLargeOutlined";
+import DonutLargeOutlinedIcon from "@mui/icons-material/DonutLargeOutlined";
 import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
@@ -65,11 +65,11 @@ function Main() {
                         background: "#F9F9F9",
                     }}
                 >
-                     <Box onClick={() => navigate("/ads-management")} sx={{ cursor: "pointer", mb: 4 }}>
-                         <Statscard cards={adsCards} heading="Ads" />
+                    <Box onClick={() => navigate("/ads-management")} sx={{ cursor: "pointer", mb: 4 }}>
+                        <Statscard cards={adsCards} heading="Ads" />
                     </Box>
 
-                     <Box onClick={() => navigate("/users-management")} sx={{ cursor: "pointer", mb: 4 }}>
+                    <Box onClick={() => navigate("/users-management")} sx={{ cursor: "pointer", mb: 4 }}>
                         <Statscard cards={usersCards} heading="Users" />
                     </Box>
 
@@ -118,7 +118,7 @@ function Main() {
                         </Box>
                     </Box>
 
-                     <Box onClick={() => navigate("/email-management")} sx={{ cursor: "pointer", mb: 4 }}>
+                    <Box onClick={() => navigate("/email-management")} sx={{ cursor: "pointer", mb: 4 }}>
                         <Typography variant="h6" fontWeight={600} sx={{ mb: 4, mt: 8, color: "text.secondary", display: "flex", alignItems: "center" }}>
                             <MailOutlineIcon fontSize="small" sx={{ mr: 1, color: "#6c757d" }} />
                             Mail
@@ -143,7 +143,7 @@ function Main() {
                         </Box>
                     </Box>
 
-                     <Box onClick={() => navigate("/story-management")} sx={{ cursor: "pointer", mb: 4 }}>
+                    <Box onClick={() => navigate("/story-management")} sx={{ cursor: "pointer", mb: 4 }}>
                         <Typography variant="h6" fontWeight={600} sx={{ mb: 2, mt: 8, color: "text.secondary", display: "flex", alignItems: "center" }}>
                             <DonutLargeOutlinedIcon fontSize="small" sx={{ mr: 1, color: "#6c757d" }} />
                             Stories

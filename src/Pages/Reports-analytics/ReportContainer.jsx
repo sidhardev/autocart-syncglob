@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
-import TopBar from "../layout/Topbar";
-import Sidebar from "../layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import Sidebar from "../../components/layout/Sidebar";
 import ReusableTabs, { TabPanel } from "../../common/Tabs";
 import SearchBar from "../../common/SearchBar";
 import ReportsTable from "./ReportsTable";
@@ -60,33 +60,33 @@ function ReportContainer() {
       <Box sx={{ display: "flex" }}>
         <Sidebar />
 
-        
-          <ReusableTabs
-            tabsData={tabsData}
-            value={value}
-            onChange={setValue}
-            getCount={getCount}
-            typeKey="reportType"
-          >
-            {(activeIndex) => (
-              <>
-                {tabsData.map((tab, index) => (
-                  <TabPanel key={index} value={value} index={index}>
 
-                    <SearchBar text={"Search Reports"} />
+        <ReusableTabs
+          tabsData={tabsData}
+          value={value}
+          onChange={setValue}
+          getCount={getCount}
+          typeKey="reportType"
+        >
+          {(activeIndex) => (
+            <>
+              {tabsData.map((tab, index) => (
+                <TabPanel key={index} value={value} index={index}>
 
-                    <ReportsTable
-                      filter={tab.reportType}
-                      filterField={getFilterField(tab.reportType)}
-                      tableHeaders={TableHeaders}
-                      rows={rows}
-                    />
-                  </TabPanel>
-                ))}
-              </>
-            )}
-          </ReusableTabs>
-        </Box>
+                  <SearchBar text={"Search Reports"} />
+
+                  <ReportsTable
+                    filter={tab.reportType}
+                    filterField={getFilterField(tab.reportType)}
+                    tableHeaders={TableHeaders}
+                    rows={rows}
+                  />
+                </TabPanel>
+              ))}
+            </>
+          )}
+        </ReusableTabs>
+      </Box>
     </>
   );
 }

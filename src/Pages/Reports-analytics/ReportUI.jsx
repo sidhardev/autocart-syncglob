@@ -1,36 +1,31 @@
-import React from "react";
-import TopBar from "../layout/Topbar";
 import { Box } from "@mui/material";
-import Sidebar from "../layout/Sidebar";
-import Dashboard from "./Dashboard";
+import Sidebar from "../../components/layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import ReportContainer from "./ReportContainer";
 
-function ShowDashboard() {
+function ReportUI() {
   return (
     <>
       <TopBar />
 
       <Box sx={{ display: "flex" }}>
         <Sidebar />
-
         <Box
           sx={{
             flexGrow: 1,
             width: "100%",
             top: "64px",
             position: "relative",
-            overflowX: "auto",
-            overflowY: "auto",
             marginLeft: "260px",
             minHeight: "calc(100vh - 64px)",
             p: 3,
-            background: "#F9F9F9",
           }}
         >
-          <Dashboard />
+          <ReportContainer />
         </Box>
       </Box>
     </>
   );
 }
 
-export default ShowDashboard;
+export default ReportUI;

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import Sidebar from "../layout/Sidebar";
-import TopBar from "../layout/Topbar";
+import Sidebar from "../../components/layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
 import StoryContainer from "./StoryContainer";
 
 function StoryUI() {

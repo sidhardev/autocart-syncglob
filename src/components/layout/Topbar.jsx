@@ -6,8 +6,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import AdbIcon from "@mui/icons-material/Adb";
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+ import { NavLink, useNavigate } from "react-router-dom";
  function TopBar() {
   const navigate = useNavigate();
   return (

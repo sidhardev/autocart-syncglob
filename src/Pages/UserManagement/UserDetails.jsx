@@ -2,8 +2,8 @@ import DetailsCard from "../../common/DetailsCard";
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import TopBar from "../layout/Topbar";
-import Sidebar from "../layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import Sidebar from "../../components/layout/Sidebar";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import GoBackButton from "../../common/GoBackButton";
@@ -97,7 +97,7 @@ function UserDetails() {
               color="text.primary"
               sx={{ display: "flex", alignItems: "center", gap: 1 }}
             >
-                        <GoBackButton />
+              <GoBackButton />
               <StopRoundedIcon
                 fontSize="small"
                 sx={{
@@ -108,21 +108,21 @@ function UserDetails() {
               {userDetails.name || "Untitled User"}
             </Typography>
             <Box sx={{ display: "flex", gap: 2 }}>
-                {userDetails.status === "Active" && (
-                    <>
-                    <CommonButton text="Edit User" size="medium" />
+              {userDetails.status === "Active" && (
+                <>
+                  <CommonButton text="Edit User" size="medium" />
                   <CommonButton text="Suspend User" size="medium" />
                   <CommonButton text="Ban User" size="medium" />
 
-                    </>
-                )}
-                {userDetails.status === "Suspended" && (
-                    <>
-                    <CommonButton text="Edit User" size="medium" />
-                  <CommonButton text="Unsuspend User" size="medium"/>
+                </>
+              )}
+              {userDetails.status === "Suspended" && (
+                <>
+                  <CommonButton text="Edit User" size="medium" />
+                  <CommonButton text="Unsuspend User" size="medium" />
                   <CommonButton text="Ban User" size="medium" />
-                    </>
-                )}
+                </>
+              )}
             </Box>
           </Box>
 

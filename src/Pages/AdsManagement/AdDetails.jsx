@@ -1,8 +1,8 @@
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import TopBar from "../layout/Topbar";
-import Sidebar from "../layout/Sidebar";
+import TopBar from "../../components/layout/Topbar";
+import Sidebar from "../../components/layout/Sidebar";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import AdDetailsCard from "./AdDetailsCard.jsx";
@@ -127,11 +127,11 @@ function AdDetails() {
               />
             ))}
           </Box>
-          
 
-            {ad.status === "REJECTED" && (
-              <Rejection rejectionReason={ad.rejectionReason} />
-            )}
+
+          {ad.status === "REJECTED" && (
+            <Rejection rejectionReason={ad.rejectionReason} />
+          )}
         </Box>
       </Box>
     </>
