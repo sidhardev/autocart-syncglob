@@ -17,10 +17,10 @@ function FinancialCard({
     <Paper
       elevation={0}
       sx={{
-        flex: "1 1 210px",
-        minWidth: 210,
-        height: "80%",
-        p: 2,
+        flex: { xs: "1 1 100%", sm: "1 1 210px" },
+        minWidth: { xs: "100%", sm: 210 },
+        height: "auto",
+        p: { xs: 2, sm: 2.5 },
         borderRadius: 3,
         border: "1px solid #e5e7eb",
         display: "flex",
@@ -41,6 +41,7 @@ function FinancialCard({
           sx={{
             fontWeight: 500,
             color: "#8b5a2b",
+            fontSize: { xs: "0.9rem", sm: "1rem" }
           }}
         >
           {title}
@@ -57,7 +58,7 @@ function FinancialCard({
           }}
         >
           <CalendarTodayOutlinedIcon
-            sx={{ fontSize: 18, color: "#9ca3af" }}
+            sx={{ fontSize: { xs: 16, sm: 18 }, color: "#9ca3af" }}
           />
         </Box>
       </Box>
@@ -68,15 +69,18 @@ function FinancialCard({
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          flexWrap: "wrap",
+          gap: 1
         }}
       >
         <Typography
           variant="h4"
           sx={{
             color: "#1f2937",
+            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.125rem" }
           }}
         >
-          {currency}{Number(amount).toLocaleString()}
+          {currency}{Number(amount || 0).toLocaleString()}
         </Typography>
 
         <Typography
@@ -91,7 +95,7 @@ function FinancialCard({
           }}
         >
           {isPositive ? "+" : ""}
-          {change}%
+          {change || 0}%
         </Typography>
       </Box>
 

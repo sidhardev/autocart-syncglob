@@ -14,12 +14,11 @@ function UserManagementUI() {
           sx={{
             flexGrow: 1,
             width: "100%",
-            top: "64px",
-            position: "relative",
-            marginLeft: "260px",
-
+            mt: "64px",
             minHeight: "calc(100vh - 64px)",
-            p: 3,
+            overflow: "auto",
+            p: { xs: 2, sm: 3 },
+            background: "#F9F9F9",
           }}
         >
           <Container />

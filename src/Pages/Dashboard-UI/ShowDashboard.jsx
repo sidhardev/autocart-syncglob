@@ -16,14 +16,11 @@ function ShowDashboard() {
           sx={{
             flexGrow: 1,
             width: "100%",
-            top: "64px",
-            position: "relative",
-            overflowX: "auto",
-            overflowY: "auto",
-            marginLeft: "260px",
+            mt: "64px",
             minHeight: "calc(100vh - 64px)",
-            p: 3,
+            p: { xs: 1.5, sm: 2, md: 3 },
             background: "#F9F9F9",
+            overflow: "hidden"
           }}
         >
           <Dashboard />

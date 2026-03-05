@@ -1,10 +1,11 @@
 import { Box, Drawer, List, ListItemButton, ListItemIcon, ListItemText, SvgIcon } from "@mui/material";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import AdsClickOutlinedIcon from '@mui/icons-material/AdsClickOutlined';
 import PublicIcon from '@mui/icons-material/Public';
 
-const drawerWidth = 280;
+const drawerWidth = 260;
 
 const NAV_ITEMS = [
   {
@@ -72,36 +73,48 @@ const NAV_ITEMS = [
     label: "Story Management",
     icon: (
       <SvgIcon viewBox="0 0 36 36">
-      <path
-        d="M16.845 20.88C19.242 21.801 20.685 23.2605 22.5 25.5M16.845 20.88C13.9305 19.7595 11.7375 19.467 9.75 19.5M16.845 20.88C19.1175 18.381 20.61 16.5795 26.25 15.75"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-      <path
-        d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-      <path
-        d="M33 18C33.0014 20.0646 32.5765 22.1072 31.752 24M18 33C19.9702 33.0024 21.9214 32.6155 23.7416 31.8616C25.5618 31.1076 27.2151 30.0014 28.6065 28.6065M3.00001 18C2.99758 16.0298 3.38447 14.0786 4.13845 12.2584C4.89243 10.4382 5.99863 8.78488 7.39351 7.3935M18 3C15.9354 2.99866 13.8928 3.42352 12 4.248M12 31.752C8.53217 30.2362 5.76384 27.4678 4.24801 24M23.748 4.5C27.2159 6.01584 29.9842 8.78416 31.5 12.252"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-    </SvgIcon>
+        <path
+          d="M16.845 20.88C19.242 21.801 20.685 23.2605 22.5 25.5M16.845 20.88C13.9305 19.7595 11.7375 19.467 9.75 19.5M16.845 20.88C19.1175 18.381 20.61 16.5795 26.25 15.75"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+        <path
+          d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+        <path
+          d="M33 18C33.0014 20.0646 32.5765 22.1072 31.752 24M18 33C19.9702 33.0024 21.9214 32.6155 23.7416 31.8616C25.5618 31.1076 27.2151 30.0014 28.6065 28.6065M3.00001 18C2.99758 16.0298 3.38447 14.0786 4.13845 12.2584C4.89243 10.4382 5.99863 8.78488 7.39351 7.3935M18 3C15.9354 2.99866 13.8928 3.42352 12 4.248M12 31.752C8.53217 30.2362 5.76384 27.4678 4.24801 24M23.748 4.5C27.2159 6.01584 29.9842 8.78416 31.5 12.252"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+      </SvgIcon>
     )
   }
 ];
 
 export default function Sidebar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleToggle = () => setMobileOpen(prev => !prev);
+    window.addEventListener('toggleMobileSidebar', handleToggle);
+    return () => window.removeEventListener('toggleMobileSidebar', handleToggle);
+  }, []);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
   const navItemStyles = {
     borderRadius: 3,
     mb: 1,
@@ -113,45 +126,69 @@ export default function Sidebar() {
       },
     },
   };
-  return (
-    <Drawer
-      variant="permanent"
-      anchor="left"
-      sx={{
-        width: drawerWidth,
-        position: "fixed",
-        zIndex: 1200,
-        flexShrink: 0,
-        overflowX: "hidden",
-        "& .MuiDrawer-paper": {
-          width: drawerWidth,
-          boxSizing: "border-box",
-          pl: 2,
-          pr: 1,
-          position: "fixed",
-          height: "calc(100vh - 64px)",
-          top: "64px",
 
-        },
-      }}
-    >
-      <Box sx={{ overflow: "auto", mt: 2, color: "#9CA3AF" }}>
-        <List sx={{ "& .MuiListItemIcon-root": { color: "inherit" } }}>
-          {NAV_ITEMS.map((item) => (
-            <ListItemButton
-              key={item.path}
-              component={NavLink}
-              to={item.path}
-              sx={navItemStyles}
-            >
-              <ListItemIcon>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText primary={item.label} />
-            </ListItemButton>
-          ))}
-        </List>
-      </Box>
-    </Drawer>
+  const drawerContent = (
+    <Box sx={{ overflow: "auto", mt: 2, color: "#9CA3AF" }}>
+      <List sx={{ "& .MuiListItemIcon-root": { color: "inherit" } }}>
+        {NAV_ITEMS.map((item) => (
+          <ListItemButton
+            key={item.path}
+            component={NavLink}
+            to={item.path}
+            sx={navItemStyles}
+            onClick={() => setMobileOpen(false)}
+          >
+            <ListItemIcon>
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText primary={item.label} />
+          </ListItemButton>
+        ))}
+      </List>
+    </Box>
+  );
+
+  return (
+    <Box component="nav" sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}>
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true,  
+        }}
+        sx={{
+          display: { xs: "block", md: "none" },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: drawerWidth,
+            pl: 2,
+            pr: 1,
+            mt: "64px",
+            height: "calc(100vh - 64px)"
+          },
+        }}
+      >
+        {drawerContent}
+      </Drawer>
+      <Drawer
+        variant="permanent"
+        sx={{
+          display: { xs: "none", md: "block" },
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+            boxSizing: "border-box",
+            pl: 2,
+            pr: 1,
+            position: "fixed",
+            height: "calc(100vh - 64px)",
+            top: "64px",
+          },
+        }}
+        open
+      >
+        {drawerContent}
+      </Drawer>
+    </Box>
   );
 }

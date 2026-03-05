@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
-import TopBar from "../../components/layout/Topbar";
-import Sidebar from "../../components/layout/Sidebar";
 import ReusableTabs, { TabPanel } from "../../common/Tabs";
 import SearchBar from "../../common/SearchBar";
 import ReportsTable from "./ReportsTable";
@@ -55,11 +53,7 @@ function ReportContainer() {
 
   return (
     <>
-      <TopBar />
-
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
-
+      <Box sx={{ display: "flex", width: "100%" }}>
 
         <ReusableTabs
           tabsData={tabsData}

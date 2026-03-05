@@ -45,7 +45,9 @@ function ReusableTabs({
       <MuiTabs
         value={value}
         onChange={(e, newValue) => onChange(newValue)}
-        variant="fullWidth"
+        variant="scrollable"
+        scrollButtons="auto"
+        allowScrollButtonsMobile
         sx={{
           "& .MuiTabs-indicator": {
             display: "none",
@@ -77,10 +79,10 @@ function ReusableTabs({
       {children
         ? children(value)
         : tabsData.map((tab, index) => (
-            <TabPanel key={index} value={value} index={index}>
-              {tab.content || `Content for ${tab.label}`}
-            </TabPanel>
-          ))}
+          <TabPanel key={index} value={value} index={index}>
+            {tab.content || `Content for ${tab.label}`}
+          </TabPanel>
+        ))}
     </Box>
   );
 }

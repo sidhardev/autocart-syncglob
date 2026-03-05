@@ -11,6 +11,7 @@ const ShowNotification = ({ notification }) => {
           alignItems: "center",
           mb: 2,
           mt: 1,
+          
         }}
       >
         <Typography

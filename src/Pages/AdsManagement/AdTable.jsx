@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import CommonTable from "../../common/Table";
 import { Box, Typography, Avatar } from "@mui/material";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
+import { formatLabel } from "../../common/Formatlabel";
 
 export default function AdTable({ filter, rows, tableHeaders }) {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function AdTable({ filter, rows, tableHeaders }) {
             }}
           />
           <Typography variant="body2" color="text.secondary">
-            {row.status}
+            {formatLabel(row.status)}
           </Typography>
         </Box>
       ),

@@ -6,42 +6,55 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import AdbIcon from "@mui/icons-material/Adb";
- import { NavLink, useNavigate } from "react-router-dom";
- function TopBar() {
+import MenuIcon from "@mui/icons-material/Menu";
+import { NavLink, useNavigate } from "react-router-dom";
+function TopBar() {
   const navigate = useNavigate();
   return (
     <>
-      <AppBar position="fixed" sx={{ background: "#DCFCE7" }}>
+      <AppBar position="fixed" sx={{ background: "#DCFCE7", zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Container maxWidth="xl">
           <Toolbar
             disableGutters
             sx={{ display: "flex", alignItems: "center" }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => navigate("/")}>
-              <AdbIcon sx={{ mr: 1, color: "#15803D" }} />
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                 sx={{
-                  fontFamily: "monospace",
-
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "#15803D",
-                  textDecoration: "none",
-                }}
+            <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={() => window.dispatchEvent(new CustomEvent('toggleMobileSidebar'))}
+                sx={{ mr: 1, ml: 1, display: { md: 'none' }, color: '#15803D' }}
               >
-                SG AUTOMOBILES
-              </Typography>
+                <MenuIcon />
+              </IconButton>
+              <Box onClick={() => navigate("/")} sx={{ display: "flex", alignItems: "center" }}>
+                <AdbIcon sx={{ mr: 1, color: "#15803D", display: { xs: 'none', sm: 'block' } }} />
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="a"
+                  sx={{
+                    fontFamily: "monospace",
+
+                    fontWeight: 700,
+                    letterSpacing: { xs: ".1rem", sm: ".3rem" },
+                    fontSize: { xs: "0.9rem", sm: "1.25rem" },
+                    color: "#15803D",
+                    textDecoration: "none",
+                  }}
+                >
+                  SG AUTOMOBILES
+                </Typography>
+              </Box>
             </Box>
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <Typography sx={{ mr: 1, color: "#15803D" }}>
+            <Typography sx={{ mr: 1, color: "#15803D", display: { xs: 'none', sm: 'block' } }}>
               Syncglob Admin
             </Typography>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 2, sm: 4, md: 6 } }}>
               <IconButton sx={{ p: 0 }}>
                 <Avatar sx={{ border: "1px solid #15803D" }} />
               </IconButton>

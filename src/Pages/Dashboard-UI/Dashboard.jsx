@@ -28,8 +28,7 @@ function Dashboard() {
     <>
       <Box
         sx={{
-          p: 4,
-
+          p: { xs: 1, sm: 1.5, md: 2 },
           minHeight: "100vh",
         }}
       >

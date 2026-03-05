@@ -13,10 +13,11 @@ function Statscard({ cards, heading }) {
         fontWeight={600}
         sx={{
           mb: 2,
-          mt: 8,
+          mt: { xs: 4, sm: 6, md: 8 },
           color: "text.secondary",
           display: "flex",
           alignItems: "center",
+          fontSize: { xs: "1rem", sm: "1.25rem" }
         }}
       >
         {" "}
@@ -106,8 +107,8 @@ function Statscard({ cards, heading }) {
             key={card.id}
             elevation={1}
             sx={{
-              flex: "1 1 220px",
-              minWidth: 220,
+              flex: { xs: "1 1 100%", sm: "1 1 220px" },
+              minWidth: { xs: "100%", sm: 220 },
               p: 2,
               display: "flex",
               flexDirection: "column",
@@ -144,7 +145,11 @@ function Statscard({ cards, heading }) {
                 {card.ratio}{" "}
               </Typography>{" "}
             </Box>{" "}
-            <Typography variant="h4" color="text.primary">
+            <Typography
+              variant="h4"
+              color="text.primary"
+              sx={{ fontSize: { xs: "1.75rem", sm: "2.125rem" } }}
+            >
               {" "}
               {card.data}{" "}
               <Typography

@@ -8,12 +8,15 @@ function DashboardDatePicker() {
         sx={{
           backgroundColor: "#ffffffb9",
           borderRadius: 3,
-          p: 2.5,
+          p: { xs: 2, sm: 2.5 },
           display: "flex",
-          alignItems: "center",
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: { xs: "flex-start", sm: "center" },
           justifyContent: "space-between",
+          gap: 2,
           boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-          width: "95%",
+          width: "100%",
+          maxWidth: "100%",
           border: "1px solid #e0e0e0",
         }}
       >
@@ -22,12 +25,12 @@ function DashboardDatePicker() {
             Today
           </Typography>
 
-          <Box sx={{ display: "flex", gap: 4, mt: 1 }}>
-            <Typography color="text.secondary">
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: { xs: 1, sm: 4 }, mt: 1 }}>
+            <Typography color="text.secondary" variant="body2">
               Sunday 19TH January 2025
             </Typography>
 
-            <Typography color="text.secondary">01:25pm</Typography>
+            <Typography color="text.secondary" variant="body2">01:25pm</Typography>
           </Box>
         </Box>
 
@@ -37,6 +40,7 @@ function DashboardDatePicker() {
           sx={{
             borderRadius: 3,
             textTransform: "none",
+            width: { xs: "100%", sm: "auto" },
           }}
           color="info"
         >

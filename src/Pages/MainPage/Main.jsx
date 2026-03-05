@@ -61,7 +61,6 @@ function Main() {
                         position: "relative",
                         minHeight: "calc(100vh - 64px)",
                         p: 4,
-                        marginLeft: "260px",
                         background: "#F9F9F9",
                     }}
                 >
@@ -69,7 +68,7 @@ function Main() {
                         <Statscard cards={adsCards} heading="Ads" />
                     </Box>
 
-                    <Box onClick={() => navigate("/users-management")} sx={{ cursor: "pointer", mb: 4 }}>
+                    <Box onClick={() => navigate("/user-management")} sx={{ cursor: "pointer", mb: 4 }}>
                         <Statscard cards={usersCards} heading="Users" />
                     </Box>
 

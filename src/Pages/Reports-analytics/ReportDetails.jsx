@@ -125,8 +125,7 @@ const ReportDetails = () => {
           flexGrow: 1,
           top: "64px",
           position: "relative",
-          marginLeft: "260px",
-          minHeight: "calc(100vh - 64px)",
+          minHeight: "calc(100vh - 64px)", overflow: "auto",
           p: 3,
         }}
       >

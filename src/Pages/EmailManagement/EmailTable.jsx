@@ -116,7 +116,7 @@ export default function EmailTable({ rows, type = "inbox", onRowClick }) {
                 },
                 {
                     header: "Days in draft",
-                    render: (row) => <Typography fontWeight={600}>{row.daysInDraft}</Typography>,
+                    render: (row) => <Typography>{row.daysInDraft}</Typography>,
                 },
             ];
         } else {

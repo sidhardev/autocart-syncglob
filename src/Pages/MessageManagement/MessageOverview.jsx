@@ -1,4 +1,4 @@
- import FinancialCard from "../../common/FinancialCard";
+import FinancialCard from "../../common/FinancialCard";
 import { Box } from "@mui/material";
 
 function MessageOverviewCards({ messageOverview }) {
@@ -36,7 +36,7 @@ function MessageOverviewCards({ messageOverview }) {
   ];
 
   return (
-    <Box sx={{ display: "flex", gap: 3 }}>
+    <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
       {overviewCards.map((card) => (
         <FinancialCard
           key={card.id}
