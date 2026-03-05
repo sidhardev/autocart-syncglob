@@ -5,8 +5,10 @@ import SearchBar from "../../common/SearchBar";
 import CalendarIcon from "../../Icons/CalanderIcon";
 import FinancialCard from "../../common/FinancialCard";
 import EmailTable from "./EmailTable";
+import { useNavigate } from "react-router-dom";
 
 function EmailContainer() {
+    const navigate = useNavigate();
     const [value, setValue] = useState(0);
     const [emailData, setEmailData] = useState(null);
     const [inboxEmails, setInboxEmails] = useState([]);
@@ -44,6 +46,19 @@ function EmailContainer() {
 
     const filterTabs = ["All", "Unread", "Read"];
     const outboxFilterTabs = ["All", "Delivered", "Opened", "Not Delivered"];
+
+    const cardData = [
+        { id: 1, title: "Today", amount: 54, change: 9.2, comparisonText: "Compared to yesterday", currency: "" },
+        { id: 2, title: "This Week", amount: 25455, change: -0.2, comparisonText: "Compared to Last week", currency: "" },
+        { id: 3, title: "This Month", amount: 347588, change: 9.2, comparisonText: "Compared to Last Month", currency: "" },
+        { id: 4, title: "This Year", amount: 8752235, change: -8.4, comparisonText: "Compared to Last Year", currency: "" }
+    ];
+
+
+
+    const handleRowClick = (row, type) => {
+        navigate(`/email-management/${row.id}?type=${type}`);
+    };
 
     return (
         <Box sx={{ display: "flex", width: "100%" }}>
@@ -88,7 +103,7 @@ function EmailContainer() {
                             <Box sx={{ display: "flex", gap: 4, alignItems: "center" }}>
                                 <Button
                                     variant="outlined"
-                                    sx={{ whiteSpace: "nowrap", borderRadius: 2 }}
+                                    sx={{ whiteSpace: "nowrap", borderRadius: 2, color: "#9CA3AF", border: "1px solid #CACACA" }}
                                 >
                                     Compose Mail
                                 </Button>
@@ -107,7 +122,7 @@ function EmailContainer() {
                             </Box>
                         </Box>
 
-                         <TabPanel value={value} index={0}>
+                        <TabPanel value={value} index={0}>
                             <Box sx={{ display: "flex", flexDirection: "column", gap: 3, width: "100%", mt: -2 }}>
                                 <Typography
                                     variant="h6"
@@ -117,10 +132,16 @@ function EmailContainer() {
                                     Inbox Mail
                                 </Typography>
                                 <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2 }}>
-                                    <FinancialCard title="Today" amount={54} change={9.2} comparisonText="Compared to yesterday" currency="" />
-                                    <FinancialCard title="This Week" amount={25455} change={-0.2} comparisonText="Compared to Last week" currency="" />
-                                    <FinancialCard title="This Month" amount={347588} change={9.2} comparisonText="Compared to Last Month" currency="" />
-                                    <FinancialCard title="This Year" amount={8752235} change={-8.4} comparisonText="Compared to Last Year" currency="" />
+                                    {cardData.map((card) => (
+                                        <FinancialCard
+                                            key={card.id}
+                                            title={card.title}
+                                            amount={card.amount}
+                                            change={card.change}
+                                            comparisonText={card.comparisonText}
+                                            currency={card.currency}
+                                        />
+                                    ))}
                                 </Box>
 
                                 <Typography
@@ -131,17 +152,23 @@ function EmailContainer() {
                                     Outbox Mail
                                 </Typography>
                                 <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2 }}>
-                                    <FinancialCard title="Today" amount={54} change={9.2} comparisonText="Compared to yesterday" currency="" />
-                                    <FinancialCard title="This Week" amount={25455} change={-0.2} comparisonText="Compared to Last week" currency="" />
-                                    <FinancialCard title="This Month" amount={347588} change={9.2} comparisonText="Compared to Last Month" currency="" />
-                                    <FinancialCard title="This Year" amount={8752235} change={-8.4} comparisonText="Compared to Last Year" currency="" />
+                                    {cardData.map((card) => (
+                                        <FinancialCard
+                                            key={card.id}
+                                            title={card.title}
+                                            amount={card.amount}
+                                            change={card.change}
+                                            comparisonText={card.comparisonText}
+                                            currency={card.currency}
+                                        />
+                                    ))}
                                 </Box>
                             </Box>
                         </TabPanel>
 
-                         <TabPanel value={value} index={1}>
+                        <TabPanel value={value} index={1}>
                             <Box sx={{ mt: -2 }}>
-                                 <Box sx={{ display: "flex", gap: 4, mb: 1 }}>
+                                <Box sx={{ display: "flex", gap: 4, mb: 1 }}>
                                     {filterTabs.map((tab) => (
                                         <Typography
                                             key={tab}
@@ -161,13 +188,14 @@ function EmailContainer() {
 
                                 <EmailTable
                                     rows={inboxEmails.filter(row => activeInboxTab === "All" ? true : row.status === activeInboxTab)}
+                                    onRowClick={(row) => handleRowClick(row, 'inbox')}
                                 />
                             </Box>
                         </TabPanel>
 
-                         <TabPanel value={value} index={2}>
+                        <TabPanel value={value} index={2}>
                             <Box sx={{ mt: -2 }}>
-                                 <Box sx={{ display: "flex", gap: 4, mb: 1 }}>
+                                <Box sx={{ display: "flex", gap: 4, mb: 1 }}>
                                     {outboxFilterTabs.map((tab) => (
                                         <Typography
                                             key={tab}
@@ -188,15 +216,17 @@ function EmailContainer() {
                                 <EmailTable
                                     type="outbox"
                                     rows={outboxEmails.filter(row => activeOutboxTab === "All" ? true : row.status === activeOutboxTab)}
+                                    onRowClick={(row) => handleRowClick(row, 'outbox')}
                                 />
                             </Box>
                         </TabPanel>
 
-                         <TabPanel value={value} index={3}>
+                        <TabPanel value={value} index={3}>
                             <Box sx={{ mt: -2 }}>
                                 <EmailTable
                                     type="draft"
                                     rows={draftEmails}
+                                    onRowClick={(row) => handleRowClick(row, 'draft')}
                                 />
                             </Box>
                         </TabPanel>

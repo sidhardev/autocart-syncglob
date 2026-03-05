@@ -71,7 +71,32 @@ const NAV_ITEMS = [
     path: "/story-management",
     label: "Story Management",
     icon: (
-      <PublicIcon />
+      <SvgIcon viewBox="0 0 36 36">
+      <path
+        d="M16.845 20.88C19.242 21.801 20.685 23.2605 22.5 25.5M16.845 20.88C13.9305 19.7595 11.7375 19.467 9.75 19.5M16.845 20.88C19.1175 18.381 20.61 16.5795 26.25 15.75"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M18 27C22.9706 27 27 22.9706 27 18C27 13.0294 22.9706 9 18 9C13.0294 9 9 13.0294 9 18C9 22.9706 13.0294 27 18 27Z"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M33 18C33.0014 20.0646 32.5765 22.1072 31.752 24M18 33C19.9702 33.0024 21.9214 32.6155 23.7416 31.8616C25.5618 31.1076 27.2151 30.0014 28.6065 28.6065M3.00001 18C2.99758 16.0298 3.38447 14.0786 4.13845 12.2584C4.89243 10.4382 5.99863 8.78488 7.39351 7.3935M18 3C15.9354 2.99866 13.8928 3.42352 12 4.248M12 31.752C8.53217 30.2362 5.76384 27.4678 4.24801 24M23.748 4.5C27.2159 6.01584 29.9842 8.78416 31.5 12.252"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </SvgIcon>
     )
   }
 ];

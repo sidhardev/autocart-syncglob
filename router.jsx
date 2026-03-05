@@ -12,11 +12,15 @@ import MessageUI from "./src/components/MessageManagement/MessageUI";
 import FinancialUI from "./src/components/FinancialManagement/FinancialUI";
 import MessageDetails from "./src/components/MessageManagement/MessageDetails";
 import EmailUI from "./src/components/EmailManagement/EmailUI";
+import EmailDetails from "./src/components/EmailManagement/EmailDetails";
+import StoryUI from "./src/components/StoryManagement/StoryUI";
+import StoryDetails from "./src/components/StoryManagement/StoryDetails";
+import Main from "./src/components/MainPage/Main";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Main />,
   },
   {
     path: "/notifications",
@@ -67,9 +71,17 @@ export const router = createBrowserRouter([
     path: "/email-management",
     element: <EmailUI />,
   },
-  // {
-  //   path: "/email-management/:id",
-  //   element: <EmailDetails />,
-  // }
+  {
+    path: "/email-management/:id",
+    element: <EmailDetails />,
+  },
+  {
+    path: "/story-management",
+    element: <StoryUI />,
+  },
+  {
+    path: "/story-management/:id",
+    element: <StoryDetails />,
+  }
 
 ]);

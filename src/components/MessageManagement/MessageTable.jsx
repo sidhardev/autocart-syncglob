@@ -7,18 +7,18 @@ export default function MessageTable({ rows, tableHeaders }) {
   const getStatusStyles = (status, count) => {
     if (status === "FLAGGED") {
       return {
-        bg: "#FFF7E6",
+        bg: "#FEFCE8",
         dot: "#EAB308",
-        text: "#B45309",
+        text: "#9CA3AF",
         label: "Flagged",
       };
     }
 
     if (status === "REPORTED") {
       return {
-        bg: "#FEE2E2",
+        bg: "#FEF2F2",
         dot: "#EF4444",
-        text: "#B91C1C",
+        text: "#9CA3AF",
         label: count ? `Reported (${count})` : "Reported",
       };
     }
@@ -46,7 +46,7 @@ export default function MessageTable({ rows, tableHeaders }) {
               bgcolor: styles.bg,
               px: 2,
               py: 0.5,
-              borderRadius: 2,
+              borderRadius: 1,
               width: "fit-content",
             }}
           >

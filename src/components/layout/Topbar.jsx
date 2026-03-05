@@ -7,9 +7,9 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import AdbIcon from "@mui/icons-material/Adb";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
-import { Link, NavLink } from "react-router-dom";
-
-function TopBar() {
+import { Link, NavLink, useNavigate } from "react-router-dom";
+ function TopBar() {
+  const navigate = useNavigate();
   return (
     <>
       <AppBar position="fixed" sx={{ background: "#DCFCE7" }}>
@@ -18,14 +18,13 @@ function TopBar() {
             disableGutters
             sx={{ display: "flex", alignItems: "center" }}
           >
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => navigate("/")}>
               <AdbIcon sx={{ mr: 1, color: "#15803D" }} />
               <Typography
                 variant="h6"
                 noWrap
                 component="a"
-                href="#"
-                sx={{
+                 sx={{
                   fontFamily: "monospace",
 
                   fontWeight: 700,

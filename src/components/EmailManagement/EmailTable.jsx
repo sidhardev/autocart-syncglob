@@ -1,21 +1,21 @@
 import { Box, Avatar, Typography } from "@mui/material";
 import CommonTable from "../../common/Table";
 
-export default function EmailTable({ rows, type = "inbox" }) {
+export default function EmailTable({ rows, type = "inbox", onRowClick }) {
     const getStatusStyles = (status) => {
         switch (status) {
             case "Unread":
-                return { bg: "#FEE2E2", dot: "#EF4444", text: "#B91C1C", label: "Unread" };
+                return { bg: "#FEF2F2", dot: "#EF4444", text: "#9CA3AF", label: "Unread" };
             case "Read":
-                return { bg: "#F3F4F6", dot: "#6B7280", text: "#374151", label: "Read" };
+                return { bg: "#F9FAFB", dot: "#6B7280", text: "#9CA3AF", label: "Read" };
             case "Not Delivered":
-                return { bg: "#FEF9C3", dot: "#EAB308", text: "#CA8A04", label: "Not Delivered" };
+                return { bg: "#FEF9C3", dot: "#EAB308", text: "#9CA3AF", label: "Not Delivered" };
             case "Opened":
-                return { bg: "#F3F4F6", dot: "#6B7280", text: "#374151", label: "Opened" };
+                return { bg: "#F9FAFB", dot: "#6B7280", text: "#9CA3AF", label: "Opened" };
             case "Delivered":
-                return { bg: "#EFF6FF", dot: "#3B82F6", text: "#1D4ED8", label: "Delivered" };
+                return { bg: "#EFF6FF", dot: "#3B82F6", text: "#9CA3AF", label: "Delivered" };
             default:
-                return { bg: "#F3F4F6", dot: "#6B7280", text: "#374151", label: status };
+                return { bg: "#F3F4F6", dot: "#6B7280", text: "#9CA3AF", label: status };
         }
     };
 
@@ -35,7 +35,7 @@ export default function EmailTable({ rows, type = "inbox" }) {
                                     bgcolor: styles.bg,
                                     px: 2,
                                     py: 0.5,
-                                    borderRadius: 2,
+                                    borderRadius: 1,
                                     width: "fit-content",
                                 }}
                             >
@@ -179,5 +179,5 @@ export default function EmailTable({ rows, type = "inbox" }) {
         }
     };
 
-    return <CommonTable columns={getColumns()} rows={rows} />;
+    return <CommonTable columns={getColumns()} rows={rows} onRowClick={onRowClick} />;
 }
