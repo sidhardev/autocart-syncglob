@@ -65,6 +65,7 @@ function StoryDetails() {
                         position: "relative",
                         minHeight: "calc(100vh - 64px)", overflow: "auto",
                         p: 3,
+                        pr: 3,
                         background: "#F9F9F9"
                     }}
                 >
@@ -76,7 +77,7 @@ function StoryDetails() {
                                 {story.status}
                             </Typography>
                         </Box>
-                        <Box sx={{ display: "flex", gap: 2 }}>
+                        <Box sx={{ display: "flex", gap: 2, pr: 3, mr: 1, ml: 1 }}>
                             {story.status === 'Flagged' ? (
                                 <>
                                     <CommonButton text="Mark Safe" size="medium" iconName="approve" sx={{ bgcolor: '#60A5FA', '&:hover': { bgcolor: '#3b82f6' } }} />

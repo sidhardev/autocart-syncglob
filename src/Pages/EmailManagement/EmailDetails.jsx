@@ -56,7 +56,7 @@ function EmailDetails() {
                 <TopBar />
                 <Box sx={{ display: "flex" }}>
                     <Sidebar />
-                    <Box sx={{ flexGrow: 1, p: 3, top: "64px", position: "relative", minHeight: "calc(100vh - 64px)", overflow: "auto", }}>
+                    <Box sx={{ flexGrow: 1, p: 3, top: "64px", position: "relative", minHeight: "calc(100vh - 64px)", overflow: "auto",  }}>
                         <CircularProgress />
                     </Box>
                 </Box>
@@ -70,7 +70,7 @@ function EmailDetails() {
                 <TopBar />
                 <Box sx={{ display: "flex" }}>
                     <Sidebar />
-                    <Box sx={{ flexGrow: 1, p: 3, top: "64px", position: "relative", minHeight: "calc(100vh - 64px)", overflow: "auto", }}>
+                    <Box sx={{ flexGrow: 1, p: 3, top: "64px", position: "relative", minHeight: "calc(100vh - 64px)", overflow: "auto", background: "#F9F9F9" }}>
                         <Typography variant="h6">Email not found.</Typography>
                     </Box>
                 </Box>

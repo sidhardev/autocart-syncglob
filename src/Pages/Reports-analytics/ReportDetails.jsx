@@ -119,6 +119,8 @@ const ReportDetails = () => {
   return (
     <>
       <TopBar />
+      <Box sx={{ display: "flex" }}>
+
       <Sidebar />
       <Box
         sx={{
@@ -126,6 +128,7 @@ const ReportDetails = () => {
           top: "64px",
           position: "relative",
           minHeight: "calc(100vh - 64px)", overflow: "auto",
+          backgroundColor: "#F9F9F9",
           p: 3,
         }}
       >
@@ -176,7 +179,7 @@ const ReportDetails = () => {
         </Box>
         {relatedDetails && reportDetails.reportType === "AD_REPORT" && (
           <DetailsCard
-            title="Reported Ad Details"
+          title="Reported Ad Details"
             data={relatedDetails}
             fields={adFields}
             description={relatedDetails.description}
@@ -192,6 +195,7 @@ const ReportDetails = () => {
           />
         )}
       </Box>
+          </Box>
     </>
   );
 };

@@ -13,9 +13,9 @@ function DetailsCard({
     <>
       <Paper
         sx={{
-          p: 3,
+          p: { xs: 2, sm: 3 },
           borderRadius: 3,
-          width: "95%",
+          width: { xs: "100%", sm: "95%" },
           mx: "auto",
           boxShadow: 0,
           border: '1px solid #E5E7EB',
@@ -30,6 +30,7 @@ function DetailsCard({
         <Box
           sx={{
             display: "flex",
+            flexDirection: { xs: "column", md: "row" },
             gap: 3,
           }}
         >
@@ -37,7 +38,7 @@ function DetailsCard({
             sx={{
               flex: 1,
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
+              gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
               columnGap: 4,
               rowGap: 3,
             }}
@@ -83,13 +84,14 @@ function DetailsCard({
           {(description || image) && (
             <Paper
               sx={{
-                flex: 0.8,
+                flex: { xs: "1", md: 0.8 },
                 borderRadius: 2,
                 alignItems: "center",
                 justifyContent: "center",
                 display: "flex",
                 flexDirection: "column",
-                height: "50%",
+                height: "fit-content",
+                boxShadow: '0 0 0 0',
               }}
             >
               {image && (
@@ -104,6 +106,7 @@ function DetailsCard({
                     borderRadius: 2,
 
                     mb: description ? 2 : 0,
+                    boxShadow: '0 0 0 0',
                   }}
                 />
               )}
@@ -116,6 +119,7 @@ function DetailsCard({
                       p: 2.5,
                       width: "100%",
                       backgroundColor: "#ffffff",
+                      boxShadow: '0 0 0 0',
                     }}
                   >
                     <Typography variant="h6" fontWeight="bold" mb={1.5}>

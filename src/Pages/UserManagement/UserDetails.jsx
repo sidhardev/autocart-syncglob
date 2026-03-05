@@ -78,6 +78,7 @@ function UserDetails() {
             position: "relative",
             minHeight: "calc(100vh - 64px)", overflow: "auto",
             p: 3,
+            backgroundColor: "#f9f9f9",
           }}
         >
           <Box
@@ -120,6 +121,13 @@ function UserDetails() {
                   <CommonButton text="Edit User" size="medium" />
                   <CommonButton text="Unsuspend User" size="medium" />
                   <CommonButton text="Ban User" size="medium" />
+                </>
+              )}
+              {userDetails.status === "Banned" && (
+                <>
+                  <CommonButton text="Edit User" size="medium" />
+                  <CommonButton text="Suspend User" size="medium" />
+                  <CommonButton text="Lift ban on user" size="medium" iconName="reject" color="delete"/>
                 </>
               )}
             </Box>

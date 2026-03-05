@@ -97,6 +97,7 @@ function MessageDetails() {
             minHeight: "calc(100vh - 64px)", overflow: "auto",
 
             p: 3,
+            backgroundColor: "#F9F9F9",
           }}
         >
           {/* Header Section */}

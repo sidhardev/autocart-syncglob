@@ -63,19 +63,21 @@ function AdDetails() {
           sx={{
             flexGrow: 1,
             width: "100%",
-            top: "64px",
+            top: { xs: "56px", sm: "64px" },
             position: "relative",
 
             minHeight: "calc(100vh - 64px)", overflow: "auto",
-            p: 3,
+            p: { xs: 1.5, sm: 3 },
           }}
         >
           <Box
             sx={{
-              p: 2,
+              p: { xs: 1, sm: 2 },
               display: "flex",
-              alignItems: "center",
+              flexDirection: { xs: "column", sm: "row" },
+              alignItems: { xs: "flex-start", sm: "center" },
               justifyContent: "space-between",
+              gap: 2,
               mb: 2,
             }}
           >
@@ -83,7 +85,12 @@ function AdDetails() {
               variant="h5"
               fontWeight="bold"
               color="text.primary"
-              sx={{ display: "flex", alignItems: "center", gap: 1 }}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                fontSize: { xs: "1.25rem", sm: "1.5rem" }
+              }}
             >
               <GoBackButton />
               <StopRoundedIcon
@@ -94,7 +101,12 @@ function AdDetails() {
               />
               {ad.title || "Untitled Ad"}
             </Typography>
-            <Box sx={{ display: "flex", gap: 2 }}>
+            <Box sx={{
+              display: "flex",
+              gap: 2,
+              width: { xs: "100%", sm: "auto" },
+              justifyContent: { xs: "flex-start", sm: "flex-end" }
+            }}>
               <CommonButton text={getButtonText()} size="medium" />
               {(ad.status === "PENDING" || ad.status === "RENEW") && (
                 <CommonButton text="Reject Ad" size="medium" />
@@ -107,7 +119,11 @@ function AdDetails() {
             sx={{
               mt: 4,
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
+              gridTemplateColumns: {
+                xs: "1fr",
+                sm: "repeat(2, 1fr)",
+                md: "repeat(3, 1fr)"
+              },
               gap: 3,
             }}
           >
@@ -119,7 +135,7 @@ function AdDetails() {
                 alt={`Slide ${index + 1}`}
                 sx={{
                   width: "100%",
-                  height: 200,
+                  height: { xs: 180, sm: 200 },
                   objectFit: "cover",
                   borderRadius: 2,
                 }}

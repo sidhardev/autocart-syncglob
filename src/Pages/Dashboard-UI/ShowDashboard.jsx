@@ -19,6 +19,7 @@ function ShowDashboard() {
             mt: "64px",
             minHeight: "calc(100vh - 64px)",
             p: { xs: 1.5, sm: 2, md: 3 },
+            pr: 2,
             background: "#F9F9F9",
             overflow: "hidden"
           }}

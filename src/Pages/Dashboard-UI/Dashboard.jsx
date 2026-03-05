@@ -29,7 +29,11 @@ function Dashboard() {
       <Box
         sx={{
           p: { xs: 1, sm: 1.5, md: 2 },
+          display: "flex",
+          flexDirection: "column",
           minHeight: "100vh",
+          width: "94%",
+          mx: "auto",
         }}
       >
         <DashboardDatePicker />
