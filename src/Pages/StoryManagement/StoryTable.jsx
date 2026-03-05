@@ -1,6 +1,7 @@
 import { Box, Avatar, Typography } from "@mui/material";
 import CommonTable from "../../common/Table";
 import { useNavigate } from "react-router-dom";
+import { formatLabel } from "../../common/Formatlabel";
 
 export default function StoryTable({ rows }) {
     const navigate = useNavigate();
@@ -36,6 +37,8 @@ export default function StoryTable({ rows }) {
                             py: 0.5,
                             borderRadius: 1,
                             width: "fit-content",
+                            minWidth: "100px",
+
                         }}
                     >
                         <Box sx={{ width: 8, height: 8, bgcolor: styles.dot, borderRadius: "2px" }} />
@@ -51,7 +54,7 @@ export default function StoryTable({ rows }) {
             render: (row) => (
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                     <Avatar src={row.userAvatar} sx={{ width: 28, height: 28 }} />
-                    <Typography fontWeight={500}>{row.userId}</Typography>
+                    <Typography >{formatLabel(row.userId)}</Typography>
                 </Box>
             ),
         },
@@ -65,17 +68,17 @@ export default function StoryTable({ rows }) {
                         alt="Story"
                         sx={{ width: 40, height: 40, borderRadius: 1, objectFit: 'cover' }}
                     />
-                    <Typography fontWeight={500}>{row.storyText}</Typography>
+                    <Typography >{row.storyText}</Typography>
                 </Box>
             ),
         },
         {
             header: "Story Id",
-            render: (row) => <Typography fontWeight={500}>{row.storyId}</Typography>,
+            render: (row) => <Typography >{row.storyId}</Typography>,
         },
         {
             header: "Upload Date",
-            render: (row) => <Typography fontWeight={500}>{row.uploadDate}</Typography>,
+            render: (row) => <Typography >{row.uploadDate}</Typography>,
         },
     ];
 

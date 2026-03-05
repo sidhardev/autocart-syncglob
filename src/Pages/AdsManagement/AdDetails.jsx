@@ -8,6 +8,7 @@ import CommonButton from "../../common/Button";
 import AdDetailsCard from "./AdDetailsCard.jsx";
 import GoBackButton from "../../common/GoBackButton.jsx";
 import Rejection from "./Rejection.jsx";
+import Layout from "../../components/Layout.jsx";
 
 const STATUS_COLORS = {
   ACTIVE: "#07B007",
@@ -54,22 +55,8 @@ function AdDetails() {
 
   return (
     <>
-      <TopBar />
+      <Layout>
 
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
-
-        <Box
-          sx={{
-            flexGrow: 1,
-            width: "100%",
-            top: { xs: "56px", sm: "64px" },
-            position: "relative",
-
-            minHeight: "calc(100vh - 64px)", overflow: "auto",
-            p: { xs: 1.5, sm: 3 },
-          }}
-        >
           <Box
             sx={{
               p: { xs: 1, sm: 2 },
@@ -147,8 +134,8 @@ function AdDetails() {
           {ad.status === "REJECTED" && (
             <Rejection rejectionReason={ad.rejectionReason} />
           )}
-        </Box>
-      </Box>
+
+      </Layout>
     </>
   );
 }

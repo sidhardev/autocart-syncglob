@@ -1,29 +1,13 @@
-import { Box } from "@mui/material";
-import Sidebar from "../../components/layout/Sidebar";
-import TopBar from "../../components/layout/Topbar";
 import MessageContainer from "./MessageContainer";
+import Layout from "../../components/Layout";
 
 function MessageUI() {
   return (
     <>
-      <TopBar />
+      <Layout>
 
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
-        <Box
-          sx={{
-            flexGrow: 1,
-            width: "100%",
-            top: "64px",
-            position: "relative",
-            minHeight: "calc(100vh - 64px)", overflow: "auto",
-            p: 3,
-            background: "#F9F9F9"
-          }}
-        >
-          <MessageContainer />
-        </Box>
-      </Box>
+        <MessageContainer />
+      </Layout>
     </>
   );
 }

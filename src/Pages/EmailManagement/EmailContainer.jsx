@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, ButtonGroup, Typography } from "@mui/material";
 import ReusableTabs, { TabPanel } from "../../common/Tabs";
 import { useEffect, useState } from "react";
 import SearchBar from "../../common/SearchBar";
@@ -61,7 +61,7 @@ function EmailContainer() {
     };
 
     return (
-        <Box sx={{ display: "flex", width: "100%" }}>
+        <Box sx={{ display: "flex" }}>
             <ReusableTabs
                 tabsData={tabsData}
                 value={value}
@@ -79,28 +79,35 @@ function EmailContainer() {
                                 pt: 2,
                             }}
                         >
-                            <Box sx={{ display: "flex", gap: 4, alignItems: "center" }}>
-                                <Box sx={{ width: { xs: "100%", md: "400px" } }}>
-                                    <SearchBar text="Search User" width="100%" />
-                                </Box>
-                                <Button
-                                    variant="outlined"
-                                    startIcon={<CalendarIcon />}
-                                    sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
-                                >
-                                    From Date
-                                </Button>
 
-                                <Button
-                                    variant="outlined"
-                                    startIcon={<CalendarIcon />}
-                                    sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
-                                >
-                                    To Date
-                                </Button>
-                            </Box>
+<Box
+  sx={{
+    display: "flex",
+    gap: { xs: 2, md: 4 },
+    alignItems: "center",
+    flexWrap: "wrap"
+  }}
+>
+  <Box sx={{ width: { xs: "100%", md: "400px" } }}>
+    <SearchBar text="Search User" width="100%" />
+  </Box>
 
-                            <Box sx={{ display: "flex", gap: 4, alignItems: "center" }}>
+     <Button
+      startIcon={<CalendarIcon />}
+      sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
+    >
+      From Date
+    </Button>
+
+    <Button
+      startIcon={<CalendarIcon />}
+      sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
+    >
+      To Date
+    </Button>
+ </Box>
+
+                            <Box sx={{ display: "flex", gap: { xs: 2, md: 4 }, alignItems: "center" }}>
                                 <Button
                                     variant="outlined"
                                     sx={{ whiteSpace: "nowrap", borderRadius: 2, color: "#9CA3AF", border: "1px solid #CACACA" }}

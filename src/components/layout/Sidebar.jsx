@@ -155,7 +155,7 @@ export default function Sidebar() {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true,  
+          keepMounted: true, 
         }}
         sx={{
           display: { xs: "block", md: "none" },
@@ -164,8 +164,8 @@ export default function Sidebar() {
             width: drawerWidth,
             pl: 2,
             pr: 1,
-            mt: "64px",
-            height: "calc(100vh - 64px)"
+            mt: "48px",
+            height: "calc(100vh - 48px)"
           },
         }}
       >

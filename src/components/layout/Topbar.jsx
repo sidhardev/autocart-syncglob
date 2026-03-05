@@ -28,7 +28,7 @@ function TopBar() {
               >
                 <MenuIcon />
               </IconButton>
-              <Box onClick={() => navigate("/")} sx={{ display: "flex", alignItems: "center" }}>
+              <Box onClick={() => navigate("/")} sx={{ display: "flex", alignItems: "flex-start" }}>
                 <AdbIcon sx={{ mr: 1, color: "#15803D", display: { xs: 'none', sm: 'block' } }} />
                 <Typography
                   variant="h6"
@@ -42,6 +42,8 @@ function TopBar() {
                     fontSize: { xs: "0.9rem", sm: "1.25rem" },
                     color: "#15803D",
                     textDecoration: "none",
+                    display: "flex",
+                    alignItems: "flex-start",
                   }}
                 >
                   SG AUTOMOBILES

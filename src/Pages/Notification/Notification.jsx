@@ -4,6 +4,7 @@ import Sidebar from "../../components/layout/Sidebar";
 import NoNotification from "./NoNotification";
 import ShowNotification from "./ShowNotification";
 import { useEffect, useState } from "react";
+import Layout from "../../components/Layout";
 const Notification = () => {
   const [notification, setNotification] = useState([]);
   useEffect(() => {
@@ -20,29 +21,15 @@ const Notification = () => {
   }, []);
   return (
     <>
-      <TopBar />
+       <Layout>
 
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
-
-        <Box
-          sx={{
-            flexGrow: 1,
-            width: "100%",
-            mt: "64px",
-            minHeight: "calc(100vh - 64px)",
-            overflow: "auto",
-            background: "#F9F9F9",
-            p: { xs: 2, sm: 3 },
-          }}
-        >
           {notification.length === 0 ? (
             <NoNotification />
           ) : (
             <ShowNotification notification={notification} />
           )}
-        </Box>
-      </Box>
+          </Layout>
+         
     </>
   );
 };

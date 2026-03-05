@@ -34,10 +34,11 @@ function Dashboard() {
           minHeight: "100vh",
           width: "94%",
           mx: "auto",
+          
         }}
       >
         <DashboardDatePicker />
-        <Box sx={{ mt: 4 }}>
+        <Box sx={{ mt: 4 , pr: 2,}}>
           <Statscard cards={ads} heading={"Ads"} />
           <Statscard cards={users} heading={"Users"} />
         </Box>
