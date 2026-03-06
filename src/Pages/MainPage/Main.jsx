@@ -56,11 +56,11 @@ function Main() {
                 <Box
                     sx={{
                         flexGrow: 1,
-                        width: "100%",
+                        minWidth: 0,
                         top: "64px",
                         position: "relative",
                         minHeight: "calc(100vh - 64px)",
-                        p: 4,
+                        p: { xs: 2, sm: 3, md: 4 },
                         background: "#F9F9F9",
                     }}
                 >

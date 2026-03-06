@@ -67,7 +67,7 @@ function ReportContainer() {
               {tabsData.map((tab, index) => (
                 <TabPanel key={index} value={value} index={index}>
 
-                  <SearchBar text={"Search Reports"} />
+                  <SearchBar text={"Search Reports"}  />
 
                   <ReportsTable
                     filter={tab.reportType}

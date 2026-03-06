@@ -8,7 +8,7 @@ import CommonButton from "../../common/Button";
 import AdDetailsCard from "./AdDetailsCard.jsx";
 import GoBackButton from "../../common/GoBackButton.jsx";
 import Rejection from "./Rejection.jsx";
-import Layout from "../../components/Layout.jsx";
+import Layout from "../../components/layout/Layout.jsx";
 
 const STATUS_COLORS = {
   ACTIVE: "#07B007",
@@ -57,83 +57,83 @@ function AdDetails() {
     <>
       <Layout>
 
-          <Box
+        <Box
+          sx={{
+            p: { xs: 1, sm: 2 },
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: { xs: "flex-start", sm: "center" },
+            justifyContent: "space-between",
+            gap: 2,
+            mb: 2,
+          }}
+        >
+          <Typography
+            variant="h5"
+            fontWeight="bold"
+            color="text.primary"
             sx={{
-              p: { xs: 1, sm: 2 },
               display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              alignItems: { xs: "flex-start", sm: "center" },
-              justifyContent: "space-between",
-              gap: 2,
-              mb: 2,
+              alignItems: "center",
+              gap: 1,
+              fontSize: { xs: "1.25rem", sm: "1.5rem" }
             }}
           >
-            <Typography
-              variant="h5"
-              fontWeight="bold"
-              color="text.primary"
+            <GoBackButton />
+            <StopRoundedIcon
+              fontSize="small"
               sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                fontSize: { xs: "1.25rem", sm: "1.5rem" }
+                color: STATUS_COLORS[ad.status] || STATUS_COLORS.INACTIVE,
               }}
-            >
-              <GoBackButton />
-              <StopRoundedIcon
-                fontSize="small"
-                sx={{
-                  color: STATUS_COLORS[ad.status] || STATUS_COLORS.INACTIVE,
-                }}
-              />
-              {ad.title || "Untitled Ad"}
-            </Typography>
-            <Box sx={{
-              display: "flex",
-              gap: 2,
-              width: { xs: "100%", sm: "auto" },
-              justifyContent: { xs: "flex-start", sm: "flex-end" }
-            }}>
-              <CommonButton text={getButtonText()} size="medium" />
-              {(ad.status === "PENDING" || ad.status === "RENEW") && (
-                <CommonButton text="Reject Ad" size="medium" />
-              )}
-            </Box>
+            />
+            {ad.title || "Untitled Ad"}
+          </Typography>
+          <Box sx={{
+            display: "flex",
+            gap: 2,
+            width: { xs: "100%", sm: "auto" },
+            justifyContent: { xs: "flex-start", sm: "flex-end" }
+          }}>
+            <CommonButton text={getButtonText()} size="medium" />
+            {(ad.status === "PENDING" || ad.status === "RENEW") && (
+              <CommonButton text="Reject Ad" size="medium" />
+            )}
           </Box>
+        </Box>
 
-          <AdDetailsCard ad={ad} />
-          <Box
-            sx={{
-              mt: 4,
-              display: "grid",
-              gridTemplateColumns: {
-                xs: "1fr",
-                sm: "repeat(2, 1fr)",
-                md: "repeat(3, 1fr)"
-              },
-              gap: 3,
-            }}
-          >
-            {["/slide1.png", "/slide2.png", "/slide3.png"].map((img, index) => (
-              <Box
-                key={index}
-                component="img"
-                src={img}
-                alt={`Slide ${index + 1}`}
-                sx={{
-                  width: "100%",
-                  height: { xs: 180, sm: 200 },
-                  objectFit: "cover",
-                  borderRadius: 2,
-                }}
-              />
-            ))}
-          </Box>
+        <AdDetailsCard ad={ad} />
+        <Box
+          sx={{
+            mt: 4,
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "repeat(2, 1fr)",
+              md: "repeat(3, 1fr)"
+            },
+            gap: 3,
+          }}
+        >
+          {["/slide1.png", "/slide2.png", "/slide3.png"].map((img, index) => (
+            <Box
+              key={index}
+              component="img"
+              src={img}
+              alt={`Slide ${index + 1}`}
+              sx={{
+                width: "100%",
+                height: { xs: 180, sm: 200 },
+                objectFit: "cover",
+                borderRadius: 2,
+              }}
+            />
+          ))}
+        </Box>
 
 
-          {ad.status === "REJECTED" && (
-            <Rejection rejectionReason={ad.rejectionReason} />
-          )}
+        {ad.status === "REJECTED" && (
+          <Rejection rejectionReason={ad.rejectionReason} />
+        )}
 
       </Layout>
     </>

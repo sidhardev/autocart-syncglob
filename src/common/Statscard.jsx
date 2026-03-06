@@ -94,7 +94,7 @@ function Statscard({ cards, heading }) {
       </Typography>{" "}
       <Box
         sx={{
-          width: "100%",
+          flexGrow: 1,
           display: "flex",
           flexWrap: "wrap",
           gap: 3,

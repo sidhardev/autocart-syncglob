@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import Sidebar from "./layout/Sidebar";
-import TopBar from "./layout/Topbar";
-import ErrorBoundary from "./Error/ErrorBoundary";
+import Sidebar from "./Sidebar";
+import TopBar from "./Topbar";
+import ErrorBoundary from "../Error/ErrorBoundary";
 
 function Layout({ children }) {
   return (
@@ -14,7 +14,7 @@ function Layout({ children }) {
         <Box
           sx={{
             flexGrow: 1,
-            width: "100%",
+            minWidth: 0,
             mt: "64px",
             minHeight: "calc(100vh - 64px)",
             overflow: "auto",
@@ -22,9 +22,9 @@ function Layout({ children }) {
             background: "#F9F9F9"
           }}
         >
-            <ErrorBoundary>
-          {children}
-            </ErrorBoundary>
+          <ErrorBoundary>
+            {children}
+          </ErrorBoundary>
         </Box>
       </Box>
     </>

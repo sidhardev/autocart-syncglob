@@ -75,37 +75,37 @@ function EmailContainer() {
                                 flexDirection: "column",
                                 gap: 3,
                                 width: "100%",
-                                px: 3,
+                                px: { xs: 0, sm: 3 },
                                 pt: 2,
                             }}
                         >
 
-<Box
-  sx={{
-    display: "flex",
-    gap: { xs: 2, md: 4 },
-    alignItems: "center",
-    flexWrap: "wrap"
-  }}
->
-  <Box sx={{ width: { xs: "100%", md: "400px" } }}>
-    <SearchBar text="Search User" width="100%" />
-  </Box>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    gap: { xs: 2, md: 4 },
+                                    alignItems: "center",
+                                    flexWrap: "wrap"
+                                }}
+                            >
+                                <Box sx={{ width: { xs: "100%", md: "400px" } }}>
+                                    <SearchBar text="Search User" width="100%" />
+                                </Box>
 
-     <Button
-      startIcon={<CalendarIcon />}
-      sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
-    >
-      From Date
-    </Button>
+                                <Button
+                                    startIcon={<CalendarIcon />}
+                                    sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
+                                >
+                                    From Date
+                                </Button>
 
-    <Button
-      startIcon={<CalendarIcon />}
-      sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
-    >
-      To Date
-    </Button>
- </Box>
+                                <Button
+                                    startIcon={<CalendarIcon />}
+                                    sx={{ whiteSpace: "nowrap", color: "#9CA3AF", border: "1px solid #CACACA" }}
+                                >
+                                    To Date
+                                </Button>
+                            </Box>
 
                             <Box sx={{ display: "flex", gap: { xs: 2, md: 4 }, alignItems: "center" }}>
                                 <Button
