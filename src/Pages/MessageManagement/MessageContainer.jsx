@@ -45,6 +45,7 @@ function MessageContainer() {
                   flexDirection: "column",
                   gap: 3,
                   width: "100%",
+                  
                 }}
               >
                 <Typography
@@ -54,12 +55,13 @@ function MessageContainer() {
                 >
                   Message Overview
                 </Typography>
-
+                <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2, justifyContent: "center", alignItems: "center" }}>
                 {messageData?.messageOverview && (
                   <MessageOverviewCards
                     messageOverview={messageData.messageOverview}
                   />
                 )}
+                </Box>
 
                 <Typography
                   variant="h6"

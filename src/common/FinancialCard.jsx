@@ -17,8 +17,8 @@ function FinancialCard({
     <Paper
       elevation={0}
       sx={{
-        flex: { xs: "1 1 100%", sm: "1 1 210px" },
-        minWidth: { xs: "100%", sm: 210 },
+        flex: { xs: "1 1 calc(100% - 16px)", sm: "1 1 210px" },
+minWidth: { xs: "calc(100% - 16px)", sm: 210 },
         height: "auto",
         p: { xs: 2, sm: 2.5 },
         borderRadius: 3,
@@ -28,8 +28,7 @@ function FinancialCard({
         gap: 2,
       }}
     >
-      {/* Top Row */}
-      <Box
+       <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -63,8 +62,7 @@ function FinancialCard({
         </Box>
       </Box>
 
-      {/* Amount + Percentage */}
-      <Box
+       <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -99,8 +97,7 @@ function FinancialCard({
         </Typography>
       </Box>
 
-      {/* Bottom Text */}
-      <Typography
+       <Typography
         variant="body2"
         sx={{
           color: "#9ca3af",

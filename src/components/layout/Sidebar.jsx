@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import AdsClickOutlinedIcon from '@mui/icons-material/AdsClickOutlined';
-import PublicIcon from '@mui/icons-material/Public';
-
+ 
 const drawerWidth = 260;
 
 const NAV_ITEMS = [

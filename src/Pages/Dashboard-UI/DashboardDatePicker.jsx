@@ -11,12 +11,11 @@ function DashboardDatePicker() {
           p: { xs: 2, sm: 2.5 },
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
-          alignItems: { xs: "flex-start", sm: "center" },
-          justifyContent: "space-between",
           gap: 2,
+          justifyContent: "flex-start",
+          mr: 1,
           boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-          width: "100%",
-          maxWidth: "97%",
+          width: "97%",
           border: "1px solid #e0e0e0",
         }}
       >
@@ -25,7 +24,7 @@ function DashboardDatePicker() {
             Today
           </Typography>
 
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: { xs: 1, sm: 4 }, mt: 1 }}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: { xs: 1, sm: 4 }, mt: 1, }}>
             <Typography color="text.secondary" variant="body2">
               Sunday 19TH January 2025
             </Typography>
@@ -41,8 +40,9 @@ function DashboardDatePicker() {
             borderRadius: 3,
             textTransform: "none",
             width: { xs: "100%", sm: "auto" },
+            color: "#9CA3AF",
+            border: "1px solid #CACACA",
           }}
-          color="info"
         >
           Change Date
         </Button>

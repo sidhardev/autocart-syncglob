@@ -98,6 +98,9 @@ function FinancialContainer() {
                         sx={{
                           mt: 4,
                           color: "text.secondary",
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
                         }}
                       >
                         Finance Overview

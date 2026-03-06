@@ -5,6 +5,7 @@ import Sidebar from "../../components/layout/Sidebar";
 import ReusableTabs, { TabPanel } from "../../common/Tabs";
 import SearchBar from "../../common/SearchBar";
 import UsersTable from "./UsersTable";
+import { Box } from "@mui/material";
 
 function Container() {
   const tabsData = [
@@ -44,6 +45,8 @@ function Container() {
 
   return (
     <div>
+          <Box sx={{ display: "flex", width: "100%" }}>
+      
       <ReusableTabs
         tabsData={tabsData}
         value={value}
@@ -66,6 +69,7 @@ function Container() {
           </>
         )}
       </ReusableTabs>
+      </Box>
     </div>
   );
 }

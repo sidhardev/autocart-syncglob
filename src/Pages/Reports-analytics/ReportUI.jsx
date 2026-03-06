@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import Sidebar from "../../components/layout/Sidebar";
 import TopBar from "../../components/layout/Topbar";
 import ReportContainer from "./ReportContainer";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout/Layout.jsx";
 
 function ReportUI() {
   return (
@@ -16,4 +16,4 @@ function ReportUI() {
 
 export default ReportUI;
 
- 
+

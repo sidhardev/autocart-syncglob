@@ -10,7 +10,11 @@ function GoBackButton() {
        startIcon={<ArrowBackIosNewIcon />}
       onClick={() => navigate(-1)}
       sx={{ 
-        color: "#07B007"
+        color: "#07B007",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: "100%",
+         
     }}>
      </Button>
   );

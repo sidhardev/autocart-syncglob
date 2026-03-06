@@ -39,7 +39,7 @@ export default function CommonTable({
       <Table
         stickyHeader
         sx={{
-          minWidth: 650,
+          minWidth: 700,
           bgcolor: "#F3F4F6",
           borderLeft: "1px solid #CACACA",
         }}
@@ -63,8 +63,7 @@ export default function CommonTable({
                       ? "1px solid #CACACA"
                       : "none",
 
-                  /* hide column on mobile if specified */
-                  display: col.hideOnMobile
+                   display: col.hideOnMobile
                     ? { xs: "none", md: "table-cell" }
                     : "table-cell",
                 }}

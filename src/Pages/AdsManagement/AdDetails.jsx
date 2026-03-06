@@ -1,9 +1,7 @@
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import TopBar from "../../components/layout/Topbar";
-import Sidebar from "../../components/layout/Sidebar";
-import StopRoundedIcon from "@mui/icons-material/StopRounded";
+ import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import AdDetailsCard from "./AdDetailsCard.jsx";
 import GoBackButton from "../../common/GoBackButton.jsx";

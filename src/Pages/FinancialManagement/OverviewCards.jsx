@@ -37,7 +37,7 @@ function OverviewCards({ finance }) {
 
   return (
     <div>
-      <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", }}>
+      <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
         {overviewCards.map((card) => (
           <FinancialCard
             key={card.id}

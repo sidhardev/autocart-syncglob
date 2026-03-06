@@ -61,7 +61,7 @@ function EmailContainer() {
     };
 
     return (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", overflowX: "hidden" }}>
             <ReusableTabs
                 tabsData={tabsData}
                 value={value}
@@ -138,7 +138,7 @@ function EmailContainer() {
                                 >
                                     Inbox Mail
                                 </Typography>
-                                <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2 }}>
+                                <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2, justifyContent: "center", alignItems: "center" }}>
                                     {cardData.map((card) => (
                                         <FinancialCard
                                             key={card.id}
@@ -158,7 +158,7 @@ function EmailContainer() {
                                 >
                                     Outbox Mail
                                 </Typography>
-                                <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2 }}>
+                                <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2, justifyContent: "center", alignItems: "center" }}>
                                     {cardData.map((card) => (
                                         <FinancialCard
                                             key={card.id}
@@ -172,8 +172,8 @@ function EmailContainer() {
                                 </Box>
                             </Box>
                         </TabPanel>
-
-                        <TabPanel value={value} index={1}>
+                                    
+                        <TabPanel value={value} index={1} >
                             <Box sx={{ mt: -2 }}>
                                 <Box sx={{ display: "flex", gap: 4, mb: 1 }}>
                                     {filterTabs.map((tab) => (

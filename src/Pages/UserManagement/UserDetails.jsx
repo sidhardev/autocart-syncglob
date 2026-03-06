@@ -2,11 +2,10 @@ import DetailsCard from "../../common/DetailsCard";
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import TopBar from "../../components/layout/Topbar";
-import Sidebar from "../../components/layout/Sidebar";
 import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import GoBackButton from "../../common/GoBackButton";
+import Layout from "../../components/layout/Layout";
 
 const STATUS_COLORS = {
   Active: "#07B007",
@@ -45,18 +44,11 @@ function UserDetails() {
     }
   }, [id]);
 
-  const getButtonText = () => {
-    return ["Active", "Suspended", "Banned"].includes(userDetails.status)
-      ? "Delete User"
-      : "Approve User";
-  };
-
   const fields = [
     { label: "Name", key: "name" },
     { label: "Country", key: "country" },
     { label: "Email", key: "email" },
     { label: "Area", key: "area" },
-
     { label: "Phone Number", key: "phoneNumber" },
     { label: "Type", key: "type" },
     { label: "Following", key: "following" },
@@ -64,84 +56,99 @@ function UserDetails() {
   ];
 
   return (
-    <>
-      <TopBar />
+    <Layout>
 
-      <Box sx={{ display: "flex" }}>
-        <Sidebar />
+ 
+      <Box
+        sx={{
+          p: { xs: 1, sm: 3 },
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: { xs: "center", md: "center" },
+          overflowX: "hidden",
+          gap: 2,
+          mb: 3,
+        }}
+      >
 
-        <Box
+ 
+        <Typography
+          variant="h5"
+          fontWeight="bold"
+          color="text.primary"
           sx={{
-            flexGrow: 1,
-            width: "100%",
-            top: "64px",
-            position: "relative",
-            minHeight: "calc(100vh - 64px)", overflow: "auto",
-            p: 3,
-            backgroundColor: "#f9f9f9",
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+            flexWrap: "wrap",
+            fontSize: { xs: "1.2rem", sm: "1.5rem" },
           }}
         >
-          <Box
+          <GoBackButton />
+
+          <StopRoundedIcon
+            fontSize="small"
             sx={{
-              p: 2,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              mb: 2,
+              color:
+                STATUS_COLORS[userDetails.status] || STATUS_COLORS.Active,
             }}
-          >
-
-            <Typography
-              variant="h5"
-              fontWeight="bold"
-              color="text.primary"
-              sx={{ display: "flex", alignItems: "center", gap: 1 }}
-            >
-              <GoBackButton />
-              <StopRoundedIcon
-                fontSize="small"
-                sx={{
-                  color:
-                    STATUS_COLORS[userDetails.status] || STATUS_COLORS.Active,
-                }}
-              />
-              {userDetails.name || "Untitled User"}
-            </Typography>
-            <Box sx={{ display: "flex", gap: 2 }}>
-              {userDetails.status === "Active" && (
-                <>
-                  <CommonButton text="Edit User" size="medium" />
-                  <CommonButton text="Suspend User" size="medium" />
-                  <CommonButton text="Ban User" size="medium" />
-
-                </>
-              )}
-              {userDetails.status === "Suspended" && (
-                <>
-                  <CommonButton text="Edit User" size="medium" />
-                  <CommonButton text="Unsuspend User" size="medium" />
-                  <CommonButton text="Ban User" size="medium" />
-                </>
-              )}
-              {userDetails.status === "Banned" && (
-                <>
-                  <CommonButton text="Edit User" size="medium" />
-                  <CommonButton text="Suspend User" size="medium" />
-                  <CommonButton text="Lift ban on user" size="medium" iconName="reject" color="delete"/>
-                </>
-              )}
-            </Box>
-          </Box>
-
-          <DetailsCard
-            title="User Details"
-            data={userDetails}
-            fields={fields}
-            image={userDetails.imageUrl}
           />
+
+          {userDetails.name || "Untitled User"}
+        </Typography>
+
+ 
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 1.5,
+            width: { xs: "90%", md: "auto" },
+            justifyContent: "flex-end"
+          }}
+        >
+
+          {userDetails.status === "Active" && (
+            <>
+              <CommonButton text="Edit User" size="medium" />
+              <CommonButton text="Suspend User" size="medium" />
+              <CommonButton text="Ban User" size="medium" />
+            </>
+          )}
+
+          {userDetails.status === "Suspended" && (
+            <>
+              <CommonButton text="Edit User" size="medium" />
+              <CommonButton text="Unsuspend User" size="medium" />
+              <CommonButton text="Ban User" size="medium" />
+            </>
+          )}
+
+          {userDetails.status === "Banned" && (
+            <>
+              <CommonButton text="Edit User" size="medium" />
+              <CommonButton text="Suspend User" size="medium" />
+              <CommonButton
+                text="Lift ban on user"
+                size="medium"
+                iconName="reject"
+                color="delete"
+              />
+            </>
+          )}
+
         </Box>
       </Box>
-    </>
+
+ 
+      <DetailsCard
+        title="User Details"
+        data={userDetails}
+        fields={fields}
+        image={userDetails.imageUrl}
+      />
+
+    </Layout>
   );
 }
 

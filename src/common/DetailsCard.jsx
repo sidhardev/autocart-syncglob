@@ -34,8 +34,7 @@ function DetailsCard({
           gap: { xs: 2, md: 3 },
         }}
       >
-        {/* Left Side Fields */}
-        <Box
+         <Box
           sx={{
             flex: 1,
             display: "grid",
@@ -85,8 +84,7 @@ function DetailsCard({
           ))}
         </Box>
 
-        {/* Right Side Image + Description */}
-        {(description || image) && (
+         {(description || image) && (
           <Box
             sx={{
               flex: { xs: 1, md: 0.8 },

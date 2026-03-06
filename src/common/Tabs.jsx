@@ -39,6 +39,8 @@ function ReusableTabs({
         display: "flex",
         flexDirection: "column",
         gap: 2,
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
         ...sx,
       }}
     >

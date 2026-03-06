@@ -4,7 +4,7 @@ import Sidebar from "../../components/layout/Sidebar";
 import NoNotification from "./NoNotification";
 import ShowNotification from "./ShowNotification";
 import { useEffect, useState } from "react";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout/Layout.jsx";
 const Notification = () => {
   const [notification, setNotification] = useState([]);
   useEffect(() => {
@@ -21,15 +21,15 @@ const Notification = () => {
   }, []);
   return (
     <>
-       <Layout>
+      <Layout>
 
-          {notification.length === 0 ? (
-            <NoNotification />
-          ) : (
-            <ShowNotification notification={notification} />
-          )}
-          </Layout>
-         
+        {notification.length === 0 ? (
+          <NoNotification />
+        ) : (
+          <ShowNotification notification={notification} />
+        )}
+      </Layout>
+
     </>
   );
 };
