@@ -38,7 +38,7 @@ function StoryContainer() {
     ];
 
     return (
-        <Box sx={{ display: "flex", width: "100%" }}>
+        <Box sx={{ display: "flex",  }}>
             <ReusableTabs
                 tabsData={tabsData}
                 value={value}
@@ -56,7 +56,7 @@ function StoryContainer() {
                                 pt: 2,
                             }}
                         >
-                            <Box sx={{ width: { xs: "100%", md: "400px" } }}>
+                            <Box sx={{ width: { xs: "100%", md: "400px" }, mb: 2 }}>
                                 <SearchBar text="Search User" width="100%" />
                             </Box>
                         </Box>

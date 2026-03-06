@@ -9,8 +9,20 @@ function FinancialCard({
   comparisonText,
   currency = "$",
 }) {
-  const isPositive = change > 0;
-  const isNegative = change < 0;
+  const numericChange = typeof change === 'string' ? parseFloat(change.replace(/[^0-9.-]/g, '')) : change;
+  const isPositive = numericChange > 0;
+  const isNegative = numericChange < 0;
+
+  const displayAmount = React.useMemo(() => {
+    if (typeof amount === 'string') {
+      // If it already has commas, just use it.
+      if (amount.includes(',')) return amount;
+      // Otherwise try to numberize and format.
+      const num = parseFloat(amount.replace(/[^0-9.-]/g, ''));
+      return isNaN(num) ? amount : num.toLocaleString();
+    }
+    return Number(amount || 0).toLocaleString();
+  }, [amount]);
 
   return (
 
@@ -18,7 +30,7 @@ function FinancialCard({
       elevation={0}
       sx={{
         flex: { xs: "1 1 calc(100% - 16px)", sm: "1 1 210px" },
-minWidth: { xs: "calc(100% - 16px)", sm: 210 },
+        minWidth: { xs: "calc(100% - 16px)", sm: 210 },
         height: "auto",
         p: { xs: 2, sm: 2.5 },
         borderRadius: 3,
@@ -28,7 +40,7 @@ minWidth: { xs: "calc(100% - 16px)", sm: 210 },
         gap: 2,
       }}
     >
-       <Box
+      <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -62,7 +74,7 @@ minWidth: { xs: "calc(100% - 16px)", sm: 210 },
         </Box>
       </Box>
 
-       <Box
+      <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -78,7 +90,7 @@ minWidth: { xs: "calc(100% - 16px)", sm: 210 },
             fontSize: { xs: "1.5rem", sm: "2rem", md: "2.125rem" }
           }}
         >
-          {currency}{Number(amount || 0).toLocaleString()}
+          {currency}{displayAmount}
         </Typography>
 
         <Typography
@@ -93,11 +105,11 @@ minWidth: { xs: "calc(100% - 16px)", sm: 210 },
           }}
         >
           {isPositive ? "+" : ""}
-          {change || 0}%
+          {numericChange || 0}%
         </Typography>
       </Box>
 
-       <Typography
+      <Typography
         variant="body2"
         sx={{
           color: "#9ca3af",

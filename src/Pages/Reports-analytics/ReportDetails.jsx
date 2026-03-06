@@ -7,6 +7,7 @@ import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import DetailsCard from "../../common/DetailsCard";
 import GoBackButton from "../../common/GoBackButton";
+import Layout from "../../components/layout/Layout";
 
 const STATUS_COLORS = {
   UNREAD: "#FEE2E2",
@@ -69,8 +70,9 @@ const ReportDetails = () => {
   if (loading) {
     return (
       <>
-        <TopBar />
-        <Sidebar />
+        <Layout>
+          
+        </Layout>
 
       </>
     );
@@ -118,84 +120,133 @@ const ReportDetails = () => {
   ];
   return (
     <>
-      <TopBar />
-      <Box sx={{ display: "flex" }}>
+   <Layout>
 
-      <Sidebar />
-      <Box
+  
+    {/* HEADER */}
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: { xs: "flex-start", md: "center" },
+        justifyContent: "space-between",
+        gap: 2,
+       }}
+    >
+      <Typography
+        variant="h5"
+        fontWeight="bold"
+        color="text.primary"
         sx={{
-          flexGrow: 1,
-          top: "64px",
-          position: "relative",
-          minHeight: "calc(100vh - 64px)", overflow: "auto",
-          backgroundColor: "#F9F9F9",
-          p: 3,
+          display: "flex",
+          alignItems: "center",
+          gap: 1,
+          flexWrap: "wrap",
         }}
       >
-        <Box
+        <GoBackButton />
+
+        <StopRoundedIcon
+          fontSize="small"
           sx={{
-            p: 2,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            mb: 2,
-            pb: 3,
+            color:
+              reportDetails.status === "READ"
+                ? "#10B981"
+                : "#F59E0B",
           }}
-        >
+        />
 
-          <Typography
-            variant="h5"
-            fontWeight="bold"
-            color="text.primary"
-            sx={{ display: "flex", alignItems: "center", gap: 1 }}
-          >
-            <GoBackButton />
-            <StopRoundedIcon
-              fontSize="small"
-              sx={{
-                color: reportDetails.status === "READ" ? "#10B981" : "#F59E0B",
-              }}
+        {reportDetails.title}
+      </Typography>
+
+      {/* ACTION BUTTONS */}
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 1.5,
+        }}
+      >
+        {reportDetails.reportType === "AD_REPORT" && (
+          <>
+            <CommonButton
+              text="Warn"
+              icon={warnIcon}
+              color="#F97316"
+              size="medium"
             />
-            {reportDetails.title}
-          </Typography>
-          <Box sx={{ display: "flex", gap: 2 }}>
-            {reportDetails.reportType === "AD_REPORT" && (
-              <>
-                <CommonButton text="Warn" icon={warnIcon} color="#F97316" size="medium" />
-                <CommonButton text="Delete Ad" size="medium" />
-              </>
-            )}
-            {reportDetails.reportType === "USER_REPORT" && (
-              <>
-                <CommonButton text="Warn User" icon={warnIcon} size="medium" />
-                <CommonButton text="Suspend User" size="medium" />
-                <CommonButton text="Ban User" size="medium" />
-              </>
-            )}
-          </Box>
-
-
-
-        </Box>
-        {relatedDetails && reportDetails.reportType === "AD_REPORT" && (
-          <DetailsCard
-          title="Reported Ad Details"
-            data={relatedDetails}
-            fields={adFields}
-            description={relatedDetails.description}
-          />
+            <CommonButton text="Delete Ad" size="medium" />
+          </>
         )}
 
-        {relatedDetails && reportDetails.reportType === "USER_REPORT" && (
-          <DetailsCard
-            title="Reported User Details"
-            data={relatedDetails}
-            fields={userFields}
-            image={relatedDetails.imageUrl}
-          />
+        {reportDetails.reportType === "USER_REPORT" && (
+          <>
+            <CommonButton
+              text="Warn User"
+              icon={warnIcon}
+              size="medium"
+            />
+            <CommonButton text="Suspend User" size="medium" />
+            <CommonButton text="Ban User" size="medium" />
+          </>
         )}
       </Box>
-          </Box>
+    </Box>
+ 
+    {/* AD DETAILS */}
+    {relatedDetails && reportDetails.reportType === "AD_REPORT" && (
+      <>
+        <DetailsCard
+          title="Reported Ad Details"
+          data={relatedDetails}
+          fields={adFields}
+          description={relatedDetails.description}
+        />
+
+        {/* IMAGE GRID */}
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "1fr 1fr",
+              md: "1fr 1fr 1fr",
+            },
+            gap: 2,
+            width: "100%",
+          }}
+        >
+          {["/slide1.png", "/slide2.png", "/slide3.png"].map(
+            (img, index) => (
+              <Box
+              key={index}
+              component="img"
+              src={img}
+                alt={`Slide ${index + 1}`}
+                sx={{
+                  width: "100%",
+                  height: 200,
+                  objectFit: "contain",
+                  borderRadius: 2,
+                  boxShadow: 1,
+                }}
+              />
+            )
+          )}
+        </Box>
+      </>
+    )}
+
+    {/* USER DETAILS */}
+    {relatedDetails && reportDetails.reportType === "USER_REPORT" && (
+      <DetailsCard
+        title="Reported User Details"
+        data={relatedDetails}
+        fields={userFields}
+        image={relatedDetails.imageUrl}
+        />
+    )}
+ </Layout>
     </>
   );
 };

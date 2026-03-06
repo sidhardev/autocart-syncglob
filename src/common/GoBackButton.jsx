@@ -8,13 +8,17 @@ function GoBackButton() {
   return (
     <Button
        startIcon={<ArrowBackIosNewIcon />}
+       disableElevation
       onClick={() => navigate(-1)}
       sx={{ 
         color: "#07B007",
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "100%",
-         
+        '&:hover': {
+            background: "#F9F9F9",
+            color: "#07b00758",
+        }         
     }}>
      </Button>
   );
