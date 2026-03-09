@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Sidebar from "./Sidebar";
-import TopBar from "./Topbar";
+import TopBar from "./TopBar";
 import ErrorBoundary from "../Error/ErrorBoundary";
 
 function Layout({ children }) {
