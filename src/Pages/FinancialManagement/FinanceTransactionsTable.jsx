@@ -1,10 +1,7 @@
 import { Box, Avatar, Typography } from "@mui/material";
 import CommonTable from "../../common/Table";
 
-export default function FinanceTransactionsTable({
-  rows,
-  tableHeaders,
-}) {
+export default function FinanceTransactionsTable({ rows, tableHeaders }) {
   const columns = [
     {
       header: tableHeaders?.[0] || "Ad Id",
@@ -15,9 +12,7 @@ export default function FinanceTransactionsTable({
             variant="rounded"
             sx={{ width: 40, height: 40 }}
           />
-          <Typography fontWeight={500}>
-            {row.ad.id}
-          </Typography>
+          <Typography fontWeight={500}>{row.ad.id}</Typography>
         </Box>
       ),
     },
@@ -25,13 +20,8 @@ export default function FinanceTransactionsTable({
       header: tableHeaders?.[1] || "User Id",
       render: (row) => (
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-          <Avatar
-            src={row.user.avatarUrl}
-            sx={{ width: 36, height: 36 }}
-          />
-          <Typography fontWeight={500}>
-            {row.user.id}
-          </Typography>
+          <Avatar src={row.user.avatarUrl} sx={{ width: 36, height: 36 }} />
+          <Typography fontWeight={500}>{row.user.id}</Typography>
         </Box>
       ),
     },
@@ -41,11 +31,7 @@ export default function FinanceTransactionsTable({
     },
     {
       header: tableHeaders?.[3] || "Amount",
-      render: (row) => (
-        <Typography>
-          ${row.amount}
-        </Typography>
-      ),
+      render: (row) => <Typography>${row.amount}</Typography>,
     },
     {
       header: tableHeaders?.[4] || "Date",
@@ -57,9 +43,7 @@ export default function FinanceTransactionsTable({
     <CommonTable
       columns={columns}
       rows={rows}
-      onRowClick={(row) =>
-        console.log("Transaction clicked:", row)
-      }
+      onRowClick={(row) => console.log("Transaction clicked:", row)}
     />
   );
 }

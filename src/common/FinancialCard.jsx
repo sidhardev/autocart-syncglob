@@ -9,23 +9,23 @@ function FinancialCard({
   comparisonText,
   currency = "$",
 }) {
-  const numericChange = typeof change === 'string' ? parseFloat(change.replace(/[^0-9.-]/g, '')) : change;
+  const numericChange =
+    typeof change === "string"
+      ? parseFloat(change.replace(/[^0-9.-]/g, ""))
+      : change;
   const isPositive = numericChange > 0;
   const isNegative = numericChange < 0;
 
   const displayAmount = React.useMemo(() => {
-    if (typeof amount === 'string') {
-      // If it already has commas, just use it.
-      if (amount.includes(',')) return amount;
-      // Otherwise try to numberize and format.
-      const num = parseFloat(amount.replace(/[^0-9.-]/g, ''));
+    if (typeof amount === "string") {
+      if (amount.includes(",")) return amount;
+      const num = parseFloat(amount.replace(/[^0-9.-]/g, ""));
       return isNaN(num) ? amount : num.toLocaleString();
     }
     return Number(amount || 0).toLocaleString();
   }, [amount]);
 
   return (
-
     <Paper
       elevation={0}
       sx={{
@@ -52,7 +52,7 @@ function FinancialCard({
           sx={{
             fontWeight: 500,
             color: "#8b5a2b",
-            fontSize: { xs: "0.9rem", sm: "1rem" }
+            fontSize: { xs: "0.9rem", sm: "1rem" },
           }}
         >
           {title}
@@ -80,28 +80,25 @@ function FinancialCard({
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
-          gap: 1
+          gap: 1,
         }}
       >
         <Typography
           variant="h4"
           sx={{
             color: "#1f2937",
-            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.125rem" }
+            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.125rem" },
           }}
         >
-          {currency}{displayAmount}
+          {currency}
+          {displayAmount}
         </Typography>
 
         <Typography
           variant="body2"
           sx={{
             fontWeight: 600,
-            color: isPositive
-              ? "#16a34a"
-              : isNegative
-                ? "#dc2626"
-                : "#6b7280",
+            color: isPositive ? "#16a34a" : isNegative ? "#dc2626" : "#6b7280",
           }}
         >
           {isPositive ? "+" : ""}
@@ -117,7 +114,6 @@ function FinancialCard({
       >
         {comparisonText}
       </Typography>
-
     </Paper>
   );
 }

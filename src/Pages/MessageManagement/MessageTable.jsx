@@ -1,4 +1,5 @@
 import { Box, Avatar, Typography } from "@mui/material";
+import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonTable from "../../common/Table";
 import { useNavigate } from "react-router-dom";
 
@@ -50,12 +51,10 @@ export default function MessageTable({ rows, tableHeaders }) {
               width: "fit-content",
             }}
           >
-            <Box
+            <StopRoundedIcon
               sx={{
-                width: 8,
-                height: 8,
-                bgcolor: styles.dot,
-                borderRadius: "50%",
+                color: styles.dot,
+                fontSize: "small",
               }}
             />
             <Typography variant="body2" sx={{ color: styles.text }}>
@@ -87,9 +86,7 @@ export default function MessageTable({ rows, tableHeaders }) {
       header: tableHeaders?.[3] || "Message Content",
       render: (row) => (
         <Box>
-          <Typography variant="body2">
-            {row.message.content}
-          </Typography>
+          <Typography variant="body2">{row.message.content}</Typography>
           <Typography variant="caption" color="text.secondary">
             {row.message.time}
           </Typography>
@@ -98,11 +95,7 @@ export default function MessageTable({ rows, tableHeaders }) {
     },
     {
       header: tableHeaders?.[4] || "Reason",
-      render: (row) => (
-        <Typography fontWeight={500}>
-          {row.reason}
-        </Typography>
-      ),
+      render: (row) => <Typography fontWeight={500}>{row.reason}</Typography>,
     },
     {
       header: tableHeaders?.[5] || "Date",
@@ -114,6 +107,7 @@ export default function MessageTable({ rows, tableHeaders }) {
     <CommonTable
       columns={columns}
       rows={rows}
-onRowClick={(row) => navigate(`/message-management/${row.id}`)}    />
+      onRowClick={(row) => navigate(`/message-management/${row.id}`)}
+    />
   );
 }

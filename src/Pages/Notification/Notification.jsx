@@ -22,14 +22,12 @@ const Notification = () => {
   return (
     <>
       <Layout>
-
         {notification.length === 0 ? (
           <NoNotification />
         ) : (
           <ShowNotification notification={notification} />
         )}
       </Layout>
-
     </>
   );
 };

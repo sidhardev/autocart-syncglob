@@ -30,11 +30,7 @@ function MessageContainer() {
 
   return (
     <Box sx={{ display: "flex", width: "100%" }}>
-      <ReusableTabs
-        tabsData={tabsData}
-        value={value}
-        onChange={setValue}
-      >
+      <ReusableTabs tabsData={tabsData} value={value} onChange={setValue}>
         {(activeIndex) => (
           <>
             {/* Overview Tab */}
@@ -45,7 +41,6 @@ function MessageContainer() {
                   flexDirection: "column",
                   gap: 3,
                   width: "100%",
-                  
                 }}
               >
                 <Typography
@@ -55,12 +50,21 @@ function MessageContainer() {
                 >
                   Message Overview
                 </Typography>
-                <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", mb: 2, justifyContent: "center", alignItems: "center" }}>
-                {messageData?.messageOverview && (
-                  <MessageOverviewCards
-                    messageOverview={messageData.messageOverview}
-                  />
-                )}
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 3,
+                    flexWrap: "wrap",
+                    mb: 2,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {messageData?.messageOverview && (
+                    <MessageOverviewCards
+                      messageOverview={messageData.messageOverview}
+                    />
+                  )}
                 </Box>
 
                 <Typography
@@ -77,7 +81,11 @@ function MessageContainer() {
                   />
                 )}
 
-                <Typography variant="h6" fontWeight={600} sx={{ mt: 4, color: "text.secondary" }}>
+                <Typography
+                  variant="h6"
+                  fontWeight={600}
+                  sx={{ mt: 4, color: "text.secondary" }}
+                >
                   Reported Messages
                 </Typography>
                 {messageData?.reportedMessagesStats && (
@@ -125,8 +133,11 @@ function MessageContainer() {
                   width: "100%",
                 }}
               >
-
-                <Typography variant="h6" fontWeight={600} sx={{ mt: 4, color: "text.secondary" }}>
+                <Typography
+                  variant="h6"
+                  fontWeight={600}
+                  sx={{ mt: 4, color: "text.secondary" }}
+                >
                   Reported Messages
                 </Typography>
                 {messageData?.reportedMessagesStats && (

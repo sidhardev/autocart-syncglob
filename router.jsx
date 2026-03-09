@@ -20,7 +20,7 @@ import Main from "./src/Pages/MainPage/Main";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: <ShowDashboard />,
   },
   {
     path: "/notifications",
@@ -47,9 +47,8 @@ export const router = createBrowserRouter([
     element: <UserDetails />,
   },
   {
-    path: '/report-analytics',
+    path: "/report-analytics",
     element: <ReportUI />,
-
   },
   {
     path: "/report-analytics/:id",
@@ -82,6 +81,5 @@ export const router = createBrowserRouter([
   {
     path: "/story-management/:id",
     element: <StoryDetails />,
-  }
-
+  },
 ]);

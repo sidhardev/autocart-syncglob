@@ -30,10 +30,10 @@ function Dashboard() {
     <>
       <Box
         sx={{
-           display: "flex",
+          display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
-           mx: "auto",
+          mx: "auto",
         }}
       >
         <DashboardDatePicker />
@@ -47,31 +47,40 @@ function Dashboard() {
               mt: { xs: 4, sm: 6, md: 8 },
               color: "text.secondary",
               display: "flex",
-               fontSize: { xs: "1rem", sm: "1.25rem" },
-               
+              fontSize: { xs: "1rem", sm: "1.25rem" },
             }}
           >
             <AdsClickIcon fontSize="small" sx={{ mr: 1, color: "#6c757d" }} />
             Ads
           </Typography>
           <Grid
-  container
-  spacing={3}
-  sx={{ mb: 4, display: "flex", flexWrap: "wrap",alignItems: "stretch" }}
-  >
-  {ads.map((card) => (
-    <Grid item xs={12} sm={6} md={4} lg={3} key={card.id}>
-      <StatsCard
-        title={card.title}
-        amount={card.data}
-        change={card.ratio}
-        dotColor={card.color}
-        unit="Ads"
-      />
-    </Grid>
-  ))}
-</Grid>
-          
+            container
+            spacing={3}
+            sx={{
+              mb: 4,
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
+              justifyContent: {
+                xs: "flex-start",
+                sm: "flex-start",
+                md: "space-evenly",
+              },
+              alignItems: { xs: "flex-start", sm: "center" },
+              gap: 2,
+            }}
+          >
+            {ads.map((card) => (
+              <Grid item xs={12} sm={6} md={4} lg={3} key={card.id}>
+                <StatsCard
+                  title={card.title}
+                  amount={card.data}
+                  change={card.ratio}
+                  dotColor={card.color}
+                  unit="Ads"
+                />
+              </Grid>
+            ))}
+          </Grid>
 
           {/* USERS SECTION */}
           <Typography
@@ -82,11 +91,12 @@ function Dashboard() {
               mt: { xs: 4, sm: 6, md: 8 },
               color: "text.secondary",
               display: "flex",
-              alignItems: "center",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
               fontSize: { xs: "1rem", sm: "1.25rem" },
             }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", mr: 1 }}>
+            <Box sx={{ display: "flex", alignItems: "flex-start", mr: 1 }}>
               <svg
                 width="24"
                 height="24"
@@ -113,11 +123,24 @@ function Dashboard() {
             </Box>
             Users
           </Typography>
-<Grid
-  container
-  spacing={3}
-  sx={{ mb: 4, display: "flex", flexWrap: "wrap",alignItems: "stretch" }}
-  >         {users.map((card) => (
+          <Grid
+            container
+            spacing={3}
+            sx={{
+              mb: 4,
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
+              justifyContent: {
+                xs: "flex-start",
+                sm: "flex-start",
+                md: "space-evenly",
+              },
+              alignItems: { xs: "flex-start", sm: "center" },
+              gap: 2,
+            }}
+          >
+            {" "}
+            {users.map((card) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={card.id}>
                 <StatsCard
                   title={card.title}

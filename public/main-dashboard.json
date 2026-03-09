@@ -1,250 +1,250 @@
 {
-    "adsCards": [
-        {
-            "id": 1,
-            "color": "#2563EB",
-            "title": "Total Ads",
-            "ratio": "+9.2%",
-            "data": "7,854,472"
-        },
-        {
-            "id": 2,
-            "color": "#D97706",
-            "title": "Pending Ads",
-            "ratio": "+9.2%",
-            "data": "7,854,472"
-        },
-        {
-            "id": 3,
-            "color": "#16A34A",
-            "title": "Active Ads",
-            "ratio": "-0.2%",
-            "data": "7,854,472"
-        },
-        {
-            "id": 4,
-            "color": "#DC2626",
-            "title": "Daily Ads Created",
-            "ratio": "-9.2%",
-            "data": "7,854,472"
-        }
-    ],
-    "usersCards": [
-        {
-            "id": 1,
-            "color": "#2563EB",
-            "title": "Total Users",
-            "ratio": "+9.2%",
-            "data": "7,854,472"
-        },
-        {
-            "id": 2,
-            "color": "#16A34A",
-            "title": "Active Users",
-            "ratio": "+9.2%",
-            "data": "7,854,472"
-        },
-        {
-            "id": 3,
-            "color": "#D97706",
-            "title": "Daily Registered Users",
-            "ratio": "-9.2%",
-            "data": "7,854,472"
-        },
-        {
-            "id": 4,
-            "color": "#DC2626",
-            "title": "Daily Login",
-            "ratio": "-9.2%",
-            "data": "7,854,472"
-        }
-    ],
-    "financialOverviewCards": [
-        {
-            "id": 1,
-            "title": "Daily",
-            "amount": "7854472",
-            "change": 9.2,
-            "comparisonText": "Compared to yesterday",
-            "currency": "$"
-        },
-        {
-            "id": 2,
-            "title": "Weekly",
-            "amount": "7854472",
-            "change": -0.2,
-            "comparisonText": "Compared to last week",
-            "currency": "$"
-        },
-        {
-            "id": 3,
-            "title": "Monthly",
-            "amount": "7854472",
-            "change": 9.2,
-            "comparisonText": "Compared to last month",
-            "currency": "$"
-        },
-        {
-            "id": 4,
-            "title": "Yearly",
-            "amount": "7854472",
-            "change": -8.4,
-            "comparisonText": "Compared to last year",
-            "currency": "$"
-        }
-    ],
-    "messageInboxMailCards": [
-        {
-            "id": 1,
-            "title": "Today",
-            "amount": "54",
-            "change": 9.2,
-            "comparisonText": "Compared to yesterday",
-            "currency": ""
-        },
-        {
-            "id": 2,
-            "title": "This Week",
-            "amount": "25455",
-            "change": -0.2,
-            "comparisonText": "Compared to last week",
-            "currency": ""
-        },
-        {
-            "id": 3,
-            "title": "This Month",
-            "amount": "347588",
-            "change": 9.2,
-            "comparisonText": "Compared to last month",
-            "currency": ""
-        },
-        {
-            "id": 4,
-            "title": "This Year",
-            "amount": "8752235",
-            "change": -8.4,
-            "comparisonText": "Compared to last year",
-            "currency": ""
-        }
-    ],
-    "storiesCards": [
-        {
-            "id": 1,
-            "title": "Today",
-            "amount": "852",
-            "change": 9.2,
-            "comparisonText": "Compared to yesterday",
-            "currency": ""
-        },
-        {
-            "id": 2,
-            "title": "This Week",
-            "amount": "54752",
-            "change": -0.2,
-            "comparisonText": "Compared to previous Week",
-            "currency": ""
-        },
-        {
-            "id": 3,
-            "title": "This Month",
-            "amount": "255475",
-            "change": 9.2,
-            "comparisonText": "Compared to previous month",
-            "currency": ""
-        },
-        {
-            "id": 4,
-            "title": "This Year",
-            "amount": "22534285",
-            "change": -8.4,
-            "comparisonText": "Compared to previous year",
-            "currency": ""
-        }
-    ],
-    "chartData": [
-        {
-            "day": "01",
-            "value": 18
-        },
-        {
-            "day": "02",
-            "value": 5
-        },
-        {
-            "day": "03",
-            "value": 8
-        },
-        {
-            "day": "04",
-            "value": 15
-        },
-        {
-            "day": "05",
-            "value": 1
-        },
-        {
-            "day": "06",
-            "value": 0.5
-        },
-        {
-            "day": "07",
-            "value": 10
-        },
-        {
-            "day": "08",
-            "value": 3
-        },
-        {
-            "day": "09",
-            "value": 2
-        },
-        {
-            "day": "10",
-            "value": 6
-        },
-        {
-            "day": "11",
-            "value": 2.5
-        },
-        {
-            "day": "12",
-            "value": 14
-        },
-        {
-            "day": "13",
-            "value": 9
-        },
-        {
-            "day": "14",
-            "value": 11
-        },
-        {
-            "day": "15",
-            "value": 1.5
-        },
-        {
-            "day": "16",
-            "value": 0.8
-        },
-        {
-            "day": "17",
-            "value": 1
-        },
-        {
-            "day": "18",
-            "value": 7
-        },
-        {
-            "day": "19",
-            "value": 7
-        },
-        {
-            "day": "20",
-            "value": 11
-        },
-        {
-            "day": "21",
-            "value": 3
-        }
-    ]
+  "adsCards": [
+    {
+      "id": 1,
+      "color": "#2563EB",
+      "title": "Total Ads",
+      "ratio": "+9.2%",
+      "data": "7,854,472"
+    },
+    {
+      "id": 2,
+      "color": "#D97706",
+      "title": "Pending Ads",
+      "ratio": "+9.2%",
+      "data": "7,854,472"
+    },
+    {
+      "id": 3,
+      "color": "#16A34A",
+      "title": "Active Ads",
+      "ratio": "-0.2%",
+      "data": "7,854,472"
+    },
+    {
+      "id": 4,
+      "color": "#DC2626",
+      "title": "Daily Ads Created",
+      "ratio": "-9.2%",
+      "data": "7,854,472"
+    }
+  ],
+  "usersCards": [
+    {
+      "id": 1,
+      "color": "#2563EB",
+      "title": "Total Users",
+      "ratio": "+9.2%",
+      "data": "7,854,472"
+    },
+    {
+      "id": 2,
+      "color": "#16A34A",
+      "title": "Active Users",
+      "ratio": "+9.2%",
+      "data": "7,854,472"
+    },
+    {
+      "id": 3,
+      "color": "#D97706",
+      "title": "Daily Registered Users",
+      "ratio": "-9.2%",
+      "data": "7,854,472"
+    },
+    {
+      "id": 4,
+      "color": "#DC2626",
+      "title": "Daily Login",
+      "ratio": "-9.2%",
+      "data": "7,854,472"
+    }
+  ],
+  "financialOverviewCards": [
+    {
+      "id": 1,
+      "title": "Daily",
+      "amount": "7854472",
+      "change": 9.2,
+      "comparisonText": "Compared to yesterday",
+      "currency": "$"
+    },
+    {
+      "id": 2,
+      "title": "Weekly",
+      "amount": "7854472",
+      "change": -0.2,
+      "comparisonText": "Compared to last week",
+      "currency": "$"
+    },
+    {
+      "id": 3,
+      "title": "Monthly",
+      "amount": "7854472",
+      "change": 9.2,
+      "comparisonText": "Compared to last month",
+      "currency": "$"
+    },
+    {
+      "id": 4,
+      "title": "Yearly",
+      "amount": "7854472",
+      "change": -8.4,
+      "comparisonText": "Compared to last year",
+      "currency": "$"
+    }
+  ],
+  "messageInboxMailCards": [
+    {
+      "id": 1,
+      "title": "Today",
+      "amount": "54",
+      "change": 9.2,
+      "comparisonText": "Compared to yesterday",
+      "currency": ""
+    },
+    {
+      "id": 2,
+      "title": "This Week",
+      "amount": "25455",
+      "change": -0.2,
+      "comparisonText": "Compared to last week",
+      "currency": ""
+    },
+    {
+      "id": 3,
+      "title": "This Month",
+      "amount": "347588",
+      "change": 9.2,
+      "comparisonText": "Compared to last month",
+      "currency": ""
+    },
+    {
+      "id": 4,
+      "title": "This Year",
+      "amount": "8752235",
+      "change": -8.4,
+      "comparisonText": "Compared to last year",
+      "currency": ""
+    }
+  ],
+  "storiesCards": [
+    {
+      "id": 1,
+      "title": "Today",
+      "amount": "852",
+      "change": 9.2,
+      "comparisonText": "Compared to yesterday",
+      "currency": ""
+    },
+    {
+      "id": 2,
+      "title": "This Week",
+      "amount": "54752",
+      "change": -0.2,
+      "comparisonText": "Compared to previous Week",
+      "currency": ""
+    },
+    {
+      "id": 3,
+      "title": "This Month",
+      "amount": "255475",
+      "change": 9.2,
+      "comparisonText": "Compared to previous month",
+      "currency": ""
+    },
+    {
+      "id": 4,
+      "title": "This Year",
+      "amount": "22534285",
+      "change": -8.4,
+      "comparisonText": "Compared to previous year",
+      "currency": ""
+    }
+  ],
+  "chartData": [
+    {
+      "day": "01",
+      "value": 18
+    },
+    {
+      "day": "02",
+      "value": 5
+    },
+    {
+      "day": "03",
+      "value": 8
+    },
+    {
+      "day": "04",
+      "value": 15
+    },
+    {
+      "day": "05",
+      "value": 1
+    },
+    {
+      "day": "06",
+      "value": 0.5
+    },
+    {
+      "day": "07",
+      "value": 10
+    },
+    {
+      "day": "08",
+      "value": 3
+    },
+    {
+      "day": "09",
+      "value": 2
+    },
+    {
+      "day": "10",
+      "value": 6
+    },
+    {
+      "day": "11",
+      "value": 2.5
+    },
+    {
+      "day": "12",
+      "value": 14
+    },
+    {
+      "day": "13",
+      "value": 9
+    },
+    {
+      "day": "14",
+      "value": 11
+    },
+    {
+      "day": "15",
+      "value": 1.5
+    },
+    {
+      "day": "16",
+      "value": 0.8
+    },
+    {
+      "day": "17",
+      "value": 1
+    },
+    {
+      "day": "18",
+      "value": 7
+    },
+    {
+      "day": "19",
+      "value": 7
+    },
+    {
+      "day": "20",
+      "value": 11
+    },
+    {
+      "day": "21",
+      "value": 3
+    }
+  ]
 }

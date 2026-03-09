@@ -18,7 +18,7 @@ export default function CommonTable({
 }) {
   const filteredRows = filter
     ? rows.filter((row) =>
-        filterValue === "All" ? true : row[filterField] === filterValue
+        filterValue === "All" ? true : row[filterField] === filterValue,
       )
     : rows;
 
@@ -59,11 +59,9 @@ export default function CommonTable({
                   color: "#9CA3AF",
                   bgcolor: "#F3F4F6",
                   borderRight:
-                    index !== columns.length - 1
-                      ? "1px solid #CACACA"
-                      : "none",
+                    index !== columns.length - 1 ? "1px solid #CACACA" : "none",
 
-                   display: col.hideOnMobile
+                  display: col.hideOnMobile
                     ? { xs: "none", md: "table-cell" }
                     : "table-cell",
                 }}

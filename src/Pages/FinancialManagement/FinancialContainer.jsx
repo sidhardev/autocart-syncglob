@@ -31,7 +31,7 @@ function FinancialContainer() {
 
     fetchData();
   }, []);
-  console.log(finance)
+  console.log(finance);
 
   const tabsData = [
     { label: "Finance Overview", fincanceType: "OVERVIEW" },
@@ -39,7 +39,7 @@ function FinancialContainer() {
     { label: "Refund Management", fincanceType: "REFUND_MANAGEMENT" },
   ];
   const [transactions, setTransactions] = useState([]);
-  const [refund, setRefund] = useState([])
+  const [refund, setRefund] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -57,7 +57,6 @@ function FinancialContainer() {
         if (data.refunds) {
           setRefund(data.refunds);
         }
-
       } catch (error) {
         console.error("Error fetching Finance:", error);
       }
@@ -70,6 +69,8 @@ function FinancialContainer() {
       <Box
         sx={{
           display: "flex",
+          justifyContent: "space-between",
+          alignContent: "flex-start",
         }}
       >
         <ReusableTabs
@@ -82,7 +83,6 @@ function FinancialContainer() {
             <>
               {tabsData.map((tab, index) => (
                 <TabPanel key={index} value={value} index={index}>
-
                   {index === 0 && (
                     <Box
                       sx={{
@@ -111,35 +111,31 @@ function FinancialContainer() {
                       )}
 
                       {finance.chartData?.length > 0 && (
-                        <FinanceChart chartData={finance.chartData} />
+                        <Box sx={{ width: "100%" }}>
+                          <FinanceChart chartData={finance.chartData} />
+                        </Box>
                       )}
                     </Box>
                   )}
 
                   {index === 1 && (
                     <>
-                      <SearchBar text={"Search Users"} />
-                      <FinanceTransactionsTable
-                        rows={transactions}
-                      />
+                      <SearchBar text={"Search Users"} width="100%" />
+                      <FinanceTransactionsTable rows={transactions} />
                     </>
                   )}
 
                   {index === 2 && (
                     <>
                       <SearchBar text={"Search Refunds"} />
-                      <FinanceTransactionsTable
-                        rows={refund}
-                      />
+                      <FinanceTransactionsTable rows={refund} />
                     </>
                   )}
-
                 </TabPanel>
               ))}
             </>
           )}
         </ReusableTabs>
-
       </Box>
     </>
   );

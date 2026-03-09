@@ -36,7 +36,15 @@ function MessageOverviewCards({ messageOverview }) {
   ];
 
   return (
-    <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
+    <Box
+      sx={{
+        display: "flex",
+        gap: 3,
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       {overviewCards.map((card) => (
         <FinancialCard
           key={card.id}

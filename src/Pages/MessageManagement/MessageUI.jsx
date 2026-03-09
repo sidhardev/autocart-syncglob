@@ -5,7 +5,6 @@ function MessageUI() {
   return (
     <>
       <Layout>
-
         <MessageContainer />
       </Layout>
     </>

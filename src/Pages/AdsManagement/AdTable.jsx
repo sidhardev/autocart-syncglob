@@ -29,7 +29,7 @@ export default function AdTable({ filter, rows, tableHeaders }) {
             alignItems: "center",
             gap: 1,
             bgcolor: getStatusColor(row.status),
-            p: {xs: 0.5, md: 1},
+            p: { xs: 0.5, md: 1 },
             borderRadius: 1,
             fontWeight: 500,
           }}
@@ -62,10 +62,10 @@ export default function AdTable({ filter, rows, tableHeaders }) {
               alignItems: "center",
               gap: 1,
               bgcolor: getSellerColor(row.sellerType),
-              p: {xs: 0.5, md: 1},
+              p: { xs: 0.5, md: 1 },
               borderRadius: 1,
               fontWeight: 500,
-              height: "auto"
+              height: "auto",
             }}
           >
             <StopRoundedIcon

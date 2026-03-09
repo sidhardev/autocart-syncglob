@@ -12,24 +12,43 @@ function TopBar() {
   const navigate = useNavigate();
   return (
     <>
-      <AppBar position="fixed" sx={{ background: "#DCFCE7", zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+      <AppBar
+        position="fixed"
+        sx={{
+          background: "#DCFCE7",
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+        }}
+      >
         <Container maxWidth="xl">
           <Toolbar
             disableGutters
             sx={{ display: "flex", alignItems: "center" }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
+            <Box
+              sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+            >
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
                 edge="start"
-                onClick={() => window.dispatchEvent(new CustomEvent('toggleMobileSidebar'))}
-                sx={{ mr: 1, ml: 1, display: { md: 'none' }, color: '#15803D' }}
+                onClick={() =>
+                  window.dispatchEvent(new CustomEvent("toggleMobileSidebar"))
+                }
+                sx={{ mr: 1, ml: 1, display: { md: "none" }, color: "#15803D" }}
               >
                 <MenuIcon />
               </IconButton>
-              <Box onClick={() => navigate("/")} sx={{ display: "flex", alignItems: "flex-start" }}>
-                <AdbIcon sx={{ mr: 1, color: "#15803D", display: { xs: 'none', sm: 'block' } }} />
+              <Box
+                onClick={() => navigate("/")}
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
+                <AdbIcon
+                  sx={{
+                    mr: 1,
+                    color: "#15803D",
+                    display: { xs: "none", sm: "block" },
+                  }}
+                />
                 <Typography
                   variant="h6"
                   noWrap
@@ -53,10 +72,22 @@ function TopBar() {
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <Typography sx={{ mr: 1, color: "#15803D", display: { xs: 'none', sm: 'block' } }}>
+            <Typography
+              sx={{
+                mr: 1,
+                color: "#15803D",
+                display: { xs: "none", sm: "block" },
+              }}
+            >
               Syncglob Admin
             </Typography>
-            <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 2, sm: 4, md: 6 } }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: { xs: 2, sm: 4, md: 6 },
+              }}
+            >
               <IconButton sx={{ p: 0 }}>
                 <Avatar sx={{ border: "1px solid #15803D" }} />
               </IconButton>
@@ -71,9 +102,7 @@ function TopBar() {
                       justifyContent: "center",
                       borderRadius: 3,
                       transition: "0.2s ease",
-                      backgroundColor: isActive
-                        ? "#07B007"
-                        : "transparent",
+                      backgroundColor: isActive ? "#07B007" : "transparent",
                     }}
                   >
                     <svg

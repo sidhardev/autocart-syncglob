@@ -2,182 +2,282 @@ import { Box, Avatar, Typography } from "@mui/material";
 import CommonTable from "../../common/Table";
 
 export default function EmailTable({ rows, type = "inbox", onRowClick }) {
-    const getStatusStyles = (status) => {
-        switch (status) {
-            case "Unread":
-                return { bg: "#FEF2F2", dot: "#EF4444", text: "#9CA3AF", label: "Unread" };
-            case "Read":
-                return { bg: "#F9FAFB", dot: "#6B7280", text: "#9CA3AF", label: "Read" };
-            case "Not Delivered":
-                return { bg: "#FEF9C3", dot: "#EAB308", text: "#9CA3AF", label: "Not Delivered" };
-            case "Opened":
-                return { bg: "#F9FAFB", dot: "#6B7280", text: "#9CA3AF", label: "Opened" };
-            case "Delivered":
-                return { bg: "#EFF6FF", dot: "#3B82F6", text: "#9CA3AF", label: "Delivered" };
-            default:
-                return { bg: "#F3F4F6", dot: "#6B7280", text: "#9CA3AF", label: status };
-        }
+  const getStatusStyles = (status) => {
+    const map = {
+      Unread: { bg: "#FEF2F2", dot: "#EF4444", label: "Unread" },
+      Read: { bg: "#F9FAFB", dot: "#6B7280", label: "Read" },
+      "Not Delivered": {
+        bg: "#FEF9C3",
+        dot: "#EAB308",
+        label: "Not Delivered",
+      },
+      Opened: { bg: "#F9FAFB", dot: "#6B7280", label: "Opened" },
+      Delivered: { bg: "#EFF6FF", dot: "#3B82F6", label: "Delivered" },
     };
 
-    const getColumns = () => {
-        if (type === "outbox") {
-            return [
-                {
-                    header: "Status",
-                    render: (row) => {
-                        const styles = getStatusStyles(row.status);
-                        return (
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: 1,
-                                    bgcolor: styles.bg,
-                                    px: 2,
-                                    py: 0.5,
-                                    borderRadius: 1,
-                                    width: "fit-content",
-                                }}
-                            >
-                                <Box sx={{ width: 8, height: 8, bgcolor: styles.dot, borderRadius: "50%" }} />
-                                <Typography variant="body2" sx={{ color: styles.text }}>
-                                    {styles.label}
-                                </Typography>
-                            </Box>
-                        );
-                    },
-                },
-                {
-                    header: "Status Date",
-                    render: (row) => <Typography fontWeight={600}>{row.statusDate}</Typography>,
-                },
-                {
-                    header: "User Id",
-                    render: (row) => (
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                            <Avatar src={row.userAvatar} sx={{ width: 28, height: 28 }} />
-                            <Typography fontWeight={500}>{row.userId}</Typography>
-                        </Box>
-                    ),
-                },
-                {
-                    header: "Email Address",
-                    render: (row) => <Typography fontWeight={500}>{row.email}</Typography>,
-                },
-                {
-                    header: "User Action",
-                    render: (row) => <Typography fontWeight={400} color="text.secondary">{row.action}</Typography>,
-                },
-                {
-                    header: "Date Sent",
-                    render: (row) => (
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                            <Typography fontWeight={500}>{row.dateSent}</Typography>
-                            <Typography variant="caption" color="text.secondary" sx={{ opacity: 0.6 }}>
-                                {row.time}
-                            </Typography>
-                        </Box>
-                    ),
-                },
-            ];
-        } else if (type === "draft") {
-            return [
-                {
-                    header: "User Id",
-                    render: (row) => (
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                            <Avatar src={row.userAvatar} sx={{ width: 28, height: 28 }} />
-                            <Typography fontWeight={500}>{row.userId}</Typography>
-                        </Box>
-                    ),
-                },
-                {
-                    header: "Email Address",
-                    render: (row) => <Typography fontWeight={500}>{row.email}</Typography>,
-                },
-                {
-                    header: "Message Content",
-                    render: (row) => (
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                            <Typography variant="body2">{row.message}</Typography>
-                        </Box>
-                    ),
-                },
-                {
-                    header: "Date Saved",
-                    render: (row) => (
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                            <Typography fontWeight={500}>{row.dateSaved}</Typography>
-                            <Typography variant="caption" color="text.secondary" sx={{ opacity: 0.6 }}>
-                                {row.time}
-                            </Typography>
-                        </Box>
-                    ),
-                },
-                {
-                    header: "Days in draft",
-                    render: (row) => <Typography>{row.daysInDraft}</Typography>,
-                },
-            ];
-        } else {
-            // Inbox Columns
-            return [
-                {
-                    header: "Status",
-                    render: (row) => {
-                        const styles = getStatusStyles(row.status);
-                        return (
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: 1,
-                                    bgcolor: styles.bg,
-                                    px: 2,
-                                    py: 0.5,
-                                    borderRadius: 2,
-                                    width: "fit-content",
-                                }}
-                            >
-                                <Box sx={{ width: 8, height: 8, bgcolor: styles.dot, borderRadius: "50%" }} />
-                                <Typography variant="body2" sx={{ color: styles.text }}>
-                                    {styles.label}
-                                </Typography>
-                            </Box>
-                        );
-                    },
-                },
-                {
-                    header: "User Id",
-                    render: (row) => (
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                            <Avatar src={row.userAvatar} sx={{ width: 28, height: 28 }} />
-                            <Typography fontWeight={500}>{row.userId}</Typography>
-                        </Box>
-                    ),
-                },
-                {
-                    header: "Email Address",
-                    render: (row) => <Typography fontWeight={500}>{row.email}</Typography>,
-                },
-                {
-                    header: "Message Content",
-                    render: (row) => (
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                            <Typography variant="body2">{row.message}</Typography>
-                            <Typography variant="caption" color="text.secondary" sx={{ opacity: 0.6 }}>
-                                {row.time}
-                            </Typography>
-                        </Box>
-                    ),
-                },
-                {
-                    header: "Date",
-                    render: (row) => <Typography fontWeight={500}>{row.date}</Typography>,
-                },
-            ];
-        }
+    return {
+      bg: map[status]?.bg || "#F3F4F6",
+      dot: map[status]?.dot || "#6B7280",
+      label: map[status]?.label || status,
+      text: "#9CA3AF",
     };
+  };
 
-    return <CommonTable columns={getColumns()} rows={rows} onRowClick={onRowClick} />;
+  const StatusChip = ({ status }) => {
+    const styles = getStatusStyles(status);
+
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: 1,
+          bgcolor: styles.bg,
+          px: { xs: 1.5, sm: 2 },
+          py: 0.5,
+          borderRadius: 2,
+          width: "fit-content",
+        }}
+      >
+        <Box
+          sx={{
+            width: 8,
+            height: 8,
+            bgcolor: styles.dot,
+            borderRadius: "50%",
+          }}
+        />
+
+        <Typography
+          variant="body2"
+          sx={{
+            color: styles.text,
+            fontSize: { xs: "0.75rem", sm: "0.85rem" },
+          }}
+        >
+          {styles.label}
+        </Typography>
+      </Box>
+    );
+  };
+
+  const userColumn = {
+    header: "User Id",
+    render: (row) => (
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: 1,
+          minWidth: 140,
+        }}
+      >
+        <Avatar
+          src={row.userAvatar}
+          sx={{
+            width: { xs: 24, sm: 28 },
+            height: { xs: 24, sm: 28 },
+          }}
+        />
+
+        <Typography
+          fontWeight={500}
+          sx={{
+            fontSize: { xs: "0.8rem", sm: "0.9rem" },
+            whiteSpace: "nowrap",
+          }}
+        >
+          {row.userId}
+        </Typography>
+      </Box>
+    ),
+  };
+
+  const emailColumn = {
+    header: "Email Address",
+    render: (row) => (
+      <Typography
+        fontWeight={500}
+        sx={{
+          fontSize: { xs: "0.8rem", sm: "0.9rem" },
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          maxWidth: { xs: 140, md: 220 },
+        }}
+      >
+        {row.email}
+      </Typography>
+    ),
+  };
+
+  const inboxColumns = [
+    {
+      header: "Status",
+      render: (row) => <StatusChip status={row.status} />,
+    },
+    userColumn,
+    emailColumn,
+    {
+      header: "Message Content",
+      render: (row) => (
+        <Box sx={{ maxWidth: { xs: 160, md: 300 } }}>
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: { xs: "0.8rem", sm: "0.9rem" },
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {row.message}
+          </Typography>
+
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            sx={{ fontSize: { xs: "0.7rem", sm: "0.75rem" } }}
+          >
+            {row.time}
+          </Typography>
+        </Box>
+      ),
+    },
+    {
+      header: "Date",
+      render: (row) => (
+        <Typography
+          fontWeight={500}
+          sx={{ fontSize: { xs: "0.8rem", sm: "0.9rem" } }}
+        >
+          {row.date}
+        </Typography>
+      ),
+    },
+  ];
+
+  const outboxColumns = [
+    {
+      header: "Status",
+      render: (row) => <StatusChip status={row.status} />,
+    },
+    {
+      header: "Status Date",
+      render: (row) => (
+        <Typography
+          fontWeight={600}
+          sx={{ fontSize: { xs: "0.8rem", sm: "0.9rem" } }}
+        >
+          {row.statusDate}
+        </Typography>
+      ),
+    },
+    userColumn,
+    emailColumn,
+    {
+      header: "User Action",
+      render: (row) => (
+        <Typography
+          color="text.secondary"
+          sx={{ fontSize: { xs: "0.8rem", sm: "0.9rem" } }}
+        >
+          {row.action}
+        </Typography>
+      ),
+    },
+    {
+      header: "Date Sent",
+      render: (row) => (
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Typography
+            fontWeight={500}
+            sx={{ fontSize: { xs: "0.8rem", sm: "0.9rem" } }}
+          >
+            {row.dateSent}
+          </Typography>
+
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            sx={{ fontSize: { xs: "0.7rem", sm: "0.75rem" } }}
+          >
+            {row.time}
+          </Typography>
+        </Box>
+      ),
+    },
+  ];
+
+  const draftColumns = [
+    userColumn,
+    emailColumn,
+    {
+      header: "Message Content",
+      render: (row) => (
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: { xs: "0.8rem", sm: "0.9rem" },
+            maxWidth: { xs: 160, md: 300 },
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {row.message}
+        </Typography>
+      ),
+    },
+    {
+      header: "Date Saved",
+      render: (row) => (
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Typography
+            fontWeight={500}
+            sx={{ fontSize: { xs: "0.8rem", sm: "0.9rem" } }}
+          >
+            {row.dateSaved}
+          </Typography>
+
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            sx={{ fontSize: { xs: "0.7rem", sm: "0.75rem" } }}
+          >
+            {row.time}
+          </Typography>
+        </Box>
+      ),
+    },
+    {
+      header: "Days in draft",
+      render: (row) => (
+        <Typography sx={{ fontSize: { xs: "0.8rem", sm: "0.9rem" } }}>
+          {row.daysInDraft}
+        </Typography>
+      ),
+    },
+  ];
+
+  const columnMap = {
+    inbox: inboxColumns,
+    outbox: outboxColumns,
+    draft: draftColumns,
+  };
+
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        overflowX: "auto",
+      }}
+    >
+      <CommonTable
+        columns={columnMap[type] || inboxColumns}
+        rows={rows}
+        onRowClick={onRowClick}
+      />
+    </Box>
+  );
 }

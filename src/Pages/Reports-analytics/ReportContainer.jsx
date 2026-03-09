@@ -54,7 +54,6 @@ function ReportContainer() {
   return (
     <>
       <Box sx={{ display: "flex", width: "100%" }}>
-
         <ReusableTabs
           tabsData={tabsData}
           value={value}
@@ -66,8 +65,7 @@ function ReportContainer() {
             <>
               {tabsData.map((tab, index) => (
                 <TabPanel key={index} value={value} index={index}>
-
-                  <SearchBar text={"Search Reports"}  />
+                  <SearchBar text={"Search Reports"} />
 
                   <ReportsTable
                     filter={tab.reportType}

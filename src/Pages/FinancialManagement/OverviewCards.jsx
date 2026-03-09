@@ -3,7 +3,6 @@ import FinancialCard from "../../common/FinancialCard";
 import { Box } from "@mui/material";
 
 function OverviewCards({ finance }) {
-
   const overviewCards = [
     {
       id: 1,
@@ -37,7 +36,14 @@ function OverviewCards({ finance }) {
 
   return (
     <div>
-      <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          gap: 2,
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
         {overviewCards.map((card) => (
           <FinancialCard
             key={card.id}
@@ -47,7 +53,8 @@ function OverviewCards({ finance }) {
             comparisonText={card.comparisonText}
           />
         ))}
-      </Box>    </div>
+      </Box>{" "}
+    </div>
   );
 }
 

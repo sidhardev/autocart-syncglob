@@ -5,13 +5,13 @@ import StoryContainer from "./StoryContainer";
 import Layout from "../../components/layout/Layout.jsx";
 
 function StoryUI() {
-    return (
-        <>
-            <Layout>
-                <StoryContainer />
-            </Layout>
-        </>
-    );
+  return (
+    <>
+      <Layout>
+        <StoryContainer />
+      </Layout>
+    </>
+  );
 }
 
 export default StoryUI;

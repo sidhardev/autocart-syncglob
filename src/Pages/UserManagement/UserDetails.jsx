@@ -57,21 +57,17 @@ function UserDetails() {
 
   return (
     <Layout>
-
- 
       <Box
         sx={{
-          p: { xs: 1, sm: 3 },
+          p: { xs: 1, sm: 2 },
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          alignItems: { xs: "center", md: "center" },
-          overflowX: "hidden",
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: { xs: "flex-start", sm: "center" },
+          justifyContent: "flex-start",
           gap: 2,
-          mb: 3,
+          mb: 2,
         }}
       >
-
- 
         <Typography
           variant="h5"
           fontWeight="bold"
@@ -80,8 +76,7 @@ function UserDetails() {
             display: "flex",
             alignItems: "center",
             gap: 1,
-            flexWrap: "wrap",
-            fontSize: { xs: "1.2rem", sm: "1.5rem" },
+            fontSize: { xs: "1.25rem", sm: "1.5rem" },
           }}
         >
           <GoBackButton />
@@ -89,25 +84,23 @@ function UserDetails() {
           <StopRoundedIcon
             fontSize="small"
             sx={{
-              color:
-                STATUS_COLORS[userDetails.status] || STATUS_COLORS.Active,
+              color: STATUS_COLORS[userDetails.status] || STATUS_COLORS.Active,
             }}
           />
 
           {userDetails.name || "Untitled User"}
         </Typography>
 
- 
         <Box
           sx={{
             display: "flex",
-            flexWrap: "wrap",
-            gap: 1.5,
-            width: { xs: "90%", md: "auto" },
-            justifyContent: "flex-end"
+            flexWrap: { xs: "wrap", sm: "nowrap" },
+            gap: 2,
+            justifyContent: { xs: "center", sm: "flex-end" },
+            width: { xs: "100%", sm: "auto" },
+            ml: "auto",
           }}
         >
-
           {userDetails.status === "Active" && (
             <>
               <CommonButton text="Edit User" size="medium" />
@@ -136,18 +129,17 @@ function UserDetails() {
               />
             </>
           )}
-
         </Box>
       </Box>
 
- 
-      <DetailsCard
-        title="User Details"
-        data={userDetails}
-        fields={fields}
-        image={userDetails.imageUrl}
-      />
-
+      <Box sx={{ display: "flex", width: "100%" }}>
+        <DetailsCard
+          title="User Details"
+          data={userDetails}
+          fields={fields}
+          image={userDetails.imageUrl}
+        />
+      </Box>
     </Layout>
   );
 }

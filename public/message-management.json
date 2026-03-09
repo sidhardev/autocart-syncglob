@@ -1,26 +1,73 @@
 {
   "messageOverview": {
-    "today": { "count": 54, "change": 9.2, "compareText": "Compared to yesterday" },
-    "thisWeek": { "count": 25455, "change": -0.2, "compareText": "Compared to last week" },
-    "thisMonth": { "count": 347588, "change": 9.2, "compareText": "Compared to last month" },
-    "thisYear": { "count": 8752235, "change": -8.4, "compareText": "Compared to last year" }
+    "today": {
+      "count": 54,
+      "change": 9.2,
+      "compareText": "Compared to yesterday"
+    },
+    "thisWeek": {
+      "count": 25455,
+      "change": -0.2,
+      "compareText": "Compared to last week"
+    },
+    "thisMonth": {
+      "count": 347588,
+      "change": 9.2,
+      "compareText": "Compared to last month"
+    },
+    "thisYear": {
+      "count": 8752235,
+      "change": -8.4,
+      "compareText": "Compared to last year"
+    }
   },
 
   "flaggedMessagesStats": {
-    "today": { "count": 54, "change": 9.2, "compareText": "Compared to yesterday" },
-    "thisWeek": { "count": 25455, "change": -0.2, "compareText": "Compared to last week" },
-    "thisMonth": { "count": 347588, "change": 9.2, "compareText": "Compared to last month" },
-    "thisYear": { "count": 8752235, "change": -8.4, "compareText": "Compared to last year" }
+    "today": {
+      "count": 54,
+      "change": 9.2,
+      "compareText": "Compared to yesterday"
+    },
+    "thisWeek": {
+      "count": 25455,
+      "change": -0.2,
+      "compareText": "Compared to last week"
+    },
+    "thisMonth": {
+      "count": 347588,
+      "change": 9.2,
+      "compareText": "Compared to last month"
+    },
+    "thisYear": {
+      "count": 8752235,
+      "change": -8.4,
+      "compareText": "Compared to last year"
+    }
   },
 
   "reportedMessagesStats": {
-    "today": { "count": 54, "change": 9.2, "compareText": "Compared to yesterday" },
-    "thisWeek": { "count": 25455, "change": -0.2, "compareText": "Compared to last week" },
-    "thisMonth": { "count": 347588, "change": 9.2, "compareText": "Compared to last month" },
-    "thisYear": { "count": 8752235, "change": -8.4, "compareText": "Compared to last year" }
+    "today": {
+      "count": 54,
+      "change": 9.2,
+      "compareText": "Compared to yesterday"
+    },
+    "thisWeek": {
+      "count": 25455,
+      "change": -0.2,
+      "compareText": "Compared to last week"
+    },
+    "thisMonth": {
+      "count": 347588,
+      "change": 9.2,
+      "compareText": "Compared to last month"
+    },
+    "thisYear": {
+      "count": 8752235,
+      "change": -8.4,
+      "compareText": "Compared to last year"
+    }
   },
 
-  
   "flaggedMessages": [
     {
       "id": 1,
@@ -75,7 +122,6 @@
       "date": "21/01/2025"
     }
   ],
-
 
   "reportedMessages": [
     {

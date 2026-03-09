@@ -46,7 +46,7 @@ export default function Container() {
         <>
           {tabsData.map((tab, index) => (
             <TabPanel key={index} value={value} index={index}>
-              <SearchBar text={"Search Ads"}/>
+              <SearchBar text={"Search Ads"} />
               <AdTable
                 tableHeaders={[
                   "Status",

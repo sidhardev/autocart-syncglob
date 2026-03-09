@@ -34,7 +34,6 @@
     ]
   },
 
-  
   "transactions": [
     {
       "id": 1,
@@ -84,10 +83,7 @@
       "status": "FAILED",
       "date": "2025-02-20T12:45:00Z"
     }
-  ]
-,
-
-  
+  ],
   "refunds": [
     {
       "id": 1,
@@ -128,5 +124,4 @@
       "refundMethod": "Bank Transfer"
     }
   ]
-
 }

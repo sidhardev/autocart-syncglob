@@ -45,30 +45,29 @@ function Container() {
 
   return (
     <div>
-          <Box sx={{ display: "flex", width: "100%" }}>
-      
-      <ReusableTabs
-        tabsData={tabsData}
-        value={value}
-        onChange={setValue}
-        getCount={getCount}
-        typeKey="userType"
-      >
-        {(activeIndex) => (
-          <>
-            {tabsData.map((tab, index) => (
-              <TabPanel key={index} value={value} index={index}>
-                <SearchBar text={"Search Users"} />
-                <UsersTable
-                  filter={tab.userType}
-                  rows={rows}
-                  tableHeaders={TableHeaders}
-                />
-              </TabPanel>
-            ))}
-          </>
-        )}
-      </ReusableTabs>
+      <Box sx={{ display: "flex", width: "100%" }}>
+        <ReusableTabs
+          tabsData={tabsData}
+          value={value}
+          onChange={setValue}
+          getCount={getCount}
+          typeKey="userType"
+        >
+          {(activeIndex) => (
+            <>
+              {tabsData.map((tab, index) => (
+                <TabPanel key={index} value={value} index={index}>
+                  <SearchBar text={"Search Users"} />
+                  <UsersTable
+                    filter={tab.userType}
+                    rows={rows}
+                    tableHeaders={TableHeaders}
+                  />
+                </TabPanel>
+              ))}
+            </>
+          )}
+        </ReusableTabs>
       </Box>
     </div>
   );

@@ -54,7 +54,7 @@ export default function UsersTable({ filter, rows, tableHeaders }) {
       header: tableHeaders[1] || "Name",
       render: (row) => (
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-           {row.name}
+          {row.name}
         </Box>
       ),
     },
@@ -74,7 +74,7 @@ export default function UsersTable({ filter, rows, tableHeaders }) {
       header: tableHeaders[4] || "User ID",
       render: (row) => (
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <Avatar src={row.imageUrl} sx={{ width: 28, height: 28 }} />
+          <Avatar src={row.imageUrl} sx={{ width: 28, height: 28 }} />
           {row.userId}
         </Box>
       ),

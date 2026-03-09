@@ -15,7 +15,7 @@ function DashboardDatePicker() {
         gap: 2,
         border: "1px solid #e5e7eb",
         boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
-       }}
+      }}
     >
       {/* LEFT CONTENT */}
       <Box>

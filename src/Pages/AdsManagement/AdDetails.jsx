@@ -1,7 +1,7 @@
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
- import StopRoundedIcon from "@mui/icons-material/StopRounded";
+import StopRoundedIcon from "@mui/icons-material/StopRounded";
 import CommonButton from "../../common/Button";
 import AdDetailsCard from "./AdDetailsCard.jsx";
 import GoBackButton from "../../common/GoBackButton.jsx";
@@ -54,14 +54,13 @@ function AdDetails() {
   return (
     <>
       <Layout>
-
         <Box
           sx={{
             p: { xs: 1, sm: 2 },
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             alignItems: { xs: "flex-start", sm: "center" },
-            justifyContent: "space-between",
+            justifyContent: "flex-start",
             gap: 2,
             mb: 2,
           }}
@@ -74,7 +73,7 @@ function AdDetails() {
               display: "flex",
               alignItems: "center",
               gap: 1,
-              fontSize: { xs: "1.25rem", sm: "1.5rem" }
+              fontSize: { xs: "1.25rem", sm: "1.5rem" },
             }}
           >
             <GoBackButton />
@@ -86,20 +85,25 @@ function AdDetails() {
             />
             {ad.title || "Untitled Ad"}
           </Typography>
-          <Box sx={{
-            display: "flex",
-            gap: 2,
-            width: { xs: "100%", sm: "auto" },
-            justifyContent: { xs: "flex-start", sm: "flex-end" }
-          }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: { xs: "wrap", sm: "nowrap" },
+              gap: 2,
+              justifyContent: { xs: "center", sm: "flex-end" },
+              width: { xs: "100%", sm: "auto" },
+              ml: "auto",
+            }}
+          >
             <CommonButton text={getButtonText()} size="medium" />
             {(ad.status === "PENDING" || ad.status === "RENEW") && (
               <CommonButton text="Reject Ad" size="medium" />
             )}
           </Box>
         </Box>
-
-        <AdDetailsCard ad={ad} />
+        <Box sx={{ width: { xs: "100%", sm: "93%" } }}>
+          <AdDetailsCard ad={ad} />
+        </Box>
         <Box
           sx={{
             mt: 4,
@@ -107,7 +111,7 @@ function AdDetails() {
             gridTemplateColumns: {
               xs: "1fr",
               sm: "repeat(2, 1fr)",
-              md: "repeat(3, 1fr)"
+              md: "repeat(3, 1fr)",
             },
             gap: 3,
           }}
@@ -128,11 +132,9 @@ function AdDetails() {
           ))}
         </Box>
 
-
         {ad.status === "REJECTED" && (
           <Rejection rejectionReason={ad.rejectionReason} />
         )}
-
       </Layout>
     </>
   );

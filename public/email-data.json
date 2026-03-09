@@ -1,225 +1,225 @@
 {
-    "inbox": [
-        {
-            "id": "1",
-            "status": "Read",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=1",
-            "email": "annatonellegavi@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur.",
-            "time": "05:47am",
-            "date": "20/01/2025"
-        },
-        {
-            "id": "2",
-            "status": "Unread",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=2",
-            "email": "ayelekeabdulmuizz@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur.",
-            "time": "05:47am",
-            "date": "20/01/2025"
-        },
-        {
-            "id": "3",
-            "status": "Unread",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=3",
-            "email": "adeolababasanye524542@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur.",
-            "time": "05:47am",
-            "date": "20/01/2025"
-        },
-        {
-            "id": "4",
-            "status": "Read",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=4",
-            "email": "chrismaya442@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur.",
-            "time": "05:47am",
-            "date": "20/01/2025"
-        },
-        {
-            "id": "5",
-            "status": "Read",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=1",
-            "email": "annatonellegavi@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur.",
-            "time": "05:47am",
-            "date": "20/01/2025"
-        },
-        {
-            "id": "6",
-            "status": "Unread",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=2",
-            "email": "ayelekeabdulmuizz@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur.",
-            "time": "05:47am",
-            "date": "20/01/2025"
-        },
-        {
-            "id": "7",
-            "status": "Read",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=1",
-            "email": "annatonellegavi@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur.",
-            "time": "05:47am",
-            "date": "20/01/2025"
-        }
-    ],
-    "outbox": [
-        {
-            "id": "1",
-            "status": "Not Delivered",
-            "statusDate": "20/01/2025",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=5",
-            "email": "adeolababasanye524542@gmail.com",
-            "action": "----",
-            "dateSent": "20/01/2025",
-            "time": "05:47am"
-        },
-        {
-            "id": "2",
-            "status": "Opened",
-            "statusDate": "20/01/2025",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=4",
-            "email": "chrismaya442@gmail.com",
-            "action": "Forwarded",
-            "dateSent": "20/01/2025",
-            "time": "05:47am"
-        },
-        {
-            "id": "3",
-            "status": "Opened",
-            "statusDate": "20/01/2025",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=1",
-            "email": "annatonellegavi@gmail.com",
-            "action": "Replied",
-            "dateSent": "20/01/2025",
-            "time": "05:47am"
-        },
-        {
-            "id": "4",
-            "status": "Delivered",
-            "statusDate": "20/01/2025",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=4",
-            "email": "chrismaya442@gmail.com",
-            "action": "----",
-            "dateSent": "20/01/2025",
-            "time": "05:47am"
-        },
-        {
-            "id": "5",
-            "status": "Opened",
-            "statusDate": "20/01/2025",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=1",
-            "email": "annatonellegavi@gmail.com",
-            "action": "Replied",
-            "dateSent": "20/01/2025",
-            "time": "05:47am"
-        },
-        {
-            "id": "6",
-            "status": "Delivered",
-            "statusDate": "20/01/2025",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=4",
-            "email": "chrismaya442@gmail.com",
-            "action": "----",
-            "dateSent": "20/01/2025",
-            "time": "05:47am"
-        },
-        {
-            "id": "7",
-            "status": "Delivered",
-            "statusDate": "20/01/2025",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=1",
-            "email": "annatonellegavi@gmail.com",
-            "action": "----",
-            "dateSent": "20/01/2025",
-            "time": "05:47am"
-        }
-    ],
-    "draft": [
-        {
-            "id": "1",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=5",
-            "email": "adeolababasanye524542@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-            "dateSaved": "20/01/2025",
-            "time": "08:47am",
-            "daysInDraft": "4 Days"
-        },
-        {
-            "id": "2",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=2",
-            "email": "ayelekeabdulmuizz@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-            "dateSaved": "20/01/2025",
-            "time": "08:47am",
-            "daysInDraft": "2 Days"
-        },
-        {
-            "id": "3",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=5",
-            "email": "adeolababasanye524542@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-            "dateSaved": "20/01/2025",
-            "time": "08:47am",
-            "daysInDraft": "4 Days"
-        },
-        {
-            "id": "4",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=2",
-            "email": "ayelekeabdulmuizz@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-            "dateSaved": "20/01/2025",
-            "time": "08:47am",
-            "daysInDraft": "2 Days"
-        },
-        {
-            "id": "5",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=5",
-            "email": "adeolababasanye524542@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-            "dateSaved": "20/01/2025",
-            "time": "08:47am",
-            "daysInDraft": "4 Days"
-        },
-        {
-            "id": "6",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=2",
-            "email": "ayelekeabdulmuizz@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-            "dateSaved": "20/01/2025",
-            "time": "08:47am",
-            "daysInDraft": "2 Days"
-        },
-        {
-            "id": "7",
-            "userId": "USER200",
-            "userAvatar": "https://i.pravatar.cc/150?img=5",
-            "email": "adeolababasanye524542@gmail.com",
-            "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
-            "dateSaved": "20/01/2025",
-            "time": "08:47am",
-            "daysInDraft": "4 Days"
-        }
-    ]
+  "inbox": [
+    {
+      "id": "1",
+      "status": "Read",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=1",
+      "email": "annatonellegavi@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur.",
+      "time": "05:47am",
+      "date": "20/01/2025"
+    },
+    {
+      "id": "2",
+      "status": "Unread",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=2",
+      "email": "ayelekeabdulmuizz@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur.",
+      "time": "05:47am",
+      "date": "20/01/2025"
+    },
+    {
+      "id": "3",
+      "status": "Unread",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=3",
+      "email": "adeolababasanye524542@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur.",
+      "time": "05:47am",
+      "date": "20/01/2025"
+    },
+    {
+      "id": "4",
+      "status": "Read",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=4",
+      "email": "chrismaya442@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur.",
+      "time": "05:47am",
+      "date": "20/01/2025"
+    },
+    {
+      "id": "5",
+      "status": "Read",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=1",
+      "email": "annatonellegavi@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur.",
+      "time": "05:47am",
+      "date": "20/01/2025"
+    },
+    {
+      "id": "6",
+      "status": "Unread",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=2",
+      "email": "ayelekeabdulmuizz@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur.",
+      "time": "05:47am",
+      "date": "20/01/2025"
+    },
+    {
+      "id": "7",
+      "status": "Read",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=1",
+      "email": "annatonellegavi@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur.",
+      "time": "05:47am",
+      "date": "20/01/2025"
+    }
+  ],
+  "outbox": [
+    {
+      "id": "1",
+      "status": "Not Delivered",
+      "statusDate": "20/01/2025",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=5",
+      "email": "adeolababasanye524542@gmail.com",
+      "action": "----",
+      "dateSent": "20/01/2025",
+      "time": "05:47am"
+    },
+    {
+      "id": "2",
+      "status": "Opened",
+      "statusDate": "20/01/2025",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=4",
+      "email": "chrismaya442@gmail.com",
+      "action": "Forwarded",
+      "dateSent": "20/01/2025",
+      "time": "05:47am"
+    },
+    {
+      "id": "3",
+      "status": "Opened",
+      "statusDate": "20/01/2025",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=1",
+      "email": "annatonellegavi@gmail.com",
+      "action": "Replied",
+      "dateSent": "20/01/2025",
+      "time": "05:47am"
+    },
+    {
+      "id": "4",
+      "status": "Delivered",
+      "statusDate": "20/01/2025",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=4",
+      "email": "chrismaya442@gmail.com",
+      "action": "----",
+      "dateSent": "20/01/2025",
+      "time": "05:47am"
+    },
+    {
+      "id": "5",
+      "status": "Opened",
+      "statusDate": "20/01/2025",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=1",
+      "email": "annatonellegavi@gmail.com",
+      "action": "Replied",
+      "dateSent": "20/01/2025",
+      "time": "05:47am"
+    },
+    {
+      "id": "6",
+      "status": "Delivered",
+      "statusDate": "20/01/2025",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=4",
+      "email": "chrismaya442@gmail.com",
+      "action": "----",
+      "dateSent": "20/01/2025",
+      "time": "05:47am"
+    },
+    {
+      "id": "7",
+      "status": "Delivered",
+      "statusDate": "20/01/2025",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=1",
+      "email": "annatonellegavi@gmail.com",
+      "action": "----",
+      "dateSent": "20/01/2025",
+      "time": "05:47am"
+    }
+  ],
+  "draft": [
+    {
+      "id": "1",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=5",
+      "email": "adeolababasanye524542@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+      "dateSaved": "20/01/2025",
+      "time": "08:47am",
+      "daysInDraft": "4 Days"
+    },
+    {
+      "id": "2",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=2",
+      "email": "ayelekeabdulmuizz@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+      "dateSaved": "20/01/2025",
+      "time": "08:47am",
+      "daysInDraft": "2 Days"
+    },
+    {
+      "id": "3",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=5",
+      "email": "adeolababasanye524542@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+      "dateSaved": "20/01/2025",
+      "time": "08:47am",
+      "daysInDraft": "4 Days"
+    },
+    {
+      "id": "4",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=2",
+      "email": "ayelekeabdulmuizz@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+      "dateSaved": "20/01/2025",
+      "time": "08:47am",
+      "daysInDraft": "2 Days"
+    },
+    {
+      "id": "5",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=5",
+      "email": "adeolababasanye524542@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+      "dateSaved": "20/01/2025",
+      "time": "08:47am",
+      "daysInDraft": "4 Days"
+    },
+    {
+      "id": "6",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=2",
+      "email": "ayelekeabdulmuizz@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+      "dateSaved": "20/01/2025",
+      "time": "08:47am",
+      "daysInDraft": "2 Days"
+    },
+    {
+      "id": "7",
+      "userId": "USER200",
+      "userAvatar": "https://i.pravatar.cc/150?img=5",
+      "email": "adeolababasanye524542@gmail.com",
+      "message": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+      "dateSaved": "20/01/2025",
+      "time": "08:47am",
+      "daysInDraft": "4 Days"
+    }
+  ]
 }

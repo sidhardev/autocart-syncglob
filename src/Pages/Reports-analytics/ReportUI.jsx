@@ -15,5 +15,3 @@ function ReportUI() {
 }
 
 export default ReportUI;
-
-

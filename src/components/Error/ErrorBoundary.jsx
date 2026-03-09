@@ -7,7 +7,7 @@ class ErrorBoundary extends React.Component {
 
     this.state = {
       hasError: false,
-      error: null
+      error: null,
     };
   }
 
@@ -36,12 +36,10 @@ class ErrorBoundary extends React.Component {
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
-            gap: 2
+            gap: 2,
           }}
         >
-          <Typography variant="h4">
-            Something went wrong
-          </Typography>
+          <Typography variant="h4">Something went wrong</Typography>
 
           <Typography color="text.secondary">
             An unexpected error occurred.

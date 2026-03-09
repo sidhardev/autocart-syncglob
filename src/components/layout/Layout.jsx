@@ -19,12 +19,10 @@ function Layout({ children }) {
             minHeight: "calc(100vh - 64px)",
             overflow: "auto",
             p: { xs: 2, sm: 3 },
-            background: "#F9F9F9"
+            background: "#F9F9F9",
           }}
         >
-          <ErrorBoundary>
-            {children}
-          </ErrorBoundary>
+          <ErrorBoundary>{children}</ErrorBoundary>
         </Box>
       </Box>
     </>

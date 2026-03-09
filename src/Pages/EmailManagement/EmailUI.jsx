@@ -8,7 +8,6 @@ function EmailUI() {
   return (
     <>
       <Layout>
-
         <EmailContainer />
       </Layout>
     </>
